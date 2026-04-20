@@ -1,5 +1,6 @@
 import React from "react";
 // import "../styles/pages/home.scss";
+// import "./../styles/pages/Home.scss";
 // import "../styles/pages/Home.scss";
 
 import { FiGithub, FiTwitter, FiLinkedin } from "react-icons/fi";
@@ -8,12 +9,12 @@ const Home = () => {
   return (
     <section className="hero">
       <div className="hero-container">
-        <h1 className="header">
+        <h1 className="header" data-aos="fade-up">
           Crafting High-Perfomance
           <span className="highlight">User Interfaces</span> with React
         </h1>
-        <p className="description">
-          specailizing in Building scalable, accessible, & pixel perfect web
+        <p className="description" data-aos="fade-up">
+          Specailizing in Building scalable, accessible, & pixel perfect web
           applications. i bridge the gap betweencomplex backend logic &
           intuitive frontend experience.
         </p>
