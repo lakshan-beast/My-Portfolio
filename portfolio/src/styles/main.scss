@@ -1,0 +1,35 @@
+// @import "abstracts/varibales";
+
+// // @import "abstracts/variables";
+// // @import "abstracts/mixins";
+
+// // @import "base/reset";
+
+// // @import "components/buttons";
+// // // @import "components/cards";
+// // // @import "components/form";
+
+// // @import "layout/header";
+// // @import "layout/footer";
+
+// @import "pages/Home";
+// // // @import "pages/about";
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/reset";
+
+@import "components/buttons";
+@import "components/cards";
+// @import "components/forms";
+//
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/Home";
+@import "pages/About";
+@import "pages/Contacts";
+@import "pages/Experience";
+@import "pages/Projects";
+@import "pages/Skills";
