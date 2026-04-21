@@ -1,0 +1,105 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.contact {
+  padding: 100px 20px;
+  background-color: $bg-color;
+  text-align: center;
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .section-title {
+    color: $primary-color;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  .contact-sub {
+    color: $text-secondary;
+    margin-bottom: 50px;
+  }
+
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    text-align: left;
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .input-group {
+        input,
+        textarea {
+          width: 100%;
+          padding: 15px;
+          background-color: $card-bg;
+          border: 1px solid rgba($text-secondary, 0.2);
+          border-radius: 8px;
+          color: $text-main;
+          font-family: inherit;
+          outline: none;
+          transition: 0.3s;
+          &:focus {
+            border-color: $primary-color;
+          }
+        }
+
+        textarea {
+          resize: none;
+        }
+      }
+      .submit-btn {
+        padding: 15px;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 5px 15px rgba($primary-color, 0.3);
+        }
+      }
+    }
+    .contact-info {
+      .info-item {
+        margin-bottom: 30px;
+
+        h3 {
+          color: $text-main;
+          margin-bottom: 10px;
+        }
+
+        a {
+          color: $text-secondary;
+          text-transform: capitalize;
+        }
+      }
+
+      .socail-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        a {
+          color: $primary-color;
+          text-decoration: none;
+          font-weight: 600;
+          letter-spacing: 1.2px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
