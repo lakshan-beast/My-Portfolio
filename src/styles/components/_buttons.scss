@@ -1,0 +1,37 @@
+// @import "../abstracts/variables";
+
+.hero-buttons {
+  button {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    outline: none;
+    letter-spacing: 1.1px;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: $text-secondary;
+    border: none;
+    color: #000;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 0px 15px rgba($primary-color, 0.4);
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid $text-main;
+    color: $text-main;
+
+    &:hover {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+}
