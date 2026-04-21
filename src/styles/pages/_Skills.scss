@@ -1,0 +1,80 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.skills {
+  padding: 100px 20px;
+  // background: $bg-color;
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-title {
+    color: $primary-color;
+    margin-bottom: 50px;
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fix, minmax(200px, 0.1));
+    gap: 25px;
+
+    .skill-card {
+      background-color: $card-bg;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid rgbs($text-secondary, 0.1);
+      transition: all 0.3s ease;
+      box-shadow: 0px 0px 16px $text-main;
+
+      &:hover {
+        transform: translateY(-10px);
+        border-color: $primary-color;
+        box-shadow: 0px 10px 20px rgbs(0, 0, 0, 0.3);
+      }
+
+      h3 {
+        color: $text-main;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        letter-spacing: 1.1px;
+      }
+
+      p {
+        color: $text-main;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        font-weight: 500;
+      }
+
+      .progress-bar {
+        background: rgba($text-secondary, 0.2);
+        height: 6px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .progress {
+          height: 100%;
+          background-color: $primary-color;
+
+          &.advanced {
+            width: 90%;
+          }
+          &.intermediate {
+            width: 70%;
+          }
+          &.basic {
+            width: 50%;
+          }
+          &.pending {
+            width: 100%;
+            background-color: $text-main;
+          }
+        }
+      }
+    }
+  }
+}
