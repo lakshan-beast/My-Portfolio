@@ -3,43 +3,53 @@ import React from "react";
 
 import { FaLaptop, FaCodeBranch } from "react-icons/fa";
 
+import Image1 from "../assets/project1.png";
+import Image2 from "../assets/project2.png";
+import Image3 from "../assets/project3.png";
+
 const Projects = () => {
   const projectsList = [
+    // react zestara project
     {
-      title: "E-Commerce UI Kit",
+      image: Image1,
+      title: "Zestara | E-Commerce UI Kit",
       description:
         "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
       tags: ["React", "SASS", "Context API"],
-      link: "#",
+      link: "https://zestara.vercel.app",
       github: "#",
     },
 
+    // info.lanka project
     {
-      title: "E-Commerce UI Kit",
+      image: Image2,
+      title: "info.lanka | Services",
       description:
-        "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
-      tags: ["React", "SASS", "Context API"],
-      link: "#",
+        "A centralized, fully responsive web portal designed to streamline access to over 200+ verified Sri Lankan government services through an intuitive keyword-based search engine.",
+      tags: ["HTML5", "CSS", "JavaScript"],
+      link: "https://info-lanka-project.vercel.app",
       github: "#",
     },
 
+    // Educa Advance Learning Platform
     {
-      title: "E-Commerce UI Kit",
+      image: Image3,
+      title: "Educa | Advance Learning Platform",
       description:
         "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
-      tags: ["React", "SASS", "Context API"],
-      link: "#",
+      tags: ["HTML5", "CSS", "JavaScript"],
+      link: "https://educa-advance-learning-platform.vercel.app",
       github: "#",
     },
 
-    {
-      title: "E-Commerce UI Kit",
-      description:
-        "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
-      tags: ["React", "SASS", "Context API"],
-      link: "#",
-      github: "#",
-    },
+    // {
+    //   title: "E-Commerce UI Kit",
+    //   description:
+    //     "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
+    //   tags: ["React", "SASS", "Context API"],
+    //   link: "#",
+    //   github: "#",
+    // },
   ];
 
   return (
@@ -51,7 +61,8 @@ const Projects = () => {
           {projectsList.map((project, index) => (
             <div className="project-card" key={index} data-aos="fade-up">
               <div className="project-content">
-                <h3>{projectsList.title}</h3>
+                <img src={project.image} alt={project.title} />
+                <h3>{project.title}</h3>
                 <p>{project.description}</p>
 
                 <div className="tags">
