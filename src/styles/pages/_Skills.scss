@@ -19,7 +19,7 @@
 
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fix, minmax(200px, 0.1));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 
     .skill-card {
