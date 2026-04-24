@@ -3,9 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // font-family: $font-primary;
   text-decoration: none;
-  // text-transform: capitalize;
   border: none;
   outline: none;
   transition: 0.5s linear;
@@ -15,7 +13,7 @@
 
 // other styles
 *::selection {
-  //   background-color: $primary-color;
+  background-color: $primary-color;
   color: white;
 }
 ::-webkit-scrollbar {
@@ -26,7 +24,7 @@
   background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  //   background-color: $primary-color;
+  background-color: $primary-color;
   border-bottom-left-radius: 2rem;
 }
 html {
@@ -35,12 +33,10 @@ html {
 
 body {
   margin: 0;
-  //   background-color: $bg-color;
   font-family: "Poppins", sans-serif;
 }
 
 #root {
-  //   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
   border-inline: 1px solid;
@@ -51,14 +47,14 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   font-family: "Titillium Web";
   font-weight: 500;
-  // color: var(--text-h);
 }
 
 h1 {
-  font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
   @media (max-width: 1024px) {
@@ -67,7 +63,6 @@ h1 {
   }
 }
 h2 {
-  font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
