@@ -1,5 +1,4 @@
 import React from "react";
-// import "../styles/pages/Experience.scss";
 
 const Experience = () => {
   const experiences = [
@@ -18,7 +17,7 @@ const Experience = () => {
   ];
 
   return (
-    <section className="experience">
+    <section className="experience" id="experince">
       <div className="experience-container">
         <h2 className="section-title">My Journey</h2>
 
