@@ -1,9 +1,9 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
-
 .experience {
   padding: 100px 20px;
-  // background: $bg-color;
+
+  @include respond(desktop) {
+    padding: 100px 200px;
+  }
 
   .container {
     max-width: 900px;
