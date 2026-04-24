@@ -1,5 +1,4 @@
 import React from "react";
-// import "../styles/Projects.scss";
 
 import { FaLaptop, FaCodeBranch } from "react-icons/fa";
 
@@ -17,7 +16,7 @@ const Projects = () => {
         "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
       tags: ["React", "SASS", "Context API"],
       link: "https://zestara.vercel.app",
-      github: "#",
+      github: "https://github.com/lakshan-beast/Zestara",
     },
 
     // info.lanka project
@@ -28,7 +27,7 @@ const Projects = () => {
         "A centralized, fully responsive web portal designed to streamline access to over 200+ verified Sri Lankan government services through an intuitive keyword-based search engine.",
       tags: ["HTML5", "CSS", "JavaScript"],
       link: "https://info-lanka-project.vercel.app",
-      github: "#",
+      github: "https://github.com/lakshan-beast/info.lanka-Project",
     },
 
     // Educa Advance Learning Platform
@@ -39,21 +38,13 @@ const Projects = () => {
         "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
       tags: ["HTML5", "CSS", "JavaScript"],
       link: "https://educa-advance-learning-platform.vercel.app",
-      github: "#",
+      github:
+        "https://github.com/lakshan-beast/Educa-Advance-Learning-Platform",
     },
-
-    // {
-    //   title: "E-Commerce UI Kit",
-    //   description:
-    //     "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
-    //   tags: ["React", "SASS", "Context API"],
-    //   link: "#",
-    //   github: "#",
-    // },
   ];
 
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <div className="projects-container">
         <h2 className="section-title">Featured Works</h2>
 
