@@ -1,8 +1,6 @@
 import React from "react";
-// import "../styles/pages/Skill.scss";
 
-// import
-
+//skills array
 const Skills = () => {
   const skillList = [
     { name: "React", level: "Intermediate" },
@@ -11,15 +9,13 @@ const Skills = () => {
     { name: "CSS3 / HTML5", level: "Advanced" },
     { name: "Git & Github", level: "Basic" },
     { name: "Python", level: "Pending" },
-    // {name: "React", level: "Advanced"},
-    // {name: "React", level: "Advanced"},
-    // {name: "React", level: "Advanced"},
   ];
 
   return (
-    <section className="skills">
+    <section className="skills" id="skills">
       <div className="skills-container">
         <h2 className="section-title">Technical Toolbox</h2>
+
         <div className="skills-grid">
           {skillList.map((skill, index) => (
             <div className="skill-card" key={index} data-aos="fade-up">
