@@ -1,9 +1,8 @@
 import React from "react";
-// import "../styles/pages/home.scss";
-// import "./../styles/pages/Home.scss";
-// import "../styles/pages/Home.scss";
 
 import { FiGithub, FiX, FiLinkedin } from "react-icons/fi";
+import { FaRegEnvelope } from "react-icons/fa";
+// import { SiFreelancer } from "react-icons/si";
 
 const Home = () => {
   return (
@@ -20,23 +19,32 @@ const Home = () => {
         </p>
 
         <div className="hero-buttons">
-          <button type="button" className="btn-primary" data-aos="fade-right">
+          <a href="#projects" className="btn-primary" data-aos="fade-right">
             View Portfolio
-          </button>
-          <button type="button" className="btn-secondary" data-aos="fade-left">
+          </a>
+          <a
+            href="/my_resume.pdf"
+            download="Lakshan_Sandeepa_CV.pdf"
+            className="btn-secondary"
+            data-aos="fade-left">
             Download Resume
-          </button>
+          </a>
         </div>
 
         <div className="hero-socail" data-aos="zoom-in">
-          <a href="#">
+          <a href="https://github.com/lakshan-beast" target="_blank">
             <FiGithub />
           </a>
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/lakshan-sandeepa"
+            target="_blank">
             <FiLinkedin />
           </a>
-          <a href="#">
-            <FiX />
+          {/* <a href="#">
+            <SiFreelancer />
+          </a> */}
+          <a href="mailto:lakshansandeepa0305@gmail.com">
+            <FaRegEnvelope />
           </a>
         </div>
       </div>
