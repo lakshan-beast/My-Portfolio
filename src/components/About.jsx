@@ -1,11 +1,9 @@
 import React from "react";
-// import "../styles/pages/About.scss";
-// import HeroImage form "../assets/hero.jpg";
 import HeroImage from "../assets/hero.jpg";
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about-container">
         <h2 className="section-title">Professional Profile</h2>
 
