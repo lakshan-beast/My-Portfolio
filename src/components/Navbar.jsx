@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { TiThMenuOutline } from "react-icons/ti";
 import { IoMdClose } from "react-icons/io";
 
@@ -8,6 +9,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__container">
+        {/* brand name */}
         <div className="navbar__logo">
           <h1>
             Lakshan<span>.</span>
@@ -27,15 +29,21 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+            <a href="#experince" onClick={() => setIsOpen(false)}>
+              Experience
+            </a>
+          </li>
+          <li>
+            <a href="#projects" onClick={() => setIsOpen(false)}>
+              Projects
+            </a>
+          </li>
+          <li>
             <a href="#skills" onClick={() => setIsOpen(false)}>
               Skills
             </a>
           </li>
-          <li>
-            <a href="#project" onClick={() => setIsOpen(false)}>
-              Projects
-            </a>
-          </li>
+
           <li>
             <a href="#contact" onClick={() => setIsOpen(false)}>
               Contact
