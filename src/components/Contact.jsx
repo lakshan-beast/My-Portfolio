@@ -1,13 +1,14 @@
 import { useRef, useState } from "react";
 import { FiGithub, FiX, FiLinkedin } from "react-icons/fi";
 import { FaRegEnvelope } from "react-icons/fa";
-import emailjs from "@emailjs/browser";
-
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { BiErrorCircle } from "react-icons/bi";
 
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
   const form = useRef();
+
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState(null);
 
@@ -103,6 +104,7 @@ const Contact = () => {
               {isSending ? "Sending..." : "Send Message"}
             </button>
           </form>
+          {/* contact form end */}
 
           {/* contact information */}
           <div className="contact-info" data-aos="fade-left">
