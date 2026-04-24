@@ -43,13 +43,13 @@ const Projects = () => {
     },
 
     // Frontend Projects
-    {
-      title: "Frontend Projects",
-      description:
-        "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
-      tags: ["HTML5", "CSS", "JavaScript"],
-      github: "https://github.com/lakshan-beast/My-Frontend-Projects-Lab",
-    },
+    // {
+    //   title: "Frontend Projects",
+    //   description:
+    //     "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
+    //   tags: ["HTML5", "CSS", "JavaScript"],
+    //   github: "https://github.com/lakshan-beast/My-Frontend-Projects-Lab",
+    // },
   ];
 
   return (
