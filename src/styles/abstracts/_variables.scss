@@ -1,6 +1,12 @@
+// variable store
 $bg-color: #0d0d0d;
 $card-bg: #1a1a1a;
 $primary-color: #00ff88;
 $text-main: #ffffff;
 $text-secondary: #a0a0a0;
-// $font-main: "Inter", sans-serif;
+
+// add breakpoints for media queries
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 800px;
+$breakpoint-laptop: 1200px;
+$breakpoint-large-desktop: 1400px;
