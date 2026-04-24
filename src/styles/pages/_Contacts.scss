@@ -1,10 +1,11 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
-
 .contact {
   padding: 100px 20px;
   background-color: $bg-color;
   text-align: center;
+
+  @include respond(desktop) {
+    padding: 100px 200px;
+  }
 
   .container {
     max-width: 900px;
@@ -30,6 +31,13 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+
+      .status-msg {
+        color: $text-main;
+        background-color: rgba($text-secondary, 0.2);
+        padding: 3px 6px;
+        border-radius: 3px;
+      }
 
       .input-group {
         input,
@@ -69,37 +77,24 @@
     }
     .contact-info {
       .info-item {
-        margin-bottom: 30px;
+        margin-bottom: 6px;
+        padding: 6px 0;
+        background-color: rgba($text-secondary, 0.2);
+        border-radius: 6px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         h3 {
           color: $text-main;
           margin-bottom: 10px;
+          border-bottom: 2px solid rgba($primary-color, 0.3);
         }
 
         a {
           color: $text-secondary;
           text-transform: capitalize;
-        }
-      }
-
-      .socail-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-
-        a {
-          color: $primary-color;
-          text-decoration: none;
-          font-weight: 600;
-          letter-spacing: 1.2px;
-          display: flex;
-          align-items: center;
-          gap: 12px;
-
-          &:hover {
-            text-decoration: underline;
-          }
         }
       }
     }
