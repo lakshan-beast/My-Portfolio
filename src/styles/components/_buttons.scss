@@ -12,13 +12,13 @@
   .btn-primary {
     background: $text-main;
     border: none;
-    color: #000;
+    color: $black-color;
 
     &:hover {
       background-color: $text-secondary;
       transform: translateY(-3px);
       transition: 0.3s ease;
-      color: #000;
+      color: $black-color;
       box-shadow: 0px 0px 15px rgba($text-secondary, 0.4);
       border-bottom: 3px solid $primary-color;
     }
