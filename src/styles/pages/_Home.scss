@@ -3,20 +3,20 @@
 // @import "components/buttons";
 
 .hero {
+  padding: 0 20px;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: $bg-color;
   text-align: center;
-  padding: 0 20px;
+
+  @include center-everything;
 
   .hero-container {
     max-width: 900px;
+    padding-top: 150px;
 
     .header {
-      font-size: clamp(2.5rem, 5vw, 4rem);
       color: $text-main;
+      font-size: clamp(2.5rem, 5vw, 4rem);
       line-height: 1.2;
 
       .highlight {
@@ -25,40 +25,25 @@
     }
 
     .description {
+      margin: 25px 0;
       color: $text-secondary;
       font-size: 1.1rem;
-      margin: 25px 0;
       line-height: 1.6;
     }
 
+    // hero buttons styles
     .hero-buttons {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
+      @include center-everything;
+      gap: 18px;
     }
 
+    // socail media icon styles
     .hero-socail {
       margin: 0 auto;
-      padding: 2rem 0;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
+      padding: 2.5rem 0;
+      gap: 15px;
 
-      a {
-        color: $primary-color;
-        font-size: 1.5rem;
-        width: 35px;
-        height: 35px;
-        padding: 3px;
-        border-radius: 6px;
-        transition: 0.3s ease;
-
-        &:hover {
-          background-color: $text-main;
-          color: $text-secondary;
-        }
-      }
+      @include center-everything;
     }
   }
 }
