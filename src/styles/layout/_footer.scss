@@ -1,60 +1,45 @@
-// @import "abstracts/variables";
-
 .footer {
-  padding: 50px 20px;
+  padding: 20px;
   background-color: $bg-color;
-  border-top: 1px solid rgba($text-secondary, 0.1);
+  border-top: 1px solid rgba($text-secondary, 0.2);
 
   .footer-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
   .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    @include flex-custom(column, center, center, 20px, nowrap);
     text-align: center;
 
-    .footer-logo {
-      h1 {
-        font-weight: bold;
-        color: $text-main;
-        font-size: 2rem;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+    @include respond(desktop) {
+      @include flex-custom(row, space-between, center, 0px, nowrap);
+    }
 
-        .dot {
-          width: 10px;
-          height: 10px;
-          background-color: $primary-color;
-          border-radius: 50%;
-        }
+    // brand name styles
+    .footer-logo {
+      color: $text-main;
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-shadow: 0px 0px 6px $text-secondary;
+      transition: 0.3s ease;
+
+      p {
+        position: relative;
+        top: -1.8rem;
+        border-top: 1px solid $text-secondary;
+        text-shadow: none;
       }
     }
 
+    // footer socail links styles
     .footer-links {
       display: flex;
       gap: 20px;
-
-      a {
-        color: $primary-color;
-        font-size: 1.5rem;
-        width: 35px;
-        height: 35px;
-        padding: 3px;
-        border-radius: 6px;
-        transition: 0.3s ease;
-
-        &:hover {
-          background-color: $text-main;
-          color: $text-secondary;
-        }
-      }
     }
 
+    // copyright paragraph styles
     p {
       color: $text-secondary;
       font-size: 0.9rem;
@@ -70,12 +55,5 @@
         }
       }
     }
-  }
-}
-
-@media (min-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    justify-content: space-between;
   }
 }
