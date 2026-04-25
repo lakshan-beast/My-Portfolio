@@ -13,7 +13,7 @@ const Projects = () => {
       image: Image1,
       title: "Zestara | E-Commerce UI Kit",
       description:
-        "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
+        "A premium e-commerce platform built with React and SASS, featuring dynamic product filtering and a seamless checkout experience, optimized for high performance and modern digital shopping.",
       tags: ["React", "SASS", "Context API"],
       link: "https://zestara.vercel.app",
       github: "https://github.com/lakshan-beast/Zestara",
@@ -35,7 +35,7 @@ const Projects = () => {
       image: Image3,
       title: "Educa | Advance Learning Platform",
       description:
-        "A high-perfomance online shop interface built with React & SASS, focusing on smooth user experience.",
+        "A comprehensive educational resource hub providing students with organized, downloadable study materials and lesson notes through a minimalist and user-friendly React interface.",
       tags: ["HTML5", "CSS", "JavaScript"],
       link: "https://educa-advance-learning-platform.vercel.app",
       github:
