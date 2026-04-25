@@ -2,13 +2,36 @@ import React from "react";
 
 //skills array
 const Skills = () => {
+  const calculateExperience = (startDate) => {
+    const start = new Date(startDate);
+    const now = new Date();
+
+    if (start > now) {
+      return "Just Sarted";
+    }
+
+    let years = now.getFullYear() - start.getFullYear();
+    let months = now.getMonth() - start.getMonth();
+
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    if (years > 0) {
+      return `${years} Years & ${months} Months Experience`;
+    } else {
+      return months <= 0 ? "Started Recently" : `${months} Months Experience`;
+    }
+  };
+
   const skillList = [
-    { name: "React", level: "Intermediate" },
-    { name: "JavaScript", level: "Intermediate" },
-    { name: "SASS / SCSS", level: "Intermediate" },
-    { name: "CSS3 / HTML5", level: "Advanced" },
-    { name: "Git & Github", level: "Basic" },
-    { name: "Python", level: "Pending" },
+    { name: "React", level: "Basic", date: "2026-04-01" },
+    { name: "JavaScript", level: "Intermediate", date: "February 03, 2026" },
+    { name: "SASS / SCSS", level: "Intermediate", date: "March 15, 2026" },
+    { name: "CSS3 / HTML5", level: "Advanced", date: "January 02, 2026" },
+    { name: "Git & Github", level: "Basic", date: "February 01, 2026" },
+    { name: "Python", level: "Pending", date: "June 01, 2026" },
   ];
 
   return (
@@ -20,7 +43,8 @@ const Skills = () => {
           {skillList.map((skill, index) => (
             <div className="skill-card" key={index} data-aos="fade-up">
               <h3>{skill.name}</h3>
-              <p>{skill.level}</p>
+              <span className="exp-tag">{calculateExperience(skill.date)}</span>
+              <p>{skill.level} </p>
 
               <div className="progress-bar">
                 <div className={`progress ${skill.level.toLowerCase()}`}></div>
