@@ -2,9 +2,9 @@ import React from "react";
 
 import { FaLaptop, FaCodeBranch } from "react-icons/fa";
 
-import Image1 from "../assets/project1.png";
-import Image2 from "../assets/project2.png";
-import Image3 from "../assets/project3.png";
+import Image2 from "../assets/project2.webp";
+import Image3 from "../assets/project3.webp";
+import Image1 from "../assets/project1.webp";
 
 const Projects = () => {
   const projectsList = [
