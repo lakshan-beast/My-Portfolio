@@ -49,6 +49,14 @@
         margin-bottom: 15px;
         font-weight: 500;
       }
+      span {
+        color: $text-secondary;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        font-weight: 500;
+        border-left: 2px solid $primary-color;
+        padding-left: 6px;
+      }
 
       .progress-bar {
         background: rgba($text-secondary, 0.2);
