@@ -1,22 +1,21 @@
 .about {
-  background: $bg-color;
-  color: $text-main;
-
   padding: 100px 20px;
+  color: $text-main;
+  background: $bg-color;
 
   @include respond(desktop) {
     padding: 100px 200px;
   }
 
   .container {
-    max-width: 1000px;
     margin: 0 auto;
+    max-width: 1000px;
   }
 
   .section-title {
-    font-size: 2rem;
-    color: $primary-color;
     margin-bottom: 40px;
+    color: $primary-color;
+    font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
@@ -24,8 +23,8 @@
   .about-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
     align-items: center;
+    gap: 40px;
 
     .about-text {
       p {
@@ -34,8 +33,8 @@
         text-transform: capitalize;
 
         strong {
-          letter-spacing: 1.05px;
           margin: 3px 0;
+          letter-spacing: 1.05px;
           font-size: 1.2rem;
         }
       }
@@ -44,22 +43,22 @@
         margin: 12px 0;
 
         .number {
+          color: $primary-color;
           font-size: 1.5rem;
           font-weight: bold;
-          color: $primary-color;
           text-decoration: underline;
-          cursor: pointer;
           transition: 0.3s ease;
+          cursor: pointer;
 
           &:hover {
             color: $text-secondary;
           }
         }
         .label {
+          margin-left: 12px;
           color: $text-secondary;
           font-size: 0.9rem;
           text-transform: uppercase;
-          margin-left: 12px;
         }
       }
     }
