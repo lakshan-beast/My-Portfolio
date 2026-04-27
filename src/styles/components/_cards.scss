@@ -1,0 +1,153 @@
+// projects cards styles
+.project-card {
+  padding: 30px;
+  background-color: $card-bg;
+  border: 1px solid rgba($text-secondary, 0.1);
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    border-color: $primary-color;
+    transform: translateY(-10px);
+  }
+
+  img {
+    margin-bottom: 6px;
+    width: 100%;
+    height: auto;
+    background-color: $text-secondary;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border: 3px solid rgba($text-secondary, 0.5);
+    border-radius: 12px;
+  }
+
+  h3 {
+    margin-bottom: 15px;
+    color: $text-main;
+    font-size: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 20px;
+    color: $text-secondary;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .tags {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .tag {
+      padding: 5px 12px;
+      background-color: rgba($primary-color, 0.1);
+      color: $primary-color;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border-radius: 50px;
+    }
+  }
+
+  .projects-links {
+    padding-top: 12px;
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid $text-main;
+
+    a {
+      padding-left: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 1.2px;
+      border-left: 1px solid;
+      transition: 0.3s;
+    }
+
+    .btn-link {
+      color: $primary-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .btn-github {
+      color: $text-secondary;
+
+      &:hover {
+        color: $text-main;
+      }
+    }
+  }
+}
+
+// skills card styles
+.skill-card {
+  padding: 30px;
+  background-color: $card-bg;
+  border-radius: 15px;
+  border: 1px solid rgbs($text-secondary, 0.1);
+  box-shadow: 0px 0px 16px $text-main;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $primary-color;
+    box-shadow: 0px 10px 20px rgbs(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    color: $text-main;
+    font-size: 1.2rem;
+    letter-spacing: 1.1px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    color: $text-main;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  span {
+    margin-bottom: 15px;
+    padding-left: 6px;
+    color: $text-secondary;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-left: 2px solid $primary-color;
+  }
+
+  .progress-bar {
+    height: 6px;
+    background: rgba($text-secondary, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+
+    .progress {
+      height: 100%;
+      background-color: $primary-color;
+
+      &.advanced {
+        width: 90%;
+      }
+      &.intermediate {
+        width: 70%;
+      }
+      &.basic {
+        width: 50%;
+      }
+      &.pending {
+        width: 100%;
+        background-color: $text-main;
+      }
+    }
+  }
+}
