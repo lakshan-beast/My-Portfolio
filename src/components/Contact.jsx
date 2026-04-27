@@ -109,14 +109,10 @@ const Contact = () => {
           {/* contact information */}
           <div className="contact-info" data-aos="fade-left">
             <div className="info-item">
-              <h3>Email</h3>
+              <h3>Follow Me</h3>
               <a href="mailto:lakshansandeepa0305@gmail.com">
                 <FaRegEnvelope />
               </a>
-            </div>
-
-            <div className="info-item ">
-              <h3>Socails</h3>
               <a href="https://github.com/lakshan-beast" target="_blank">
                 <FiGithub />
               </a>
