@@ -7,7 +7,7 @@ const Skills = () => {
     const now = new Date();
 
     if (start > now) {
-      return "Just Sarted";
+      return "Just Started";
     }
 
     let years = now.getFullYear() - start.getFullYear();
@@ -26,9 +26,9 @@ const Skills = () => {
   };
 
   const skillList = [
-    { name: "React", level: "Basic", date: "2026-04-01" },
+    { name: "React", level: "Basic", date: "March 20, 2026" },
     { name: "JavaScript", level: "Intermediate", date: "February 03, 2026" },
-    { name: "SASS / SCSS", level: "Intermediate", date: "March 15, 2026" },
+    { name: "SASS / SCSS", level: "Intermediate", date: "March 10, 2026" },
     { name: "CSS3 / HTML5", level: "Advanced", date: "January 02, 2026" },
     { name: "Git & Github", level: "Basic", date: "February 01, 2026" },
     { name: "Python", level: "Pending", date: "June 01, 2026" },
