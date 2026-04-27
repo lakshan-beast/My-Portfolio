@@ -34,7 +34,9 @@
         background-color: rgba($text-secondary, 0.2);
         border-radius: 6px;
 
-        @include center-everything;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         h3 {
           margin-bottom: 10px;
