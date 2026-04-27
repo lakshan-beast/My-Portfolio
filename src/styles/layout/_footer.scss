@@ -45,13 +45,13 @@
       font-size: 0.9rem;
 
       a {
+        margin-left: 6px;
         color: $text-main;
         font-weight: 500;
-        margin-left: 6px;
 
         &:hover {
-          text-decoration: underline;
           color: $text-secondary;
+          text-decoration: underline;
         }
       }
     }
