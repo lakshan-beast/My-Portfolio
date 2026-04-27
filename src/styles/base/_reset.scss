@@ -33,18 +33,18 @@ html {
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
   background-color: $bg-color;
+  font-family: "Poppins", sans-serif;
 }
 
 #root {
   max-width: 100%;
+  min-height: 100svh;
   margin: 0 auto;
   border-inline: 1px solid;
-  min-height: 100svh;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 }
 
 h1,
