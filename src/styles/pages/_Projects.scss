@@ -11,105 +11,16 @@
     margin: 0 auto;
 
     .section-title {
-      color: $primary-color;
-      text-align: center;
       margin-bottom: 60px;
+      color: $primary-color;
       font-size: 2.2rem;
+      text-align: center;
     }
 
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
-
-      .project-card {
-        background-color: $card-bg;
-        border-radius: 20px;
-        padding: 30px;
-        border: 1px solid rgba($text-secondary, 0.1);
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: translateY(-10px);
-          border-color: $primary-color;
-        }
-
-        img {
-          width: 100%;
-          height: auto;
-          background-color: $text-secondary;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-clip: border-box;
-          border-radius: 12px;
-          border: 3px solid rgba($text-secondary, 0.5);
-          margin-bottom: 6px;
-          aspect-ratio: 16/9;
-          object-fit: cover;
-        }
-
-        h3 {
-          color: $text-main;
-          margin-bottom: 15px;
-          font-size: 1.5rem;
-        }
-
-        p {
-          color: $text-secondary;
-          line-height: 1.6;
-          margin-bottom: 20px;
-          font-size: 0.95rem;
-        }
-
-        .tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-          margin-bottom: 25px;
-
-          .tag {
-            background-color: rgba($primary-color, 0.1);
-            color: $primary-color;
-            padding: 5px 12px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: bold;
-          }
-        }
-
-        .projects-links {
-          display: flex;
-          gap: 20px;
-          border-top: 1px solid $text-main;
-          padding-top: 12px;
-
-          a {
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: 0.3s;
-            letter-spacing: 1.2px;
-            border-left: 1px solid;
-            padding-left: 12px;
-          }
-
-          .btn-link {
-            color: $primary-color;
-
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-
-          .btn-github {
-            color: $text-secondary;
-
-            &:hover {
-              color: $text-main;
-            }
-          }
-        }
-      }
     }
   }
 }
