@@ -1,5 +1,6 @@
 .experience {
   padding: 100px 20px;
+  background: $text-main;
 
   @include respond(desktop) {
     padding: 100px 200px;
