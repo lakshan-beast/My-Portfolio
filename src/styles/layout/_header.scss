@@ -27,10 +27,10 @@
 
   // brand name styles
   &__logo {
+    color: $bg-color;
     font-size: 1.3rem;
     font-weight: 800;
     letter-spacing: 2px;
-    color: $bg-color;
     text-shadow: 0px 0px 6px $text-secondary;
     transition: 0.3s ease;
 
@@ -39,26 +39,26 @@
     }
 
     span {
+      margin-left: 3px;
       color: $primary-color;
       font-size: 2rem;
-      margin-left: 3px;
     }
   }
 
   // nav links styles
   // mobile style
   .nav-links {
-    list-style: none;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: $card-bg;
-    flex-direction: column;
-    text-align: center;
     padding: 40px 0;
-    display: none;
+    list-style: none;
+    background: $card-bg;
     border-radius: 0px 0px 1rem 1rem;
+    text-align: center;
+    flex-direction: column;
+    display: none;
 
     &.active {
       display: flex;
@@ -68,17 +68,17 @@
       margin: 6px 0;
 
       a {
+        display: block;
         color: $text-secondary;
         font-weight: 500;
-        transition: 0.3s ease;
         font-size: 1.3rem;
-        display: block;
         border-radius: 3px;
+        transition: 0.3s ease;
 
         &:hover {
           color: $primary-color;
-          text-decoration: underline;
           background-color: rgba($text-main, 0.3);
+          text-decoration: underline;
 
           @include respond(desktop) {
             background-color: transparent;
@@ -89,13 +89,13 @@
 
     // desktop styles
     @include respond(desktop) {
-      display: flex;
-      flex-direction: row;
-      background: transparent;
+      position: static;
       padding: 0;
       width: auto;
+      background: transparent;
+      display: flex;
+      flex-direction: row;
       gap: 30px;
-      position: static;
     }
   }
 
