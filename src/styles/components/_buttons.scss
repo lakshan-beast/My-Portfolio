@@ -1,58 +1,78 @@
+// hero butyons
 .hero-buttons {
   a {
     padding: 12px 28px;
-    border-radius: 8px;
     font-weight: 600;
+    letter-spacing: 1.1px;
+    border-radius: 8px;
     transition: 0.3s ease;
     outline: none;
-    letter-spacing: 1.1px;
     cursor: pointer;
   }
 
+  // view portfolio btn
   .btn-primary {
     background: $text-main;
-    border: none;
     color: $black-color;
+    border: none;
 
     &:hover {
+      color: $black-color;
       background-color: $text-secondary;
+      border-bottom: 3px solid $primary-color;
+      box-shadow: 0px 0px 15px rgba($text-secondary, 0.4);
       transform: translateY(-3px);
       transition: 0.3s ease;
-      color: $black-color;
-      box-shadow: 0px 0px 15px rgba($text-secondary, 0.4);
-      border-bottom: 3px solid $primary-color;
     }
   }
 
+  // cv button
   .btn-secondary {
+    color: $text-main;
     background: transparent;
     border: 1px solid $text-main;
-    color: $text-main;
 
     &:hover {
-      border-color: $primary-color;
       color: $primary-color;
+      border-color: $primary-color;
     }
   }
 }
 
+// another links
 .hero-socail,
 .footer-links,
 .info-item {
   a {
-    color: $primary-color;
-    font-size: 1.5rem;
+    padding: 3px;
     width: 35px;
     height: 35px;
-    padding: 3px;
+    color: $primary-color;
+    font-size: 1.5rem;
     transition: 0.3s ease;
 
     &:hover {
-      border-radius: 6px;
-      background-color: $text-main;
       color: $text-secondary;
+      background-color: $text-main;
+      border-radius: 6px;
       transform: translateY(-5px);
       filter: drop-shadow(0 0 6px $primary-color);
     }
+  }
+}
+
+// contact submit btn
+.submit-btn {
+  padding: 15px;
+  background-color: $primary-color;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba($primary-color, 0.3);
+    transform: translateY(-3px);
   }
 }
