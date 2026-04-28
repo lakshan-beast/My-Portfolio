@@ -1,8 +1,7 @@
 import { useRef, useState } from "react";
 import { FiGithub, FiX, FiLinkedin } from "react-icons/fi";
 import { FaRegEnvelope } from "react-icons/fa";
-import { IoMdCheckboxOutline } from "react-icons/io";
-import { BiErrorCircle } from "react-icons/bi";
+import { FcApproval, FcHighPriority } from "react-icons/fc";
 
 import emailjs from "@emailjs/browser";
 
@@ -27,7 +26,7 @@ const Contact = () => {
       .then(() => {
         setStatus({
           message: "Message sent successfully!",
-          icon: <IoMdCheckboxOutline />,
+          icon: <FcApproval />,
           type: "success",
         });
         e.target.reset(); // Form clear
@@ -39,7 +38,7 @@ const Contact = () => {
       .catch((error) => {
         setStatus({
           message: "Failed to send. Please try again.",
-          icon: <BiErrorCircle />,
+          icon: <FcHighPriority />,
           type: "error",
         });
         console.log(error);
