@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 // reset styles
 * {
   margin: 0;
@@ -14,7 +16,7 @@
 // other styles
 *::selection {
   background-color: $primary-color;
-  color: white;
+  color: $text-main;
 }
 ::-webkit-scrollbar {
   height: 0.3rem;
