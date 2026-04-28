@@ -31,7 +31,7 @@ const Skills = () => {
     { name: "SASS / SCSS", level: "Intermediate", date: "March 10, 2026" },
     { name: "CSS3 / HTML5", level: "Advanced", date: "January 02, 2026" },
     { name: "Git & Github", level: "Basic", date: "February 01, 2026" },
-    { name: "Python", level: "Pending", date: "June 01, 2026" },
+    { name: "Tailwind CSS", level: "Pending", date: "June 01, 2026" },
   ];
 
   return (
