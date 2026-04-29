@@ -1,9 +1,10 @@
 .projects {
   padding: 100px 20px;
   background: $bg-color;
+  overflow: hidden;
 
   @include respond(desktop) {
-    padding: 100px 200px;
+    padding: 100px 5%;
   }
 
   .projects-container {
@@ -19,7 +20,7 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
   }
