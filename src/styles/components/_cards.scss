@@ -95,13 +95,13 @@
   padding: 30px;
   background-color: $card-bg;
   border-radius: 15px;
-  border: 1px solid rgbs($text-secondary, 0.1);
-  box-shadow: 0px 0px 16px $text-main;
+  border: 1px solid rgba($text-secondary, 0.1);
+  box-shadow: 0px 4px 10px rgba($text-main, 0.3);
   transition: all 0.3s ease;
 
   &:hover {
     border-color: $primary-color;
-    box-shadow: 0px 10px 20px rgbs(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     transform: translateY(-10px);
   }
 
@@ -132,6 +132,7 @@
     background: rgba($text-secondary, 0.2);
     border-radius: 10px;
     overflow: hidden;
+    width: 100%;
 
     .progress {
       height: 100%;
