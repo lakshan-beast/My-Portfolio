@@ -6,7 +6,7 @@
   text-decoration: none;
   border: none;
   outline: none;
-  transition: 0.5s linear;
+  // transition: 0.5s linear;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
@@ -38,13 +38,13 @@ body {
 }
 
 #root {
-  max-width: 100%;
+  width: 100%;
   min-height: 100svh;
   margin: 0 auto;
-  border-inline: 1px solid;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 h1,
