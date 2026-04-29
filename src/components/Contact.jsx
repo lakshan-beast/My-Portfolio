@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact" id="contact">
+    <section className="contact" id="contact" data-aos-offset="0">
       <div className="contact-container">
         <h2 className="section-title">Get In Touch</h2>
         <p className="contact-sub">

@@ -3,7 +3,7 @@ import HeroImage from "../assets/hero.jpg";
 
 const About = () => {
   return (
-    <section className="about" id="about">
+    <section className="about" id="about" data-aos-offset="0">
       <div className="about-container">
         <h2 className="section-title">Professional Profile</h2>
 

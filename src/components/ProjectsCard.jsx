@@ -53,7 +53,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="projects" id="projects">
+    <section className="projects" id="projects" data-aos-offset="0">
       <div className="projects-container">
         <h2 className="section-title">Featured Works</h2>
 

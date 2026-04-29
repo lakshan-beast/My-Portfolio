@@ -17,7 +17,7 @@ const Experience = () => {
   ];
 
   return (
-    <section className="experience" id="experince">
+    <section className="experience" id="experince" data-aos-offset="0">
       <div className="experience-container">
         <h2 className="section-title">My Journey</h2>
 

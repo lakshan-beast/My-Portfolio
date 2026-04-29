@@ -35,7 +35,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="skills" id="skills">
+    <section className="skills" id="skills" data-aos-offset="0">
       <div className="skills-container">
         <h2 className="section-title">Technical Toolbox</h2>
 
