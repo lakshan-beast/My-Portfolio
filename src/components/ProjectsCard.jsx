@@ -2,16 +2,16 @@ import React from "react";
 
 import { FaLaptop, FaCodeBranch } from "react-icons/fa";
 
-import Image2 from "../assets/project2.webp";
-import Image3 from "../assets/project3.webp";
-import Image1 from "../assets/project1.webp";
-import Image1 from "../assets/project1.webp";
+import Zestara from "../assets/Zestara.webp";
+import Info_Lanka from "../assets/Info.Lanka.webp";
+import Educa from "../assets/Educa.webp";
+import Dream_Tracker from "../assets/Dream-Tracker.webp";
 
 const Projects = () => {
   const projectsList = [
     // react zestara project
     {
-      image: Image1,
+      image: Zestara,
       title: "Zestara | E-Commerce UI Kit",
       description:
         "A premium e-commerce platform built with React and SASS, featuring dynamic product filtering and a seamless checkout experience, optimized for high performance and modern digital shopping.",
@@ -22,7 +22,7 @@ const Projects = () => {
 
     // info.lanka project
     {
-      image: Image2,
+      image: Info_Lanka,
       title: "info.lanka | Services",
       description:
         "A centralized, fully responsive web portal designed to streamline access to over 200+ verified Sri Lankan government services through an intuitive keyword-based search engine.",
@@ -33,7 +33,7 @@ const Projects = () => {
 
     // Educa Advance Learning Platform
     {
-      image: Image3,
+      image: Educa,
       title: "Educa | Advance Learning Platform",
       description:
         "A comprehensive educational resource hub providing students with organized, downloadable study materials and lesson notes through a minimalist and user-friendly React interface.",
@@ -45,7 +45,7 @@ const Projects = () => {
 
     // Dream Track | Academic Productivity Dashboard
     {
-      image: FuturePlanImage,
+      image: Dream_Tracker,
       title: "Dream Track | Academic Performance Tracker",
       description:
         "A premium academic management system built for students to track study progress through gamified focus timers, interactive past paper analytics using Recharts, and automated study scheduling with Firebase integration.",
