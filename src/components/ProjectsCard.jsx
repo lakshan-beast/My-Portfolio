@@ -5,6 +5,7 @@ import { FaLaptop, FaCodeBranch } from "react-icons/fa";
 import Image2 from "../assets/project2.webp";
 import Image3 from "../assets/project3.webp";
 import Image1 from "../assets/project1.webp";
+import Image1 from "../assets/project1.webp";
 
 const Projects = () => {
   const projectsList = [
@@ -42,6 +43,17 @@ const Projects = () => {
         "https://github.com/lakshan-beast/Educa-Advance-Learning-Platform",
     },
 
+    // Dream Track | Academic Productivity Dashboard
+    {
+      image: FuturePlanImage,
+      title: "Dream Track | Academic Performance Tracker",
+      description:
+        "A premium academic management system built for students to track study progress through gamified focus timers, interactive past paper analytics using Recharts, and automated study scheduling with Firebase integration.",
+      tags: ["React.js", "Firebase", "Recharts", "SASS"],
+      link: "https://future-plan-six.vercel.app",
+      github: "https://github.com/lakshan-beast/Future-Plan",
+    },
+
     // Frontend Projects
     // {
     //   title: "Frontend Projects",
@@ -50,6 +62,8 @@ const Projects = () => {
     //   tags: ["HTML5", "CSS", "JavaScript"],
     //   github: "https://github.com/lakshan-beast/My-Frontend-Projects-Lab",
     // },
+
+    // https://future-plan-six.vercel.app/
   ];
 
   return (
