@@ -56,8 +56,10 @@
     }
   }
 
-  .projects-links {
+  .projects-links,
+  .com-links {
     padding-top: 12px;
+    margin-bottom: 6px;
     display: flex;
     gap: 20px;
     border-top: 1px solid $text-main;
@@ -72,7 +74,8 @@
       transition: 0.3s;
     }
 
-    .btn-link {
+    .btn-link,
+    .reviews-link {
       color: $primary-color;
 
       &:hover {
