@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FaLaptop, FaCodeBranch } from "react-icons/fa";
+import { FaLaptop, FaCodeBranch, FaLinkedin } from "react-icons/fa";
 
 import Zestara from "../assets/Zestara.webp";
 import Info_Lanka from "../assets/Info.Lanka.webp";
@@ -18,6 +18,7 @@ const Projects = () => {
       tags: ["React", "SASS", "Context API"],
       link: "https://zestara.vercel.app",
       github: "https://github.com/lakshan-beast/Zestara",
+      linkedin: "",
     },
 
     // info.lanka project
@@ -29,6 +30,7 @@ const Projects = () => {
       tags: ["HTML5", "CSS", "JavaScript"],
       link: "https://info-lanka-project.vercel.app",
       github: "https://github.com/lakshan-beast/info.lanka-Project",
+      linkedin: "",
     },
 
     // Educa Advance Learning Platform
@@ -41,6 +43,7 @@ const Projects = () => {
       link: "https://educa-advance-learning-platform.vercel.app",
       github:
         "https://github.com/lakshan-beast/Educa-Advance-Learning-Platform",
+      linkedin: "",
     },
 
     // Dream Track | Academic Productivity Dashboard
@@ -52,6 +55,8 @@ const Projects = () => {
       tags: ["React.js", "Firebase", "Recharts", "SASS"],
       link: "https://future-plan-six.vercel.app",
       github: "https://github.com/lakshan-beast/Future-Plan",
+      linkedin:
+        "https://www.linkedin.com/posts/lakshan-sandeepa_reactjs-firebase-freelanceproject-ugcPost-7459432361013821440-wHDL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFPtsUwB7_aLX2saPRBkbB618Q_hYVofstU",
     },
 
     // Frontend Projects
@@ -85,6 +90,15 @@ const Projects = () => {
                       {tag}
                     </span>
                   ))}
+                </div>
+
+                <div className="com-links">
+                  <a
+                    href={project.linkedin}
+                    className="reviews-link"
+                    target="_blank">
+                    <FaLinkedin /> Community Reviews
+                  </a>
                 </div>
 
                 <div className="projects-links">
