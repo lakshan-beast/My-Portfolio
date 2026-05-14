@@ -50,9 +50,11 @@ const Contact = () => {
 
   return (
     <section className="contact" id="contact" data-aos-offset="0">
-      <div className="contact-container">
-        <h2 className="section-title">Get In Touch</h2>
-        <p className="contact-sub">
+      <div className="contact-container" data-aos="fade-up">
+        <h2 className="section-title" data-aos="fade-up">
+          Get In Touch
+        </h2>
+        <p className="contact-sub" data-aos="fade-up">
           Have a project in Mind? Let's create something amazing together.
         </p>
 
