@@ -25,7 +25,7 @@ const Home = () => {
           </a>
 
           <a
-            href="/my_resume.pdf"
+            href="/Lakshan_Sandeepa_CV.pdf"
             download="Lakshan_Sandeepa_CV.pdf"
             className="btn-secondary"
             data-aos="fade-left">
