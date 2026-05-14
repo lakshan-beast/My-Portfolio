@@ -18,7 +18,7 @@ const Experience = () => {
 
   return (
     <section className="experience" id="experince" data-aos-offset="0">
-      <div className="experience-container">
+      <div className="experience-container" data-aos="fade-up">
         <h2 className="section-title">My Journey</h2>
 
         <div className="timeline">
