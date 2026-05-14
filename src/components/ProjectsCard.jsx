@@ -73,7 +73,7 @@ const Projects = () => {
 
   return (
     <section className="projects" id="projects" data-aos-offset="0">
-      <div className="projects-container">
+      <div className="projects-container" data-aos="fade-up">
         <h2 className="section-title">Featured Works</h2>
 
         <div className="projects-grid">
@@ -96,16 +96,23 @@ const Projects = () => {
                   <a
                     href={project.linkedin}
                     className="reviews-link"
-                    target="_blank">
+                    target="_blank"
+                    data-aos="fade-right">
                     <FaLinkedin /> Community Reviews
                   </a>
                 </div>
 
                 <div className="projects-links">
-                  <a href={project.link} className="btn-link">
+                  <a
+                    href={project.link}
+                    className="btn-link"
+                    data-aos="fade-right">
                     <FaLaptop /> Live Demo
                   </a>
-                  <a href={project.github} className="btn-github">
+                  <a
+                    href={project.github}
+                    className="btn-github"
+                    data-aos="fade-left">
                     <FaCodeBranch /> Source Code
                   </a>
                 </div>
