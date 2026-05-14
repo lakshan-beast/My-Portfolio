@@ -10,7 +10,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer" data-aos-offset="0">
+    <footer className="footer" data-aos-offset="0" data-aos="fade-up">
       <div className="footer-container">
         <div className="footer-content">
           {/* footer logo */}
