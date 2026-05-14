@@ -40,7 +40,7 @@ const Projects = () => {
       description:
         "A comprehensive educational resource hub providing students with organized, downloadable study materials and lesson notes through a minimalist and user-friendly React interface.",
       tags: ["HTML5", "CSS", "JavaScript"],
-      link: "https://educa-advance-learning-platform.vercel.app",
+      link: "https://educa-ol-learning-platform.vercel.app/",
       github:
         "https://github.com/lakshan-beast/Educa-Advance-Learning-Platform",
       linkedin: "",
