@@ -9,9 +9,13 @@
   @include center-everything;
 
   .hero-container {
-    max-width: 900px;
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding: 15% 2rem;
+    width: 100%;
+    height: 100vh;
+
+    @include respond(desktop) {
+      padding: 12% 20%;
+    }
 
     .header {
       color: $text-main;
@@ -48,5 +52,39 @@
 
       @include center-everything;
     }
+  }
+}
+
+// mouse
+.glow-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      600px circle at var(--x, 0px) var(--y, 0px),
+      rgba(70, 156, 116, 0.15),
+      transparent 80%
+    );
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
   }
 }
