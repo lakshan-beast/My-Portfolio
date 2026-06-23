@@ -4,20 +4,21 @@ import { FaLaptop, FaCodeBranch, FaLinkedin } from "react-icons/fa";
 
 import Zestara from "../assets/Zestara.webp";
 import Info_Lanka from "../assets/Info.Lanka.webp";
-import Educa from "../assets/Educa.webp";
+import Educa from "../assets/educa.png";
 import Dream_Tracker from "../assets/Dream-Tracker.webp";
 
 const Projects = () => {
   const projectsList = [
-    // react zestara project
+    // Educa Advance Learning Platform
     {
-      image: Zestara,
-      title: "Zestara | E-Commerce UI Kit",
+      image: Educa,
+      title: "Educa | Advance Learning Platform",
       description:
-        "A premium e-commerce platform built with React and SASS, featuring dynamic product filtering and a seamless checkout experience, optimized for high performance and modern digital shopping.",
-      tags: ["React", "SASS", "Context API"],
-      link: "https://zestara.vercel.app",
-      github: "https://github.com/lakshan-beast/Zestara",
+        "A comprehensive educational resource hub providing students with organized, downloadable study materials and lesson notes through a minimalist and user-friendly React interface.",
+      tags: ["React.js", "SASS", "FireBase"],
+      link: "https://educa-ol-learning-platform.vercel.app/",
+      // github:
+      //   "https://github.com/lakshan-beast/Educa-Advance-Learning-Platform",
       linkedin: "",
     },
 
@@ -29,20 +30,19 @@ const Projects = () => {
         "A centralized, fully responsive web portal designed to streamline access to over 200+ verified Sri Lankan government services through an intuitive keyword-based search engine.",
       tags: ["HTML5", "CSS", "JavaScript"],
       link: "https://info-lanka-project.vercel.app",
-      github: "https://github.com/lakshan-beast/info.lanka-Project",
+      // github: "https://github.com/lakshan-beast/info.lanka-Project",
       linkedin: "",
     },
 
-    // Educa Advance Learning Platform
+    // react zestara project
     {
-      image: Educa,
-      title: "Educa | Advance Learning Platform",
+      image: Zestara,
+      title: "Zestara | E-Commerce UI Kit",
       description:
-        "A comprehensive educational resource hub providing students with organized, downloadable study materials and lesson notes through a minimalist and user-friendly React interface.",
-      tags: ["HTML5", "CSS", "JavaScript"],
-      link: "https://educa-ol-learning-platform.vercel.app/",
-      github:
-        "https://github.com/lakshan-beast/Educa-Advance-Learning-Platform",
+        "A premium e-commerce platform built with React and SASS, featuring dynamic product filtering and a seamless checkout experience, optimized for high performance and modern digital shopping.",
+      tags: ["React", "SASS", "Context API"],
+      link: "https://zestara.vercel.app",
+      // github: "https://github.com/lakshan-beast/Zestara",
       linkedin: "",
     },
 
@@ -54,7 +54,7 @@ const Projects = () => {
         "A premium academic management system built for students to track study progress through gamified focus timers, interactive past paper analytics using Recharts, and automated study scheduling with Firebase integration.",
       tags: ["React.js", "Firebase", "Recharts", "SASS"],
       link: "https://future-plan-six.vercel.app",
-      github: "https://github.com/lakshan-beast/Future-Plan",
+      // github: "https://github.com/lakshan-beast/Future-Plan",
       linkedin:
         "https://www.linkedin.com/posts/lakshan-sandeepa_reactjs-firebase-freelanceproject-ugcPost-7459432361013821440-wHDL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFPtsUwB7_aLX2saPRBkbB618Q_hYVofstU",
     },
@@ -73,12 +73,15 @@ const Projects = () => {
 
   return (
     <section className="projects" id="projects" data-aos-offset="0">
-      <div className="projects-container" data-aos="fade-up">
+      <div className="projects-container bento-container " data-aos="fade-up">
         <h2 className="section-title">Featured Works</h2>
 
-        <div className="projects-grid">
+        <div className="projects-grid bento-grid">
           {projectsList.map((project, index) => (
-            <div className="project-card" key={index} data-aos="fade-up">
+            <div
+              className="project-card bento-card large"
+              key={index}
+              data-aos="fade-up">
               <div className="project-content">
                 <img src={project.image} alt={project.title} />
                 <h3>{project.title}</h3>
@@ -92,15 +95,16 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="com-links">
+                {/* <div className="com-links">
                   <a
                     href={project.linkedin}
                     className="reviews-link"
+                    // className="btn-github"
                     target="_blank"
                     data-aos="fade-right">
-                    <FaLinkedin /> Community Reviews
+                    <FaLinkedin /> Reviews
                   </a>
-                </div>
+                </div> */}
 
                 <div className="projects-links">
                   <a
@@ -109,11 +113,20 @@ const Projects = () => {
                     data-aos="fade-right">
                     <FaLaptop /> Live Demo
                   </a>
-                  <a
+                  {/* <a
                     href={project.github}
                     className="btn-github"
                     data-aos="fade-left">
                     <FaCodeBranch /> Source Code
+                  </a> */}
+
+                  <a
+                    href={project.linkedin}
+                    // className="reviews-link"
+                    className="btn-github"
+                    target="_blank"
+                    data-aos="fade-left">
+                    <FaLinkedin /> Reviews
                   </a>
                 </div>
               </div>
