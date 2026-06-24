@@ -22,6 +22,8 @@ const Home = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  const text = `Specailizing in Building scalable, accessible, & pixel perfect web applications. I bridge the gap between complex backend logic & intuitive frontend experience.`;
+
   return (
     <section className="hero" id="hero">
       <div className="hero-container glow-wrapper" ref={bgRef}>
@@ -31,10 +33,12 @@ const Home = () => {
             <span className="highlight"> User Interfaces</span> with React.
           </h1>
 
-          <p className="description" data-aos="fade-up">
-            Specailizing in Building scalable, accessible, & pixel perfect web
-            applications. I bridge the gap between complex backend logic &
-            intuitive frontend experience.
+          <p className="reveal-text description" data-aos="fade-up">
+            {text.split(" ").map((word, index) => (
+              <span key={index} className="word">
+                {word}&nbsp;
+              </span>
+            ))}
           </p>
 
           {/* hero buttons */}
