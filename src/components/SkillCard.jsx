@@ -13,7 +13,6 @@ import {
   SiNetlify,
   SiOpenai,
   SiNextdotjs,
-  SiNextdotjs,
   SiGithub,
   SiHtml5,
   SiSass,
