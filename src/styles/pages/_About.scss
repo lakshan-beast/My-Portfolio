@@ -1,16 +1,13 @@
 .about {
-  padding: 100px 20px;
   color: $text-main;
   background: $bg-color;
   overflow: hidden;
 
-  @include respond(desktop) {
-    padding: 100px 5%;
-  }
-
   .about-container {
-    margin: 0 auto;
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10%;
   }
 
   .section-title {
@@ -19,6 +16,7 @@
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-align: left;
   }
 
   .about-wrapper {
