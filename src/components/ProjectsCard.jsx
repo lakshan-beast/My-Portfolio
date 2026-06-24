@@ -16,7 +16,7 @@ const Projects = () => {
       description:
         "A comprehensive educational resource hub providing students with organized, downloadable study materials and lesson notes through a minimalist and user-friendly React interface.",
       tags: ["React.js", "SASS", "FireBase"],
-      link: "https://educa-ol-learning-platform.vercel.app/",
+      link: "https://educa-lms-platform.vercel.app/",
       // github:
       //   "https://github.com/lakshan-beast/Educa-Advance-Learning-Platform",
       linkedin: "",

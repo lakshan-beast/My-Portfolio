@@ -48,7 +48,7 @@ const Skills = () => {
   const skillList = [
     {
       name: "React",
-      level: "Internediate",
+      level: "Intermediate",
       date: "March 20, 2026",
       icon: <FaReact />,
     },
