@@ -1,10 +1,31 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import HeroImage from "../assets/hero.jpg";
 
 const About = () => {
+  const bgRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (bgRef.current) {
+        const rect = bgRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        bgRef.current.style.setProperty("--x", `${x}px`);
+        bgRef.current.style.setProperty("--y", `${y}px`);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <section className="about" id="about" data-aos-offset="0">
-      <div className="about-container" data-aos="fade-up">
+      <div
+        className="about-container glow-wrapper "
+        data-aos="fade-up"
+        ref={bgRef}>
         <h2 className="section-title" data-aos="fade-up">
           Professional Profile
         </h2>
