@@ -119,9 +119,7 @@ const Skills = () => {
         <h2 className="section-title" data-aos="fade-right">
           Technical Toolbox
         </h2>
-
         <h2 className="parts-heading">Languages & Frameworks</h2>
-
         <div className="skills-grid">
           {skillList.map((skill, index) => (
             <div className="skill-card shimmer" key={index} data-aos="fade-up">
@@ -138,9 +136,8 @@ const Skills = () => {
             </div>
           ))}
         </div>
-
+        {/* other skills  */}
         <h2 className="parts-heading">Software, Services & Platforms</h2>
-
         <div className="marquee-wrapper">
           <div className="marquee-track">
             {doubleList.map((item, index) => (
@@ -151,6 +148,72 @@ const Skills = () => {
                 <span>{item.name}</span>
               </div>
             ))}
+          </div>
+        </div>
+        {/* Github COntributation  */}
+        <h2 className="parts-heading">My GitHub Activity</h2>
+        <div className="github-stats-container" data-aos="fade-up">
+          <div className="stats-grid">
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=lakshan-beast&show_icons=true&theme=radial"
+              // src="https://vercel.app/lakshan-beast&show_icons=true&theme=radial"
+              alt="Lakshan's GitHub Stats"
+              className="stats-card"
+            />
+
+            <img
+              // src="https://vercel.app/lakshan-beast&layout=compact&theme=radial"
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=lakshan-beast&layout=compact&theme=radial"
+              alt="Top Languages"
+              className="stats-card"
+            />
+
+            {/* <p align="center"> */}
+            <img src="https://streak-stats.demolab.com?user=lakshan-beast&theme=radical&hide_border=true&border_radius=6.5&date_format=j%20M%5B%20Y%5D&exclude_days=Sun%2CMon%2CTue%2CWed%2CThu%2CFri%2CSat&theme=tokyonight&hide_border=true" />
+            {/* </p> */}
+
+            {/* <div align="center"> */}
+            <img
+              src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=lakshan-beast&theme=github_dark"
+              alt="lakshan-beast's GitHub Stats"
+            />
+            {/* </div> */}
+          </div>
+        </div>
+
+        <div className="code-playground" data-aos="fade-up">
+          <div className="code-header">
+            <div className="code-dots">
+              <span className="dot red"></span>
+              <span className="dot yellow"></span>
+              <span className="dot green"></span>
+            </div>
+            <span className="code-title">useFetchCustomHook.js</span>
+          </div>
+          <div className="code-body">
+            <pre>
+              <code>
+                {`
+                  // A custom hook I designed for clean API integration
+                  import { useState, useEffect } from 'react';
+
+                  export const useFetch = (url) => {
+                    const [data, setData] = useState(null);
+                    const [loading, setLoading] = useState(true);
+
+                    useEffect(() => {
+                      fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                          setData(data);
+                          setLoading(false);
+                        });
+                    }, [url]);
+
+                    return { data, loading };
+                  };`}
+              </code>
+            </pre>
           </div>
         </div>
       </div>
