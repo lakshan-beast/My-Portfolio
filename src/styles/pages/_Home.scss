@@ -41,7 +41,12 @@
     // hero buttons styles
     .hero-buttons {
       @include center-everything;
+      flex-direction: column;
       gap: 18px;
+
+      @include respond(desktop) {
+        flex-direction: row;
+      }
     }
 
     // socail media icon styles

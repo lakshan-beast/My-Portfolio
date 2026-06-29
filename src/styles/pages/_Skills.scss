@@ -33,3 +33,86 @@
     margin: 20px 0;
   }
 }
+
+// stats
+.github-stats-container {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.github-stats-container h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: var(--text-white);
+}
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Mobile friendly වෙන්න */
+}
+.stats-card {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.stats-card:hover {
+  transform: translateY(-5px);
+}
+
+// playground
+.code-playground {
+  background: #0f172a; /* Dark background like VS Code */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  margin: 3rem auto;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  font-family: "Fira Code", Consolas, Monaco, monospace;
+}
+.code-header {
+  background: #1e293b;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.code-dots {
+  display: flex;
+  gap: 0.6rem;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.red {
+  background: #ef4444;
+}
+.yellow {
+  background: #eab308;
+}
+.green {
+  background: #22c55e;
+}
+.code-title {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+.code-body {
+  padding: 1rem;
+  overflow-x: auto;
+}
+.code-body pre {
+  margin: 0;
+  text-align: left;
+}
+.code-body code {
+  color: #38bdf8; /* Light blue code color */
+  font-size: 1rem;
+  line-height: 1.6;
+}
