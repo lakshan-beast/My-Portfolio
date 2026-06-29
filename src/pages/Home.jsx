@@ -48,11 +48,14 @@ const Home = () => {
             </a>
 
             <a
-              href="Lakshan_Sandeepa_CV.pdf"
-              download="Lakshan_Sandeepa_CV.pdf"
+              // href="Lakshan_Sandeepa_CV.pdf"
+              // download="Lakshan_Sandeepa_CV.pdf"
+              href="https://lakshan-sandeepa-cv.vercel.app/"
+              rel="noreferrer"
+              target="_blank"
               className="btn-secondary"
               data-aos="fade-left">
-              Download Resume
+              View / Download Resume
             </a>
           </div>
 

@@ -36,20 +36,25 @@
 
 // stats
 .github-stats-container {
-  padding: 4rem 2rem;
   text-align: center;
 }
-.github-stats-container h2 {
-  font-size: 2.8rem;
-  margin-bottom: 2rem;
-  color: var(--text-white);
-}
+
 .stats-grid {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap; /* Mobile friendly වෙන්න */
+  gap: 1rem; /* Mobile friendly වෙන්න */
+
+  @include respond(desktop) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
+.stats-grid img {
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+}
+
 .stats-card {
   max-width: 100%;
   height: auto;
@@ -57,7 +62,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
-.stats-card:hover {
+.stats-grid img:hover {
   transform: translateY(-5px);
 }
 
