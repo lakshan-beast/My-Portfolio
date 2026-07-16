@@ -5,6 +5,7 @@
   border: 1px solid rgba($text-secondary, 0.1);
   border-radius: 20px;
   transition: transform 0.3s ease;
+  display: flex;
 
   &:hover {
     border-color: $primary-color;
