@@ -9,6 +9,7 @@ import ProjectsCard from "./components/ProjectsCard";
 import SkillCard from "./components/SkillCard";
 import Contact from "./components/Contact";
 
+
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
@@ -30,6 +31,7 @@ function App() {
       <Experience />
       <ProjectsCard />
       <SkillCard />
+      
       <Contact />
       <Footer />
     </>
