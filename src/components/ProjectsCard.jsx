@@ -28,7 +28,7 @@ const Projects = () => {
       image: Unseen_Tapro,
       title: "Unseen_Tapro | in process",
       description:
-        "A comprehensive educational resource hub providing students with organized, downloadable study materials and lesson notes through a minimalist and user-friendly React interface.",
+        "A travel exploration platform dedicated to uncovering and showcasing the hidden gems and offbeat destinations of Sri Lanka through an interactive, responsive web experience.",
       tags: ["React.js", "Tailwind CSS", "TypeScript"],
       link: "https://unseen-tapro.vercel.app/",
       // github:
