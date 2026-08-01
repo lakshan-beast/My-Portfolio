@@ -1,5 +1,7 @@
 import React from "react";
 
+// import Courses from "./Coursers";
+
 import { TbMailFast } from "react-icons/tb";
 import { IoLogoCss3 } from "react-icons/io5";
 import { FaSquareJs } from "react-icons/fa6";
@@ -79,19 +81,19 @@ const Skills = () => {
     {
       name: "Tailwind CSS",
       level: "Basic",
-      date: "June 23, 2026",
+      date: "July 15, 2026",
       icon: <SiTailwindcss />,
     },
     {
       name: "TypeScript",
       level: "Basic",
-      date: "June 22, 2026",
+      date: "July 22, 2026",
       icon: <SiTypescript />,
     },
     {
       name: "Next.js",
       level: "Basic",
-      date: "June 23, 2026",
+      date: "July 15, 2026",
       icon: <SiNextdotjs />,
     },
   ];
@@ -112,6 +114,56 @@ const Skills = () => {
     { name: "Cursor AI", icon: <BiCodeAlt />, color: "#38bdf8" },
   ];
   const doubleList = [...toolsAndServices, ...toolsAndServices];
+
+  const coursesData = [
+    {
+      title: "Junior Cybersecurity Analyst",
+      institute: "Cisco Networking Academy",
+      status: "In Progress",
+      skills: [
+        "Web Application Security",
+        "Network Security",
+        "Packet Routing",
+      ],
+      color: "from-cyan-500 to-blue-500",
+    },
+    {
+      title: "Artificial Intelligence Foundations",
+      institute: "OpenAI Academy",
+      status: "In Progress",
+      skills: [
+        "Artificial Intelligence (AI)",
+        "Prompt Engineering",
+        "LLM Logic",
+      ],
+      color: "from-emerald-500 to-green-500",
+    },
+    {
+      title: "Cybersecurity Fundamentals",
+      institute: "IBM SkillsBuild",
+      status: "In Progress",
+      skills: ["Data Privacy", "Information Security", "Compliance Arrays"],
+      color: "from-red-500 to-pink-500",
+    },
+    {
+      title: "Azure Fundamentals (AZ-900)",
+      institute: "Microsoft Certified",
+      status: "In Progress",
+      skills: ["Cloud Computing", "Cloud Architecture", "Azure Services"],
+      color: "from-blue-600 to-indigo-500",
+    },
+    {
+      title: "LearnEnglish Workplace Proficiency",
+      institute: "British Council",
+      status: "In Progress",
+      skills: [
+        "Professional Communication",
+        "Technical Writing",
+        "Remote Collaboration",
+      ],
+      color: "from-purple-500 to-violet-500",
+    },
+  ];
 
   return (
     <section className="skills" id="skills" data-aos-offset="0">
@@ -198,6 +250,50 @@ const Skills = () => {
             </pre>
           </div>
         </div> */}
+      </div>
+
+      <div className="courses-continer">
+        <h2 className="parts-heading">
+          Continuous Professional Specializations
+        </h2>
+        {/* <p className="parts">
+          To evolve as a robust T-Shaped Engineer, I am continuously scaling my
+          core knowledge across AI engines, cloud ecosystems, and infrastructure
+          security.
+        </p> */}
+
+        {/* Courses Grid */}
+        <div className="courses-grid">
+          {coursesData.map((course, index) => (
+            <div key={index} className="course-card shimmer">
+              <div className="course-card__main">
+                <div className="course-card__meta">
+                  <h3 className="course-card__institute">{course.institute}</h3>
+                  <span className="course-card__status">{course.status}</span>
+                </div>
+
+                {/* Course Title */}
+                <h3 className="course-card__title">{course.title}</h3>
+              </div>
+
+              {/* Skills Tags */}
+              <div className="course-card__footer">
+                <div className="course-card__tags">
+                  {course.skills.map((skill, sIndex) => (
+                    <span key={sIndex} className="course-card__tag">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p className="courses-section__footnote">
+          *Also expanding knowledge through non-certified architectural
+          deep-dives via Google Digital Garage.
+        </p>
       </div>
     </section>
   );

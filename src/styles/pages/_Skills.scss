@@ -1,5 +1,6 @@
-.skills {
-  padding: 100px 20px;
+.skills,
+.courses {
+  padding: 60px 16px;
   background: $text-main;
   overflow: hidden;
 
@@ -7,7 +8,8 @@
     padding: 100px 5%;
   }
 
-  .skills-container {
+  .skills-container,
+  .courses-continer {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -42,7 +44,7 @@
 .stats-grid {
   display: flex;
   justify-content: center;
-  gap: 1rem; 
+  gap: 1rem;
 
   @include respond(desktop) {
     flex-direction: column-reverse;
@@ -68,7 +70,7 @@
 
 // playground
 .code-playground {
-  background: #0f172a; 
+  background: #0f172a;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   max-width: 800px;
@@ -117,7 +119,7 @@
   text-align: left;
 }
 .code-body code {
-  color: #38bdf8; 
+  color: #38bdf8;
   font-size: 1rem;
   line-height: 1.6;
 }
