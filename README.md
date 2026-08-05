@@ -11,6 +11,9 @@ Check out the live site here: https://lakshan-sandeepa-dev.vercel.app/
 This portfolio is built using modern web technologies:
 
 - React.js (Frontend Library)
+- TaildwindCSS
+- TypeScript
+- JavaScript
 - SASS / SCSS (Advanced Styling)
 - AOS (Animate On Scroll Library)
 - EmailJS (Contact Form Service)
@@ -66,4 +69,5 @@ To run this project locally:
 - Mail:  lakshansandeepa0305@gmail.com
 
 ---
+
 Designed & Built by ❤️ Lakshan
