@@ -271,38 +271,3 @@
     left: 150%;
   }
 }
-
-// bento
-// .bento-container {
-//   .bento-card {
-//     position: relative;
-//     background-color: #0a0a0a; // තද කළු/අළු කාඩ් පසුබිම
-//     border: 1px solid #1a1a1a; // ඉතාම සිහින් බෝඩරය
-//     // padding: 2.5rem;
-//     // border-radius: 1.5rem;
-//     overflow: hidden;
-//     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-
-//     // 💡 මෙන්න Hover වෙද්දී පත්තු වෙන Neon Border එක
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       inset: 0;
-//       border: 2px solid transparent;
-//       border-radius: 1.5rem;
-//       transition: all 0.4s ease;
-//       pointer-events: none;
-//     }
-
-//     &:hover {
-//       transform: translateY(-4px);
-
-//       &::after {
-//         border-color: #00ff88; // 💡 ඔබේ Highlight වර්ණය
-//         box-shadow:
-//           0 0 20px rgba(0, 255, 136, 0.15),
-//           inset 0 0 10px rgba(0, 255, 136, 0.1);
-//       }
-//     }
-//   }
-// }

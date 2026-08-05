@@ -48,7 +48,6 @@ const Home = () => {
             </a>
 
             <a
-              // href="Lakshan_Sandeepa_CV.pdf"
               // download="Lakshan_Sandeepa_CV.pdf"
               href="https://lakshan-sandeepa-cv.vercel.app/"
               rel="noreferrer"

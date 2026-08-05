@@ -110,9 +110,9 @@ const Skills = () => {
     { name: "Vercel", icon: <SiVercel />, color: "#181717" },
     { name: "Netlify", icon: <SiNetlify />, color: "#00c7b7" },
     { name: "VS Code", icon: <BiLogoVisualStudio />, color: "#007acc" },
-    // { name: "Postman", icon: <SiPostman />, color: "#ff6c37" },
     { name: "Claude", icon: <SiOpenai />, color: "#10a37f" },
     { name: "Cursor AI", icon: <BiCodeAlt />, color: "#38bdf8" },
+    // { name: "Postman", icon: <SiPostman />, color: "#ff6c37" },
   ];
   const doubleList = [...toolsAndServices, ...toolsAndServices];
 
