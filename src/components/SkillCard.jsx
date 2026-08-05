@@ -55,10 +55,22 @@ const Skills = () => {
       icon: <FaReact />,
     },
     {
+      name: "TypeScript",
+      level: "Basic",
+      date: "July 22, 2026",
+      icon: <SiTypescript />,
+    },
+    {
       name: "JavaScript",
       level: "Intermediate",
       date: "February 03, 2026",
       icon: <FaSquareJs />,
+    },
+    {
+      name: "Tailwind CSS",
+      level: "Basic",
+      date: "July 15, 2026",
+      icon: <SiTailwindcss />,
     },
     {
       name: "SASS / SCSS",
@@ -78,24 +90,13 @@ const Skills = () => {
       date: "January 02, 2026",
       icon: <SiHtml5 />,
     },
-    {
-      name: "Tailwind CSS",
-      level: "Basic",
-      date: "July 15, 2026",
-      icon: <SiTailwindcss />,
-    },
-    {
-      name: "TypeScript",
-      level: "Basic",
-      date: "July 22, 2026",
-      icon: <SiTypescript />,
-    },
-    {
-      name: "Next.js",
-      level: "Basic",
-      date: "July 15, 2026",
-      icon: <SiNextdotjs />,
-    },
+
+    // {
+    //   name: "Next.js",
+    //   level: "Basic",
+    //   date: "July 28, 2026",
+    //   icon: <SiNextdotjs />,
+    // },
   ];
 
   const toolsAndServices = [
@@ -109,7 +110,7 @@ const Skills = () => {
     { name: "Vercel", icon: <SiVercel />, color: "#181717" },
     { name: "Netlify", icon: <SiNetlify />, color: "#00c7b7" },
     { name: "VS Code", icon: <BiLogoVisualStudio />, color: "#007acc" },
-    { name: "Postman", icon: <SiPostman />, color: "#ff6c37" },
+    // { name: "Postman", icon: <SiPostman />, color: "#ff6c37" },
     { name: "Claude", icon: <SiOpenai />, color: "#10a37f" },
     { name: "Cursor AI", icon: <BiCodeAlt />, color: "#38bdf8" },
   ];

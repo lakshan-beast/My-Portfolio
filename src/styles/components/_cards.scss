@@ -8,13 +8,14 @@
   display: flex;
 
   &:hover {
-    border-color: $primary-color;
+    border-color: rgba($primary-color, 0.3);
     transform: translateY(-10px);
   }
 
   .project-content {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 
   img {

@@ -4,7 +4,7 @@ import { FaLaptop, FaCodeBranch, FaLinkedin } from "react-icons/fa";
 
 import Zestara from "../assets/Zestara.webp";
 import Info_Lanka from "../assets/Info.Lanka.webp";
-import Educa from "../assets/educa.png";
+import Educa from "../assets/educa.webp";
 import Dream_Tracker from "../assets/Dream-Tracker.webp";
 import Unseen_Tapro from "../assets/Unseen-Tapro.webp";
 
@@ -30,7 +30,7 @@ const Projects = () => {
       description:
         "A travel exploration platform dedicated to uncovering and showcasing the hidden gems and offbeat destinations of Sri Lanka through an interactive, responsive web experience.",
       tags: ["React.js", "Tailwind CSS", "TypeScript"],
-      link: "https://unseen-tapro.vercel.app/",
+      link: "https://unseentapro.vercel.app/",
       // github:
       //   "https://github.com/lakshan-beast/Educa-Advance-Learning-Platform",
       linkedin: "",
@@ -51,7 +51,7 @@ const Projects = () => {
     // Dream Track | Academic Productivity Dashboard
     {
       image: Dream_Tracker,
-      title: "Dream Track | Academic Performance Tracker",
+      title: "Dream Track | Study Tracker",
       description:
         "A premium academic management system built for students to track study progress through gamified focus timers, interactive past paper analytics using Recharts, and automated study scheduling with Firebase integration.",
       tags: ["React.js", "Firebase", "Recharts", "SASS"],
@@ -125,7 +125,6 @@ const Projects = () => {
 
                   <a
                     href={project.linkedin}
-                    // className="reviews-link"
                     className="btn-github"
                     target="_blank"
                     data-aos="fade-left">
