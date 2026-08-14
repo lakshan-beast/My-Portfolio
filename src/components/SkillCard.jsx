@@ -51,13 +51,13 @@ const Skills = () => {
     {
       name: "React",
       level: "Intermediate",
-      date: "March 20, 2026",
+      date: "April 10, 2026",
       icon: <FaReact />,
     },
     {
       name: "TypeScript",
       level: "Basic",
-      date: "July 22, 2026",
+      date: "July 28, 2026",
       icon: <SiTypescript />,
     },
     {
@@ -69,7 +69,7 @@ const Skills = () => {
     {
       name: "Tailwind CSS",
       level: "Basic",
-      date: "July 15, 2026",
+      date: "July 25, 2026",
       icon: <SiTailwindcss />,
     },
     {
