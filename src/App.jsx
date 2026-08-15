@@ -30,8 +30,7 @@ function App() {
       <About />
       <Experience />
       <ProjectsCard />
-      <SkillCard />
-      
+      <SkillCard />      
       <Contact />
       <Footer />
     </>
