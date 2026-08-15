@@ -1,115 +1,200 @@
-// navbar styles
-.navbar {
+.editorial-navbar {
   position: sticky;
-  top: 0.5rem;
-  margin: 0 0.5rem;
-  padding: 10px 0;
-  width: calc(100% - 1rem);
-  background: rgba($text-main, 0.8);
-  border-radius: 1rem;
-  border-bottom: 1px solid rgba($primary-color, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  background-color: rgba($bg-color, 0.85);
+  border-bottom: 1px solid rgba($text-secondary, 0.15);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  border-radius: 0 0 1rem 1rem;
 
-  @include respond(desktop) {
-    top: 0;
-    margin: 0;
-    border-radius: 0 0 1rem 1rem;
-  }
-
-  &__container {
+  .nav-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    @include flex-custom(row, space-between, center, 0, nowrap);
+    @include respond(desktop) {
+      padding: 0 5%;
+      height: 85px;
+    }
   }
 
-  // brand name styles
-  &__logo {
-    color: $bg-color;
-    font-size: 1.3rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-shadow: 0px 0px 6px $text-secondary;
-    transition: 0.3s ease;
+  // Display Helper Classes
+  .desktop-only {
+    display: none !important;
+
+    @include respond(desktop) {
+      display: flex !important;
+    }
+  }
+
+  .mobile-only {
+    display: flex !important;
+
+    @include respond(desktop) {
+      display: none !important;
+    }
+  }
+
+  // Brand Logo Styles
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Titillium Web";
+
+    .logo-text {
+      color: $text-main;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .logo-dot {
+      color: $primary-color;
+      font-size: 1.4rem;
+      font-weight: 900;
+      transition: transform 0.3s ease;
+      margin-top: 0.5rem;
+    }
 
     &:hover {
-      color: $text-secondary;
-    }
-
-    span {
-      margin-left: 3px;
-      color: $primary-color;
-      font-size: 2rem;
+      .logo-text {
+        color: rgba($text-main, 0.8);
+      }
+      .logo-dot {
+        transform: scale(1.25);
+      }
     }
   }
 
-  // nav links styles
-  // mobile style
+  // Desktop Navigation Links
   .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 40px 0;
-    box-sizing: border-box;
     list-style: none;
-    background: $card-bg;
-    border-radius: 0px 0px 1rem 1rem;
-    text-align: center;
-    flex-direction: column;
-    display: none;
+    align-items: center;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
 
-    &.active {
-      display: flex;
+    li a {
+      color: $text-secondary;
+      text-decoration: none;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $text-main;
+      }
     }
+  }
 
-    li {
-      margin: 6px 0;
+  // Availability Status Badge
+  .status-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background-color: rgba($text-secondary, 0.08);
+    border: 1px solid rgba($text-secondary, 0.15);
+    border-radius: 50px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: $text-main;
 
-      a {
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $primary-color;
+      box-shadow: 0 0 8px $primary-color;
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+  }
+
+  // Mobile Menu Toggle Button
+  .menu-toggle-btn {
+    background: transparent;
+    border: none;
+    color: $text-main;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  // Mobile Dropdown Menu Overlay
+  .mobile-menu {
+    width: 100%;
+    background-color: rgba($bg-color, 0.95);
+    border-bottom: 1px solid rgba($text-secondary, 0.15);
+    padding: 24px 20px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+
+    .mobile-nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+
+      li a {
         display: block;
+        padding: 10px;
         color: $text-secondary;
-        font-weight: 500;
-        font-size: 1.3rem;
-        border-radius: 3px;
-        transition: 0.3s ease;
-        box-sizing: border-box;
+        text-decoration: none;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
 
         &:hover {
-          color: $primary-color;
-          background-color: rgba($text-main, 0.3);
-          transform: translate(-3px);
-          @include respond(desktop) {
-            background-color: transparent;
-          }
+          color: $text-main;
+          background-color: rgba($text-secondary, 0.1);
         }
       }
     }
 
-    // desktop styles
-    @include respond(desktop) {
-      position: static;
-      padding: 0;
-      width: auto;
-      background: transparent;
+    .mobile-status-container {
       display: flex;
-      flex-direction: row;
-      gap: 30px;
+      justify-content: center;
+      padding-top: 12px;
+      border-top: 1px solid rgba($text-secondary, 0.1);
     }
   }
+}
 
-  // menu icon styles
-  .menu-icon {
-    display: block;
-    font-size: 2.3rem;
-    color: $text-secondary;
-    cursor: pointer;
-
-    @include respond(desktop) {
-      display: none;
-    }
+// Glowing Pulse Animation for Status Dot
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
   }
 }

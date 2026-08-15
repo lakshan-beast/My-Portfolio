@@ -1,56 +1,347 @@
-.footer {
-  padding: 20px;
+// .footer {
+//   padding: 20px;
+//   background-color: $bg-color;
+//   border-top: 1px solid rgba($text-secondary, 0.2);
+
+//   .footer-container {
+//     max-width: 1400px;
+//     margin: 0 auto;
+//   }
+
+//   .footer-content {
+//     @include flex-custom(column, center, center, 20px, nowrap);
+//     text-align: center;
+
+//     @include respond(desktop) {
+//       @include flex-custom(row, space-between, center, 0px, nowrap);
+//     }
+
+//     // brand name styles
+//     .footer-logo {
+//       color: $text-main;
+//       font-size: 1.3rem;
+//       letter-spacing: 2px;
+//       text-shadow: 0px 0px 6px $text-secondary;
+//       transition: 0.3s ease;
+
+//       p {
+//         position: relative;
+//         top: -1.8rem;
+//         border-top: 1px solid $text-secondary;
+//         text-shadow: none;
+//       }
+//     }
+
+//     // footer socail links styles
+//     .footer-links {
+//       display: flex;
+//       gap: 20px;
+//     }
+
+//     // copyright paragraph styles
+//     p {
+//       color: $text-secondary;
+//       font-size: 0.9rem;
+
+//       a {
+//         margin-left: 6px;
+//         color: $text-main;
+//         font-weight: 500;
+
+//         &:hover {
+//           color: $text-secondary;
+//           text-decoration: underline;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.editorial-footer {
+  width: 100%;
+  padding: 80px 20px 40px;
   background-color: $bg-color;
-  border-top: 1px solid rgba($text-secondary, 0.2);
+  border-top: 1px solid rgba($text-secondary, 0.15);
+  color: $text-main;
+
+  @include respond(desktop) {
+    padding: 100px 5% 50px;
+  }
 
   .footer-container {
     max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 70vh;
   }
 
-  .footer-content {
-    @include flex-custom(column, center, center, 20px, nowrap);
-    text-align: center;
+  // 1. Header Bar Styles
+  .footer-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba($text-secondary, 0.15);
 
-    @include respond(desktop) {
-      @include flex-custom(row, space-between, center, 0px, nowrap);
-    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
 
-    // brand name styles
-    .footer-logo {
-      color: $text-main;
-      font-size: 1.3rem;
-      letter-spacing: 2px;
-      text-shadow: 0px 0px 6px $text-secondary;
-      transition: 0.3s ease;
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $text-main;
+        font-family: "Titillium Web";
 
-      p {
-        position: relative;
-        top: -1.8rem;
-        border-top: 1px solid $text-secondary;
-        text-shadow: none;
+        .dot {
+          color: $primary-color;
+        }
+      }
+
+      .role-tag {
+        font-size: 0.75rem;
+        // font-family: monospace;
+        color: rgba($text-secondary, 0.6);
+        letter-spacing: 1px;
+        display: none;
+
+        @include respond(desktop) {
+          display: inline-block;
+        }
       }
     }
 
-    // footer socail links styles
-    .footer-links {
+    .back-to-top-btn {
       display: flex;
-      gap: 20px;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: $text-secondary;
+      font-size: 0.75rem;
+      // font-family: monospace;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $text-main;
+
+        .icon-wrapper {
+          background-color: rgba($text-main, 0.15);
+          transform: translateY(-2px);
+        }
+      }
+
+      .btn-text {
+        display: none;
+
+        @include respond(desktop) {
+          display: inline;
+        }
+      }
+
+      .icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        border-radius: 50%;
+        background-color: rgba($text-secondary, 0.1);
+        border: 1px solid rgba($text-secondary, 0.2);
+        transition: all 0.3s ease;
+
+        svg {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  // 2. Main Massive Headline Section
+  .footer-main-hero {
+    margin: 60px 0;
+
+    .editorial-headline {
+      font-size: 3.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 0.92;
+      letter-spacing: -1.5px;
+      color: $text-main;
+
+      @include respond(desktop) {
+        font-size: 5.5rem;
+      }
+
+      .muted-text {
+        color: rgba($text-secondary, 0.4);
+      }
     }
 
-    // copyright paragraph styles
-    p {
-      color: $text-secondary;
-      font-size: 0.9rem;
+    .contact-meta-grid {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 50px;
 
-      a {
-        margin-left: 6px;
-        color: $text-main;
-        font-weight: 500;
+      @include respond(desktop) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .meta-item {
+        .meta-label {
+          font-size: 0.65rem;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          color: rgba($text-secondary, 0.5);
+          margin-bottom: 6px;
+        }
+
+        .meta-value {
+          font-size: 0.9rem;
+          color: $text-main;
+          margin: 0;
+
+          &.email-link {
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+
+        .status-badge {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 6px;
+          font-size: 0.75rem;
+          // font-family: monospace;
+          color: $primary-color;
+
+          .pulse-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $primary-color;
+            box-shadow: 0 0 10px $primary-color;
+          }
+        }
+      }
+
+      .get-in-touch-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 28px;
+        background-color: $text-main;
+        color: $bg-color;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba($text-main, 0.1);
 
         &:hover {
-          color: $text-secondary;
+          background-color: $primary-color;
+          color: $text-main;
+          box-shadow: 0 0 25px rgba($primary-color, 0.4);
+          transform: translateY(-2px);
+
+          .cta-icon {
+            transform: translate(2px, -2px);
+          }
+        }
+
+        .cta-icon {
+          font-size: 0.9rem;
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+  }
+
+  // 3. Bottom Bar & Action Links
+  .footer-bottom-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba($text-secondary, 0.15);
+
+    @include respond(desktop) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-social-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8rem;
+        // font-family: monospace;
+        color: $text-secondary;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $text-main;
+          border-bottom: 1px solid rgba($text-main, 0.5);
+        }
+
+        svg {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .footer-action-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+
+      @include respond(desktop) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: auto;
+      }
+
+      .copyright-text {
+        font-size: 0.75rem;
+        // font-family: monospace;
+        color: rgba($text-secondary, 0.6);
+        margin: 0;
+
+        a {
+          color: $text-main;
           text-decoration: underline;
+          padding-left: 0.5rem;
+
+          &:hover {
+            color: $primary-color;
+          }
         }
       }
     }
