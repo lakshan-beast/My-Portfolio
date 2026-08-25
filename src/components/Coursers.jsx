@@ -30,7 +30,7 @@ const coursesData = [
     color: "from-blue-600 to-indigo-500",
   },
   {
-    title: "LearnEnglish Workplace Proficiency",
+    title: "Learn English Workplace Proficiency",
     institute: "British Council",
     status: "In Progress",
     skills: [

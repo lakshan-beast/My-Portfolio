@@ -143,10 +143,11 @@ export default function Footer() {
             <a href="mailto:lakshansandeepa0305@gmail.com">
               <FiMail /> | <span>Email</span>
             </a>
+            <a href=""></a>
           </div>
 
           <div className="footer-action-group">
-            <p className="copyright-text">
+            {/* <p className="copyright-text">
               <FaRegCopyright /> Copyrights {currentYear} | Designed & Built by
               <a
                 href="https://github.com/lakshan-beast"
@@ -154,6 +155,10 @@ export default function Footer() {
                 rel="noreferrer">
                 Lakshan
               </a>
+            </p> */}
+            <p className="copyright-text">
+              Copyright <FaRegCopyright /> {currentYear}
+              <span> SyncXel Web Solutions.</span> All rights reserved.
             </p>
           </div>
         </div>
