@@ -1,306 +1,306 @@
-import React from "react";
+// import React from "react";
 
-// import Courses from "./Coursers";
+// // import Courses from "./Coursers";
 
-import { TbMailFast } from "react-icons/tb";
-import { IoLogoCss3 } from "react-icons/io5";
-import { FaSquareJs } from "react-icons/fa6";
-import { BiCodeAlt, BiLogoVisualStudio } from "react-icons/bi";
-import { FaChrome, FaNpm, FaReact, FaGitAlt, FaFigma } from "react-icons/fa";
-import {
-  SiTailwindcss,
-  SiTypescript,
-  SiFirebase,
-  SiReactrouter,
-  SiNetlify,
-  SiOpenai,
-  SiNextdotjs,
-  SiGithub,
-  SiHtml5,
-  SiSass,
-  SiVercel,
-  SiPostman,
-} from "react-icons/si";
+// import { TbMailFast } from "react-icons/tb";
+// import { IoLogoCss3 } from "react-icons/io5";
+// import { FaSquareJs } from "react-icons/fa6";
+// import { BiCodeAlt, BiLogoVisualStudio } from "react-icons/bi";
+// import { FaChrome, FaNpm, FaReact, FaGitAlt, FaFigma } from "react-icons/fa";
+// import {
+//   SiTailwindcss,
+//   SiTypescript,
+//   SiFirebase,
+//   SiReactrouter,
+//   SiNetlify,
+//   SiOpenai,
+//   SiNextdotjs,
+//   SiGithub,
+//   SiHtml5,
+//   SiSass,
+//   SiVercel,
+//   SiPostman,
+// } from "react-icons/si";
 
-//skills array
-const Skills = () => {
-  const calculateExperience = (startDate) => {
-    const start = new Date(startDate);
-    const now = new Date();
+// //skills array
+// const Skills = () => {
+//   const calculateExperience = (startDate) => {
+//     const start = new Date(startDate);
+//     const now = new Date();
 
-    if (start > now) {
-      return "Just Started";
-    }
+//     if (start > now) {
+//       return "Just Started";
+//     }
 
-    let years = now.getFullYear() - start.getFullYear();
-    let months = now.getMonth() - start.getMonth();
+//     let years = now.getFullYear() - start.getFullYear();
+//     let months = now.getMonth() - start.getMonth();
 
-    if (months < 0) {
-      years--;
-      months += 12;
-    }
+//     if (months < 0) {
+//       years--;
+//       months += 12;
+//     }
 
-    if (years > 0) {
-      return `${years} Years & ${months} Months Experience`;
-    } else {
-      return months <= 0 ? "Started Recently" : `${months} Months Experience`;
-    }
-  };
+//     if (years > 0) {
+//       return `${years} Years & ${months} Months Experience`;
+//     } else {
+//       return months <= 0 ? "Started Recently" : `${months} Months Experience`;
+//     }
+//   };
 
-  const skillList = [
-    {
-      name: "React",
-      level: "Intermediate",
-      date: "April 10, 2026",
-      icon: <FaReact />,
-    },
-    {
-      name: "TypeScript",
-      level: "Basic",
-      date: "July 28, 2026",
-      icon: <SiTypescript />,
-    },
-    {
-      name: "JavaScript",
-      level: "Intermediate",
-      date: "February 03, 2026",
-      icon: <FaSquareJs />,
-    },
-    {
-      name: "Tailwind CSS",
-      level: "Basic",
-      date: "July 25, 2026",
-      icon: <SiTailwindcss />,
-    },
-    {
-      name: "SASS / SCSS",
-      level: "Intermediate",
-      date: "March 10, 2026",
-      icon: <SiSass />,
-    },
-    {
-      name: "CSS3",
-      level: "Advanced",
-      date: "January 02, 2026",
-      icon: <IoLogoCss3 />,
-    },
-    {
-      name: "HTML5",
-      level: "Advanced",
-      date: "January 02, 2026",
-      icon: <SiHtml5 />,
-    },
+//   const skillList = [
+//     {
+//       name: "React",
+//       level: "Intermediate",
+//       date: "April 10, 2026",
+//       icon: <FaReact />,
+//     },
+//     {
+//       name: "TypeScript",
+//       level: "Basic",
+//       date: "July 28, 2026",
+//       icon: <SiTypescript />,
+//     },
+//     {
+//       name: "JavaScript",
+//       level: "Intermediate",
+//       date: "February 03, 2026",
+//       icon: <FaSquareJs />,
+//     },
+//     {
+//       name: "Tailwind CSS",
+//       level: "Basic",
+//       date: "July 25, 2026",
+//       icon: <SiTailwindcss />,
+//     },
+//     {
+//       name: "SASS / SCSS",
+//       level: "Intermediate",
+//       date: "March 10, 2026",
+//       icon: <SiSass />,
+//     },
+//     {
+//       name: "CSS3",
+//       level: "Advanced",
+//       date: "January 02, 2026",
+//       icon: <IoLogoCss3 />,
+//     },
+//     {
+//       name: "HTML5",
+//       level: "Advanced",
+//       date: "January 02, 2026",
+//       icon: <SiHtml5 />,
+//     },
 
-    // {
-    //   name: "Next.js",
-    //   level: "Basic",
-    //   date: "July 28, 2026",
-    //   icon: <SiNextdotjs />,
-    // },
-  ];
+//     // {
+//     //   name: "Next.js",
+//     //   level: "Basic",
+//     //   date: "July 28, 2026",
+//     //   icon: <SiNextdotjs />,
+//     // },
+//   ];
 
-  const toolsAndServices = [
-    { name: "Firebase", icon: <SiFirebase />, color: "#f5740b" },
-    { name: "EmailJS", icon: <TbMailFast />, color: "#f44336" },
-    { name: "React Router", icon: <SiReactrouter />, color: "#ca4245" },
-    { name: "Git & GitHub", icon: <FaGitAlt />, color: "#303030" },
-    { name: "NPM", icon: <FaNpm />, color: "#cb3837" },
-    { name: "Figma", icon: <FaFigma />, color: "#f24e1e" },
-    { name: "Dev Tools", icon: <FaChrome />, color: "#428537" },
-    { name: "Vercel", icon: <SiVercel />, color: "#181717" },
-    { name: "Netlify", icon: <SiNetlify />, color: "#00c7b7" },
-    { name: "VS Code", icon: <BiLogoVisualStudio />, color: "#007acc" },
-    { name: "Claude", icon: <SiOpenai />, color: "#10a37f" },
-    { name: "Cursor AI", icon: <BiCodeAlt />, color: "#38bdf8" },
-    // { name: "Postman", icon: <SiPostman />, color: "#ff6c37" },
-  ];
-  const doubleList = [...toolsAndServices, ...toolsAndServices];
+//   const toolsAndServices = [
+//     { name: "Firebase", icon: <SiFirebase />, color: "#f5740b" },
+//     { name: "EmailJS", icon: <TbMailFast />, color: "#f44336" },
+//     { name: "React Router", icon: <SiReactrouter />, color: "#ca4245" },
+//     { name: "Git & GitHub", icon: <FaGitAlt />, color: "#303030" },
+//     { name: "NPM", icon: <FaNpm />, color: "#cb3837" },
+//     { name: "Figma", icon: <FaFigma />, color: "#f24e1e" },
+//     { name: "Dev Tools", icon: <FaChrome />, color: "#428537" },
+//     { name: "Vercel", icon: <SiVercel />, color: "#181717" },
+//     { name: "Netlify", icon: <SiNetlify />, color: "#00c7b7" },
+//     { name: "VS Code", icon: <BiLogoVisualStudio />, color: "#007acc" },
+//     { name: "Claude", icon: <SiOpenai />, color: "#10a37f" },
+//     { name: "Cursor AI", icon: <BiCodeAlt />, color: "#38bdf8" },
+//     // { name: "Postman", icon: <SiPostman />, color: "#ff6c37" },
+//   ];
+//   const doubleList = [...toolsAndServices, ...toolsAndServices];
 
-  const coursesData = [
-    {
-      title: "Junior Cybersecurity Analyst",
-      institute: "Cisco Networking Academy",
-      status: "In Progress",
-      skills: [
-        "Web Application Security",
-        "Network Security",
-        "Packet Routing",
-      ],
-      color: "from-cyan-500 to-blue-500",
-    },
-    {
-      title: "Artificial Intelligence Foundations",
-      institute: "OpenAI Academy",
-      status: "In Progress",
-      skills: [
-        "Artificial Intelligence (AI)",
-        "Prompt Engineering",
-        "LLM Logic",
-      ],
-      color: "from-emerald-500 to-green-500",
-    },
-    {
-      title: "Cybersecurity Fundamentals",
-      institute: "IBM SkillsBuild",
-      status: "In Progress",
-      skills: ["Data Privacy", "Information Security", "Compliance Arrays"],
-      color: "from-red-500 to-pink-500",
-    },
-    {
-      title: "Azure Fundamentals (AZ-900)",
-      institute: "Microsoft Certified",
-      status: "In Progress",
-      skills: ["Cloud Computing", "Cloud Architecture", "Azure Services"],
-      color: "from-blue-600 to-indigo-500",
-    },
-    {
-      title: "LearnEnglish Workplace Proficiency",
-      institute: "British Council",
-      status: "In Progress",
-      skills: [
-        "Professional Communication",
-        "Technical Writing",
-        "Remote Collaboration",
-      ],
-      color: "from-purple-500 to-violet-500",
-    },
-  ];
+//   const coursesData = [
+//     {
+//       title: "Junior Cybersecurity Analyst",
+//       institute: "Cisco Networking Academy",
+//       status: "In Progress",
+//       skills: [
+//         "Web Application Security",
+//         "Network Security",
+//         "Packet Routing",
+//       ],
+//       color: "from-cyan-500 to-blue-500",
+//     },
+//     {
+//       title: "Artificial Intelligence Foundations",
+//       institute: "OpenAI Academy",
+//       status: "In Progress",
+//       skills: [
+//         "Artificial Intelligence (AI)",
+//         "Prompt Engineering",
+//         "LLM Logic",
+//       ],
+//       color: "from-emerald-500 to-green-500",
+//     },
+//     {
+//       title: "Cybersecurity Fundamentals",
+//       institute: "IBM SkillsBuild",
+//       status: "In Progress",
+//       skills: ["Data Privacy", "Information Security", "Compliance Arrays"],
+//       color: "from-red-500 to-pink-500",
+//     },
+//     {
+//       title: "Azure Fundamentals (AZ-900)",
+//       institute: "Microsoft Certified",
+//       status: "In Progress",
+//       skills: ["Cloud Computing", "Cloud Architecture", "Azure Services"],
+//       color: "from-blue-600 to-indigo-500",
+//     },
+//     {
+//       title: "LearnEnglish Workplace Proficiency",
+//       institute: "British Council",
+//       status: "In Progress",
+//       skills: [
+//         "Professional Communication",
+//         "Technical Writing",
+//         "Remote Collaboration",
+//       ],
+//       color: "from-purple-500 to-violet-500",
+//     },
+//   ];
 
-  return (
-    <section className="skills" id="skills" data-aos-offset="0">
-      <div className="skills-container" data-aos="fade-up">
-        <h2 className="section-title" data-aos="fade-right">
-          Technical Toolbox
-        </h2>
-        <h2 className="parts-heading">Languages & Frameworks</h2>
-        <div className="skills-grid">
-          {skillList.map((skill, index) => (
-            <div className="skill-card shimmer" key={index} data-aos="fade-up">
-              <span className="skill-icon">{skill.icon}</span>
-              <h3 data-aos="fade-down">{skill.name}</h3>
-              <span className="exp-tag">{calculateExperience(skill.date)}</span>
-              <p data-aos="fade-right">{skill.level} </p>
+//   return (
+//     <section className="skills" id="skills" data-aos-offset="0">
+//       <div className="skills-container" data-aos="fade-up">
+//         <h2 className="section-title" data-aos="fade-right">
+//           Technical Toolbox
+//         </h2>
+//         <h2 className="parts-heading">Languages & Frameworks</h2>
+//         <div className="skills-grid">
+//           {skillList.map((skill, index) => (
+//             <div className="skill-card shimmer" key={index} data-aos="fade-up">
+//               <span className="skill-icon">{skill.icon}</span>
+//               <h3 data-aos="fade-down">{skill.name}</h3>
+//               <span className="exp-tag">{calculateExperience(skill.date)}</span>
+//               <p data-aos="fade-right">{skill.level} </p>
 
-              <div className="progress-bar">
-                <div
-                  data-aos="fade-right"
-                  className={`progress ${skill.level.toLowerCase()}`}></div>
-              </div>
-            </div>
-          ))}
-        </div>
-        {/* other skills  */}
-        <h2 className="parts-heading">Software, Services & Platforms</h2>
-        <div className="marquee-wrapper">
-          <div className="marquee-track">
-            {doubleList.map((item, index) => (
-              <div key={index} className="marquee-item">
-                <span style={{ color: item.color, fontSize: "1.5rem" }}>
-                  {item.icon}
-                </span>
-                <span>{item.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Github COntributation  */}
-        {/* <h2 className="parts-heading">My GitHub Activity</h2>
-        <div className="github-stats-container" data-aos="fade-up">
-          <div className="stats-grid">
-            <img src="https://streak-stats.demolab.com?user=lakshan-beast&theme=radical&hide_border=true&border_radius=6.5&date_format=j%20M%5B%20Y%5D&exclude_days=Sun%2CMon%2CTue%2CWed%2CThu%2CFri%2CSat&theme=tokyonight&hide_border=true" />
+//               <div className="progress-bar">
+//                 <div
+//                   data-aos="fade-right"
+//                   className={`progress ${skill.level.toLowerCase()}`}></div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//         {/* other skills  */}
+//         <h2 className="parts-heading">Software, Services & Platforms</h2>
+//         <div className="marquee-wrapper">
+//           <div className="marquee-track">
+//             {doubleList.map((item, index) => (
+//               <div key={index} className="marquee-item">
+//                 <span style={{ color: item.color, fontSize: "1.5rem" }}>
+//                   {item.icon}
+//                 </span>
+//                 <span>{item.name}</span>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//         {/* Github COntributation  */}
+//         {/* <h2 className="parts-heading">My GitHub Activity</h2>
+//         <div className="github-stats-container" data-aos="fade-up">
+//           <div className="stats-grid">
+//             <img src="https://streak-stats.demolab.com?user=lakshan-beast&theme=radical&hide_border=true&border_radius=6.5&date_format=j%20M%5B%20Y%5D&exclude_days=Sun%2CMon%2CTue%2CWed%2CThu%2CFri%2CSat&theme=tokyonight&hide_border=true" />
 
-            <img
-              src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=lakshan-beast&theme=github_dark"
-              alt="lakshan-beast's GitHub Stats"
-            />
-          </div>
-        </div> */}
-        {/* 
-        <div className="code-playground" data-aos="fade-up">
-          <div className="code-header">
-            <div className="code-dots">
-              <span className="dot red"></span>
-              <span className="dot yellow"></span>
-              <span className="dot green"></span>
-            </div>
-            <span className="code-title">useFetchCustomHook.js</span>
-          </div>
-          <div className="code-body">
-            <pre>
-              <code>
-                {`
-                  // A custom hook I designed for clean API integration
-                  import { useState, useEffect } from 'react';
+//             <img
+//               src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=lakshan-beast&theme=github_dark"
+//               alt="lakshan-beast's GitHub Stats"
+//             />
+//           </div>
+//         </div> */}
+//         {/*
+//         <div className="code-playground" data-aos="fade-up">
+//           <div className="code-header">
+//             <div className="code-dots">
+//               <span className="dot red"></span>
+//               <span className="dot yellow"></span>
+//               <span className="dot green"></span>
+//             </div>
+//             <span className="code-title">useFetchCustomHook.js</span>
+//           </div>
+//           <div className="code-body">
+//             <pre>
+//               <code>
+//                 {`
+//                   // A custom hook I designed for clean API integration
+//                   import { useState, useEffect } from 'react';
 
-                  export const useFetch = (url) => {
-                    const [data, setData] = useState(null);
-                    const [loading, setLoading] = useState(true);
+//                   export const useFetch = (url) => {
+//                     const [data, setData] = useState(null);
+//                     const [loading, setLoading] = useState(true);
 
-                    useEffect(() => {
-                      fetch(url)
-                        .then(res => res.json())
-                        .then(data => {
-                          setData(data);
-                          setLoading(false);
-                        });
-                    }, [url]);
+//                     useEffect(() => {
+//                       fetch(url)
+//                         .then(res => res.json())
+//                         .then(data => {
+//                           setData(data);
+//                           setLoading(false);
+//                         });
+//                     }, [url]);
 
-                    return { data, loading };
-                  };`}
-              </code>
-            </pre>
-          </div>
-        </div> */}
-      </div>
+//                     return { data, loading };
+//                   };`}
+//               </code>
+//             </pre>
+//           </div>
+//         </div> */}
+//       </div>
 
-      <div className="courses-continer">
-        <h2 className="parts-heading">
-          Continuous Professional Specializations
-        </h2>
-        {/* <p className="parts">
-          To evolve as a robust T-Shaped Engineer, I am continuously scaling my
-          core knowledge across AI engines, cloud ecosystems, and infrastructure
-          security.
-        </p> */}
+//       <div className="courses-continer">
+//         <h2 className="parts-heading">
+//           Continuous Professional Specializations
+//         </h2>
+//         {/* <p className="parts">
+//           To evolve as a robust T-Shaped Engineer, I am continuously scaling my
+//           core knowledge across AI engines, cloud ecosystems, and infrastructure
+//           security.
+//         </p> */}
 
-        {/* Courses Grid */}
-        <div className="courses-grid">
-          {coursesData.map((course, index) => (
-            <div key={index} className="course-card shimmer">
-              <div className="course-card__main">
-                <div className="course-card__meta">
-                  <h3 className="course-card__institute">{course.institute}</h3>
-                  <span className="course-card__status">{course.status}</span>
-                </div>
+//         {/* Courses Grid */}
+//         <div className="courses-grid">
+//           {coursesData.map((course, index) => (
+//             <div key={index} className="course-card shimmer">
+//               <div className="course-card__main">
+//                 <div className="course-card__meta">
+//                   <h3 className="course-card__institute">{course.institute}</h3>
+//                   <span className="course-card__status">{course.status}</span>
+//                 </div>
 
-                {/* Course Title */}
-                <h3 className="course-card__title">{course.title}</h3>
-              </div>
+//                 {/* Course Title */}
+//                 <h3 className="course-card__title">{course.title}</h3>
+//               </div>
 
-              {/* Skills Tags */}
-              <div className="course-card__footer">
-                <div className="course-card__tags">
-                  {course.skills.map((skill, sIndex) => (
-                    <span key={sIndex} className="course-card__tag">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+//               {/* Skills Tags */}
+//               <div className="course-card__footer">
+//                 <div className="course-card__tags">
+//                   {course.skills.map((skill, sIndex) => (
+//                     <span key={sIndex} className="course-card__tag">
+//                       {skill}
+//                     </span>
+//                   ))}
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
 
-        <p className="courses-section__footnote">
-          *Also expanding knowledge through non-certified architectural
-          deep-dives via Google Digital Garage.
-        </p>
-      </div>
-    </section>
-  );
-};
+//         <p className="courses-section__footnote">
+//           *Also expanding knowledge through non-certified architectural
+//           deep-dives via Google Digital Garage.
+//         </p>
+//       </div>
+//     </section>
+//   );
+// };
 
-export default Skills;
+// export default Skills;
 
 // import React from "react";
 // import { motion } from "framer-motion";
@@ -603,3 +603,253 @@ export default Skills;
 //     </section>
 //   );
 // }
+
+import { motion } from "framer-motion";
+import {
+  FaSquareJs,
+  FaChrome,
+  FaNpm,
+  FaReact,
+  FaGitAlt,
+  FaFigma,
+} from "react-icons/fa6";
+import {
+  SiTailwindcss,
+  SiTypescript,
+  SiFirebase,
+  SiReactrouter,
+  SiNetlify,
+  SiSupabase,
+  // SiGithub,
+  SiSass,
+  SiVercel,
+} from "react-icons/si";
+import { TbSparkles } from "react-icons/tb";
+import { BiLogoVisualStudio } from "react-icons/bi";
+
+import { TbMailFast } from "react-icons/tb";
+// import { IoLogoCss3 } from "react-icons/io";
+import { BsCursor } from "react-icons/bs";
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const coreStack = [
+  {
+    name: "React",
+    icon: <FaReact />,
+    context: "Component systems, state and interactive UIs",
+    proof: "Used across SyncXel & client work",
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript />,
+    context: "Type-safe components and scalable frontend logic",
+    proof: "Currently deepening",
+  },
+  {
+    name: "JavaScript",
+    icon: <FaSquareJs />,
+    context: "Core language for modern web applications",
+    proof: "Foundation of every project",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss />,
+    context: "Utility-first styling and responsive design systems",
+    proof: "Used in SyncXel UI Packs",
+  },
+  {
+    name: "SASS / SCSS",
+    icon: <SiSass />,
+    context: "Structured, maintainable styling workflows",
+    proof: "Used in earlier client work",
+  },
+  {
+    name: "Motion",
+    icon: <TbSparkles />,
+    context: "Scroll reveals, micro-interactions and transitions",
+    proof: "Used across portfolio & packs",
+  },
+];
+
+const aiStack = [
+  "Cursor",
+  "Claude",
+  "Prompt Engineering",
+  "AI-assisted debugging",
+];
+
+const tools = [
+  { name: "Firebase", icon: <SiFirebase /> },
+  { name: "Supabase", icon: <SiSupabase /> },
+  { name: "EmailJS", icon: <TbMailFast /> },
+  { name: "React Router", icon: <SiReactrouter /> },
+  { name: "Git & GitHub", icon: <FaGitAlt /> },
+  { name: "npm", icon: <FaNpm /> },
+  { name: "Figma", icon: <FaFigma /> },
+  { name: "Vercel", icon: <SiVercel /> },
+  { name: "Netlify", icon: <SiNetlify /> },
+  { name: "VS Code", icon: <BiLogoVisualStudio /> },
+  { name: "Chrome DevTools", icon: <FaChrome /> },
+  { name: "Cursor", icon: <BsCursor /> },
+];
+
+export default function SkillCard() {
+  return (
+    <section
+      id="skills"
+      className="relative bg-ink px-5 py-24 text-paper sm:px-10 lg:px-[5%] lg:py-32">
+      <div className="mx-auto max-w-[1400px]">
+        {/* Header */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}>
+          <motion.p
+            variants={item}
+            className="mb-4 text-sm tracking-[0.25em] text-muted uppercase">
+            Toolkit
+          </motion.p>
+
+          <motion.h2
+            variants={item}
+            className="font-display text-4xl font-extrabold sm:text-5xl lg:text-6xl">
+            The stack I build with
+            <span className="text-violet-brand">.</span>
+          </motion.h2>
+
+          <motion.p variants={item} className="mt-5 max-w-xl text-muted">
+            Technologies, services and AI tools I use to design, build and ship
+            modern web interfaces.
+          </motion.p>
+        </motion.div>
+
+        {/* Core Frontend */}
+        <motion.h3
+          variants={item}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-16 text-xs tracking-[0.25em] text-muted uppercase">
+          Core Frontend
+        </motion.h3>
+
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {coreStack.map((skill) => (
+            <motion.div
+              key={skill.name}
+              variants={item}
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-violet-brand/40">
+              {/* Watermark icon */}
+              <span className="pointer-events-none absolute right-1 bottom-1 text-[9rem] text-paper/4 transition duration-500 group-hover:text-violet-brand/20 group-hover:scale-105">
+                {skill.icon}
+              </span>
+
+              <div className="relative">
+                <h3 className="font-display text-2xl font-bold">
+                  {skill.name}
+                </h3>
+
+                <p className="mt-3 max-w-[80%] text-sm leading-relaxed text-muted">
+                  {skill.context}
+                </p>
+
+                <p className="mt-5 text-xs font-medium text-violet-soft opacity-0 transition duration-300 group-hover:opacity-100">
+                  {skill.proof}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* AI-Assisted Development */}
+        <motion.div
+          variants={item}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="mt-14 rounded-3xl border border-violet-brand/25 bg-gradient-to-br from-violet-brand/[0.10] via-white/[0.03] to-transparent p-8 backdrop-blur-md lg:p-10">
+          <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
+            <div className="max-w-2xl">
+              <span className="inline-flex items-center gap-2 rounded-full border border-violet-brand/30 bg-violet-brand/10 px-3.5 py-1.5 text-xs text-violet-soft">
+                <BsCursor />
+                AI-Assisted Development
+              </span>
+
+              <h3 className="mt-5 font-display text-2xl font-bold sm:text-3xl">
+                Building faster — without losing ownership
+              </h3>
+
+              <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+                I use AI tools to speed up scaffolding, debugging and
+                refactoring — while reviewing every output and owning the final
+                implementation.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              {aiStack.map((tool) => (
+                <span
+                  key={tool}
+                  className="rounded-full border border-violet-brand/25 bg-violet-brand/10 px-4 py-2 text-xs text-violet-soft">
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Services & Tools marquee */}
+        <motion.h3
+          variants={item}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-16 text-xs tracking-[0.25em] text-muted uppercase">
+          Services & Tools
+        </motion.h3>
+
+        <motion.div
+          variants={item}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="group/marquee relative mt-6 overflow-hidden">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-ink to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-ink to-transparent" />
+
+          <div className="flex w-max animate-marquee gap-4 group-hover/marquee:[animation-play-state:paused]">
+            {[...tools, ...tools].map((tool, index) => (
+              <div
+                key={`${tool.name}-${index}`}
+                className="flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm text-muted transition hover:border-violet-brand/50 hover:text-paper">
+                <span className="text-lg text-violet-soft">{tool.icon}</span>
+                {tool.name}
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
