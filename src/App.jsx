@@ -1,40 +1,27 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { MotionConfig } from "framer-motion";
 
-import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import ProjectsCard from "./components/ProjectsCard";
-import SkillCard from "./components/SkillCard";
-import Contact from "./components/Contact";
-
-
+import Hero from "./components/Hero";
+// import About from "./components/About";
+// import Experience from "./components/Experience";
+// import ProjectsCard from "./components/ProjectsCard";
+// import SkillCard from "./components/SkillCard";
+// import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-import Home from "./pages/Home";
-
-function App() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: "ease-in-out",
-    });
-  });
-
+export default function App() {
   return (
-    <>
-      <Navbar />
-      <Home />
-      <About />
-      <Experience />
-      <ProjectsCard />
-      <SkillCard />      
-      <Contact />
-      <Footer />
-    </>
+    <MotionConfig reducedMotion="user">
+      <main id="top" className="relative min-h-screen bg-ink text-paper">
+        <Hero />
+
+        {/* <About /> */}
+        {/* <Experience /> */}
+        {/* <ProjectsCard /> */}
+        {/* <SkillCard /> */}
+        {/* <Contact /> */}
+
+        <Footer />
+      </main>
+    </MotionConfig>
   );
 }
-
-export default App;
