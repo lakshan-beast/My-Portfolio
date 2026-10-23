@@ -1,8 +1,8 @@
 import { MotionConfig } from "framer-motion";
 
 import Hero from "./components/Hero";
-// import About from "./components/About";
-// import Experience from "./components/Experience";
+import About from "./components/About";
+import Experience from "./components/Experience";
 // import ProjectsCard from "./components/ProjectsCard";
 // import SkillCard from "./components/SkillCard";
 // import Contact from "./components/Contact";
@@ -14,8 +14,8 @@ export default function App() {
       <main id="top" className="relative min-h-screen bg-ink text-paper">
         <Hero />
 
-        {/* <About /> */}
-        {/* <Experience /> */}
+        <About />
+        <Experience />
         {/* <ProjectsCard /> */}
         {/* <SkillCard /> */}
         {/* <Contact /> */}
