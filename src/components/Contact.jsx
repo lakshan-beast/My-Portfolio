@@ -206,7 +206,9 @@ export default function Contact() {
         });
         e.target.reset();
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+
         setStatus({
           type: "error",
           message: (
@@ -353,19 +355,6 @@ export default function Contact() {
               className="hidden"
               aria-hidden="true"
             />
-
-            {/* {status && (
-              <motion.p
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                className={`mt-5 rounded-2xl border px-4 py-3 text-sm ${
-                  status.type === "success"
-                    ? "border-violet-brand/30 bg-violet-brand/10 text-violet-soft"
-                    : "border-red-500/30 bg-red-500/10 text-red-400"
-                }`}>
-                {status.message}
-              </motion.p>
-            )} */}
 
             {status && (
               <motion.p
