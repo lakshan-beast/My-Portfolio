@@ -1,27 +1,76 @@
-import { MotionConfig } from "framer-motion";
+// import { MotionConfig } from "framer-motion";
+
+// import Hero from "./components/Hero";
+// import About from "./components/About";
+// import Experience from "./components/Experience";
+// import Projects from "./components/Projects";
+// // import SkillCard from "./components/SkillCard";
+// // import Contact from "./components/Contact";
+// import Footer from "./components/Footer";
+
+// export default function App() {
+//   return (
+//     <MotionConfig reducedMotion="user">
+//       <main id="top" className="relative min-h-screen bg-ink text-paper">
+//         <Hero />
+
+//         <About />
+//         <Experience />
+//         <Projects />
+//         {/* <SkillCard /> */}
+//         {/* <Contact /> */}
+
+//         <Footer />
+//       </main>
+//     </MotionConfig>
+//   );
+// }
+
+// import { MotionConfig } from "framer-motion";
+
+// import Hero from "./components/Hero";
+// import About from "./components/About";
+// import Experience from "./components/Experience";
+// import Projects from "./components/Projects";
+// // import SkillCard from "./components/SkillCard";
+// // import Contact from "./components/Contact";
+// import Footer from "./components/Footer";
+
+// export default function App() {
+//   return (
+//     <MotionConfig reducedMotion="user">
+//       <main id="top" className="relative min-h-screen bg-ink text-paper">
+//         <Hero />
+
+//         <About />
+//         <Experience />
+//         <Projects />
+//         {/* <SkillCard /> */}
+//         {/* <Contact /> */}
+
+//         <Footer />
+//       </main>
+//     </MotionConfig>
+//   );
+// }
 
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
-// import ProjectsCard from "./components/ProjectsCard";
-// import SkillCard from "./components/SkillCard";
+import Projects from "./components/Projects";
+import SkillCard from "./components/SkillCard";
 // import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <MotionConfig reducedMotion="user">
-      <main id="top" className="relative min-h-screen bg-ink text-paper">
-        <Hero />
+    <>
+      <Hero />
 
-        <About />
-        <Experience />
-        {/* <ProjectsCard /> */}
-        {/* <SkillCard /> */}
-        {/* <Contact /> */}
-
-        <Footer />
-      </main>
-    </MotionConfig>
+      <About />
+      <Experience />
+      <Projects />
+      <SkillCard />
+      {/* <Contact /> */}
+    </>
   );
 }

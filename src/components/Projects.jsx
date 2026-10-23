@@ -142,7 +142,6 @@
 
 // export default Projects;
 
-
 // import React, { useState, useEffect } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 
@@ -193,7 +192,7 @@
 
 //   return (
 //     <div className="bg-[#080808] text-[#f5f5f5] font-sans antialiased selection:bg-[#22c55e] selection:text-black min-h-screen">
-      
+
 //       {/* Navbar */}
 //       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 md:px-12 py-5 flex items-center justify-between ${
 //         isScrolled
@@ -234,7 +233,7 @@
 //       {/* Hero Header */}
 //       <header className="relative h-screen w-full flex items-center justify-center overflow-hidden">
 //         <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#080808] via-black/50 to-black/70"></div>
-        
+
 //         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto mt-16">
 //           <motion.div
 //             initial={{ opacity: 0, y: 30 }}
@@ -351,3 +350,129 @@
 //     </div>
 //   );
 // }
+
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { FiArrowUpRight, FiArrowRight, FiZap } from "react-icons/fi";
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+export default function Projects() {
+  return (
+    <section
+      id="projects"
+      className="relative bg-ink px-5 py-24 text-paper sm:px-10 lg:px-[5%] lg:py-32">
+      <div className="mx-auto max-w-[1400px]">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="flex flex-col justify-between gap-6 border-b border-white/10 pb-10 md:flex-row md:items-end">
+          <div>
+            <motion.p
+              variants={item}
+              className="mb-4 text-sm tracking-[0.25em] text-muted uppercase">
+              Selected Work
+            </motion.p>
+
+            <motion.h2
+              variants={item}
+              className="font-display text-4xl font-extrabold sm:text-5xl lg:text-6xl">
+              Featured
+              <span className="text-violet-brand">.</span>
+            </motion.h2>
+          </div>
+
+          <motion.p
+            variants={item}
+            className="max-w-sm text-sm leading-relaxed text-muted">
+            A selection of products, client work and experiments — built with
+            React, Tailwind CSS and Motion.
+          </motion.p>
+        </motion.div>
+
+        {/* Featured SyncXel card */}
+        <motion.a
+          variants={item}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          href="https://syncxel.com"
+          target="_blank"
+          rel="noreferrer"
+          className="group relative mt-12 block overflow-hidden rounded-3xl border border-violet-brand/25 bg-gradient-to-br from-violet-brand/[0.12] via-white/[0.03] to-transparent p-8 transition hover:border-violet-brand/50 lg:p-12">
+          <div className="pointer-events-none absolute -top-24 -right-24 size-72 rounded-full bg-violet-brand/20 blur-3xl" />
+
+          <div className="relative flex flex-col justify-between gap-10 lg:flex-row lg:items-end">
+            <div className="max-w-2xl">
+              <span className="inline-flex items-center gap-2 rounded-full border border-violet-brand/30 bg-violet-brand/10 px-3.5 py-1.5 text-xs tracking-wide text-violet-soft">
+                <FiZap />
+                Founder & Frontend Engineer
+              </span>
+
+              <h3 className="mt-6 font-display text-4xl font-extrabold sm:text-5xl lg:text-6xl">
+                SyncXel
+              </h3>
+
+              <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
+                A component library platform offering reusable React, Tailwind
+                CSS and Motion UI components. I designed and built the platform
+                from the ground up — including the component system, previews
+                and UI packs.
+              </p>
+
+              <div className="mt-7 flex flex-wrap gap-2">
+                {["React", "Tailwind CSS", "Motion", "Firebase", "Vercel"].map(
+                  (tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-muted">
+                      {tech}
+                    </span>
+                  ),
+                )}
+              </div>
+            </div>
+
+            <div className="flex shrink-0 items-center gap-4">
+              <span className="inline-flex items-center gap-2 rounded-full bg-violet-brand px-6 py-3.5 text-sm font-semibold text-white transition group-hover:bg-violet-soft">
+                Visit SyncXel
+                <FiArrowUpRight className="transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </span>
+            </div>
+          </div>
+        </motion.a>
+
+        {/* View all projects */}
+        <motion.div
+          variants={item}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mt-10 flex justify-center">
+          <Link
+            to="/projects"
+            className="group inline-flex items-center gap-3 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold transition hover:border-violet-brand hover:text-violet-soft">
+            View all projects
+            <FiArrowRight className="transition group-hover:translate-x-1" />
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

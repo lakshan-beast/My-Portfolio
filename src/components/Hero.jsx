@@ -263,7 +263,7 @@ export default function Hero() {
         </motion.nav>
       </div>
 
-      <MenuButton links={navLinks} />
+      <MenuButton />
     </section>
   );
 }

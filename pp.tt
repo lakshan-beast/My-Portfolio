@@ -1,0 +1,553 @@
+aththatama ekath marama lassanai, clear, professional look. 
+dan apita thiyenne projects kiyana eka. ithin eka kohomada karanne, ekata monada danne, monada dena features, poddak katha karamu. 
+
+me mage kalin eka : // import React, { useState, useEffect } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+
+
+// export default function Portfolio() {
+//   const [isScrolled, setIsScrolled] = useState(false);
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+//   const [activeModal, setActiveModal] = useState(null);
+//   const [selectedProject, setSelectedProject] = useState(null);
+
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       if (window.scrollY > 40) {
+//         setIsScrolled(true);
+//       } else {
+//         setIsScrolled(false);
+//       }
+//     };
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+
+//   const projects = [
+//     {
+//       title: "Educa | Advance Learning Platform",
+//       category: "React.js • SASS • Firebase",
+//       description: "A comprehensive educational resource hub providing students with organized, downloadable study materials.",
+//       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+//     },
+//     {
+//       title: "Unseen_Tapro",
+//       category: "React.js • Tailwind CSS • TypeScript",
+//       description: "A travel exploration platform dedicated to uncovering and showcasing the hidden gems of Sri Lanka.",
+//       image: "https://images.unsplash.com/photo-1588598023183-fefde038cb44?q=80&w=1200&auto=format&fit=crop"
+//     },
+//     {
+//       title: "Dream Track | Study Tracker",
+//       category: "React.js • Firebase • Recharts",
+//       description: "A premium academic management system built with gamified focus timers and past paper analytics.",
+//       image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200&auto=format&fit=crop"
+//     },
+//     {
+//       title: "info.lanka | Services",
+//       category: "HTML5 • CSS • JavaScript",
+//       description: "A centralized web portal designed to streamline access to over 200+ verified Sri Lankan government services.",
+//       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop"
+//     },
+//   ];
+
+
+//   return (
+//     <div className="bg-[#080808] text-[#f5f5f5] font-sans antialiased selection:bg-[#22c55e] selection:text-black min-h-screen">
+      
+//       {/* Navbar */}
+//       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 md:px-12 py-5 flex items-center justify-between ${
+//         isScrolled
+//           ? "bg-black/70 backdrop-blur-xl border-b border-white/10 shadow-2xl py-4"
+//           : "bg-gradient-to-b from-black/80 via-black/40 to-transparent"
+//       }`}>
+//         <a href="#" className="group flex items-center space-x-3">
+//           <span className="font-serif tracking-[0.3em] text-lg md:text-xl font-medium text-white group-hover:text-[#22c55e] transition-colors duration-300">
+//             LAKSHAN.
+//           </span>
+//           <span className="hidden sm:inline-block w-8 h-[1px] bg-[#22c55e]/60"></span>
+//           <span className="hidden sm:inline-block text-[10px] tracking-[0.4em] uppercase text-neutral-400">
+//             Frontend Dev
+//           </span>
+//         </a>
+
+
+//         <div className="hidden md:flex items-center space-x-10">
+//           {["Projects", "Skills", "Journey", "Contact"].map((item, idx) => (
+//             <a
+//               key={idx}
+//               href={`#${item.toLowerCase()}`}
+//               className="text-xs tracking-[0.25em] uppercase text-neutral-300 hover:text-white transition-all duration-300 relative py-1 group">
+//               {item}
+//               <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#22c55e] transition-all duration-300 group-hover:w-full"></span>
+//             </a>
+//           ))}
+//         </div>
+
+
+//         <div className="flex items-center space-x-6">
+//           <a
+//             href="#contact"
+//             className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full border border-white/20 text-xs tracking-[0.2em] uppercase text-white hover:bg-white hover:text-black transition-all duration-500 backdrop-blur-sm">
+//             Get In Touch
+//           </a>
+//         </div>
+//       </nav>
+
+
+//       {/* Hero Header */}
+//       <header className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+//         <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#080808] via-black/50 to-black/70"></div>
+        
+//         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto mt-16">
+//           <motion.div
+//             initial={{ opacity: 0, y: 30 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 1, delay: 0.2 }}>
+//             <span className="inline-block py-1.5 px-5 rounded-full bg-white/5 border border-white/10 text-[10px] md:text-xs tracking-[0.4em] uppercase text-[#22c55e] mb-6 backdrop-blur-md">
+//               Frontend Developer &amp; React Enthusiast
+//             </span>
+//           </motion.div>
+
+
+//           <motion.h1
+//             initial={{ opacity: 0, y: 40 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 1, delay: 0.4 }}
+//             className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.15em] font-normal text-white uppercase leading-[1.1] mb-8">
+//             Crafting <span className="italic font-light text-neutral-400">Interfaces</span>
+//           </motion.h1>
+
+
+//           <motion.p
+//             initial={{ opacity: 0, y: 30 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 1, delay: 0.6 }}
+//             className="text-neutral-400 text-sm md:text-base tracking-[0.2em] max-w-xl mx-auto font-light mb-12">
+//             Specializing in building scalable, accessible, and pixel-perfect web applications with React and Tailwind CSS.
+//           </motion.p>
+
+
+//           <motion.div
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 1, delay: 0.8 }}
+//             className="flex flex-col sm:flex-row items-center justify-center gap-5">
+//             <a
+//               href="#projects"
+//               className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-medium text-xs tracking-[0.25em] uppercase hover:bg-[#22c55e] transition-all duration-300 shadow-2xl">
+//               View Projects
+//             </a>
+//           </motion.div>
+//         </div>
+//       </header>
+
+
+//       {/* Featured Works Section */}
+//       <section id="projects" className="py-28 px-6 md:px-12 max-w-7xl mx-auto">
+//         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-white/10 pb-8">
+//           <div>
+//             <span className="text-[10px] tracking-[0.4em] text-[#22c55e] uppercase block mb-3">
+//               Portfolio
+//             </span>
+//             <h2 className="font-serif text-3xl md:text-5xl tracking-[0.1em] text-white">
+//               Featured Works
+//             </h2>
+//           </div>
+//           <p className="text-neutral-400 text-xs tracking-[0.15em] max-w-xs mt-4 md:mt-0 font-light">
+//             Each project is engineered with optimized state management and modern responsive layouts.
+//           </p>
+//         </div>
+
+
+//         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+//           {projects.map((item, index) => (
+//             <div
+//               key={index}
+//               onClick={() => setSelectedProject(item)}
+//               className="group relative cursor-pointer overflow-hidden rounded-2xl bg-neutral-900 border border-white/5 aspect-[4/3] flex flex-col justify-end p-8">
+//               <img
+//                 src={item.image}
+//                 alt={item.title}
+//                 className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 filter grayscale group-hover:grayscale-0 opacity-40 group-hover:opacity-70"
+//               />
+//               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+
+
+//               <div className="relative z-10">
+//                 <span className="text-[10px] tracking-[0.3em] uppercase text-[#22c55e] block mb-2">
+//                   {item.category}
+//                 </span>
+//                 <h3 className="font-serif text-2xl md:text-3xl tracking-[0.1em] text-white mb-3">
+//                   {item.title}
+//                 </h3>
+//                 <p className="text-neutral-300 text-xs font-light tracking-wider line-clamp-2">
+//                   {item.description}
+//                 </p>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </section>
+
+
+//       {/* Footer / Contact Section */}
+//       <footer id="contact" className="py-24 px-6 md:px-12 bg-black border-t border-white/10 text-center">
+//         <div className="max-w-3xl mx-auto">
+//           <span className="text-[10px] tracking-[0.4em] text-[#22c55e] uppercase block mb-4">
+//             Get In Touch
+//           </span>
+//           <h2 className="font-serif text-4xl md:text-6xl tracking-[0.1em] text-white mb-6">
+//             Let's Build Together
+//           </h2>
+//           <p className="text-neutral-400 text-sm tracking-[0.2em] font-light mb-10 max-w-lg mx-auto">
+//             Available for roles and freelance projects. Reach out via email or connect on LinkedIn and GitHub.
+//           </p>
+//           <a
+//             href="mailto:lakshansandeepa0305@gmail.com"
+//             className="inline-block px-10 py-4 rounded-full bg-[#22c55e] text-black font-medium text-xs tracking-[0.3em] uppercase hover:bg-white transition-colors shadow-2xl">
+//             Email Me
+//           </a>
+
+
+//           <div className="mt-20 pt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs tracking-[0.2em] text-neutral-500">
+//             <span>© 2026 Lakshan Sandeepa. All rights reserved.</span>
+//             <div className="flex space-x-6 mt-4 sm:mt-0">
+//               <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a>
+//               <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+//             </div>
+//           </div>
+//         </div>
+//       </footer>
+
+
+//     </div>
+//   );
+// }
+katha karamuko. kohomada, monada karanne kiyala. codes passe liyamu.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+poddak inna, meke ui-packs preview wenne ekama link ekakin newei. ewa wenne eka page eken page eka, e kiwwe e preview balanna puluwan ekata thiyena direct link eken witharai. okkoama ekata dala na. e kiwwe oya hithanna footer ui-packs balanna or buy karanna yanwa kiyala. ekata yanna puluwan wenne syncxel eke ui-pack page eke footer ui-pack kiyana card eken thiyena direct link eken witharai. ethakota oyata eken footer ui-pack eke thiyena ui deisngs 5 k balaganna puluwan, eken oyata e time ekenma eka pay karala code eka ganna puluwan (eka wenne lemon queezy eken). 
+
+ithin ehema unoth apita wenne, ape projects eka mehema hadanna wenne, eka main eka project ekak pennala eken all projects kiyala wenama page ekak hadanna. eken all projects tika penwanna puluwan wenawa, eth meke thawa mehema deyak karanna puluwan oyaa kiwwa wage, mama igena ganna hadapu projects/ clients lata hadala dunna permission approved projects (meke aniwa danna one permission nathi , thiyena okkoma projects kiyak thiyanawada kiyala naththan hitnawa muta echchara projects awith na kiyala. puluwan nan permission nathi ewage name, desc ekak techs, permision not approved kiyla danna. live links, images mukuth na, eken katawth prashnayk na ape eken eka karala thiyenne kiyala dannawa echchrai.) / aye damu ape syncxel eke thiyena ui-packs eke thiyena ui-packs walata card hadala ekata direct link eka damu eken thawa karala thiyenne kiyala therenawane. me kiwwa client/learn/ui-packs kiyana ewa tabs thunakin damu. meka gana oyage adahasa mokakda. api mulin damu syncxel eka. eken all ekata enna link eka damu. mokada kiyanne
+
+
+
+
+import React from "react";
+
+// import Courses from "./Coursers";
+
+import { TbMailFast } from "react-icons/tb";
+import { IoLogoCss3 } from "react-icons/io5";
+import { FaSquareJs } from "react-icons/fa6";
+import { BiCodeAlt, BiLogoVisualStudio } from "react-icons/bi";
+import { FaChrome, FaNpm, FaReact, FaGitAlt, FaFigma } from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiTypescript,
+  SiFirebase,
+  SiReactrouter,
+  SiNetlify,
+  SiOpenai,
+  SiNextdotjs,
+  SiGithub,
+  SiHtml5,
+  SiSass,
+  SiVercel,
+  SiPostman,
+} from "react-icons/si";
+
+//skills array
+const Skills = () => {
+  const calculateExperience = (startDate) => {
+    const start = new Date(startDate);
+    const now = new Date();
+
+    if (start > now) {
+      return "Just Started";
+    }
+
+    let years = now.getFullYear() - start.getFullYear();
+    let months = now.getMonth() - start.getMonth();
+
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    if (years > 0) {
+      return `${years} Years & ${months} Months Experience`;
+    } else {
+      return months <= 0 ? "Started Recently" : `${months} Months Experience`;
+    }
+  };
+
+  const skillList = [
+    {
+      name: "React",
+      level: "Intermediate",
+      date: "April 10, 2026",
+      icon: <FaReact />,
+    },
+    {
+      name: "TypeScript",
+      level: "Basic",
+      date: "July 28, 2026",
+      icon: <SiTypescript />,
+    },
+    {
+      name: "JavaScript",
+      level: "Intermediate",
+      date: "February 03, 2026",
+      icon: <FaSquareJs />,
+    },
+    {
+      name: "Tailwind CSS",
+      level: "Basic",
+      date: "July 25, 2026",
+      icon: <SiTailwindcss />,
+    },
+    {
+      name: "SASS / SCSS",
+      level: "Intermediate",
+      date: "March 10, 2026",
+      icon: <SiSass />,
+    },
+    {
+      name: "CSS3",
+      level: "Advanced",
+      date: "January 02, 2026",
+      icon: <IoLogoCss3 />,
+    },
+    {
+      name: "HTML5",
+      level: "Advanced",
+      date: "January 02, 2026",
+      icon: <SiHtml5 />,
+    },
+
+    // {
+    //   name: "Next.js",
+    //   level: "Basic",
+    //   date: "July 28, 2026",
+    //   icon: <SiNextdotjs />,
+    // },
+  ];
+
+  const toolsAndServices = [
+    { name: "Firebase", icon: <SiFirebase />, color: "#f5740b" },
+    { name: "EmailJS", icon: <TbMailFast />, color: "#f44336" },
+    { name: "React Router", icon: <SiReactrouter />, color: "#ca4245" },
+    { name: "Git & GitHub", icon: <FaGitAlt />, color: "#303030" },
+    { name: "NPM", icon: <FaNpm />, color: "#cb3837" },
+    { name: "Figma", icon: <FaFigma />, color: "#f24e1e" },
+    { name: "Dev Tools", icon: <FaChrome />, color: "#428537" },
+    { name: "Vercel", icon: <SiVercel />, color: "#181717" },
+    { name: "Netlify", icon: <SiNetlify />, color: "#00c7b7" },
+    { name: "VS Code", icon: <BiLogoVisualStudio />, color: "#007acc" },
+    { name: "Claude", icon: <SiOpenai />, color: "#10a37f" },
+    { name: "Cursor AI", icon: <BiCodeAlt />, color: "#38bdf8" },
+    // { name: "Postman", icon: <SiPostman />, color: "#ff6c37" },
+  ];
+  const doubleList = [...toolsAndServices, ...toolsAndServices];
+
+  const coursesData = [
+    {
+      title: "Junior Cybersecurity Analyst",
+      institute: "Cisco Networking Academy",
+      status: "In Progress",
+      skills: [
+        "Web Application Security",
+        "Network Security",
+        "Packet Routing",
+      ],
+      color: "from-cyan-500 to-blue-500",
+    },
+    {
+      title: "Artificial Intelligence Foundations",
+      institute: "OpenAI Academy",
+      status: "In Progress",
+      skills: [
+        "Artificial Intelligence (AI)",
+        "Prompt Engineering",
+        "LLM Logic",
+      ],
+      color: "from-emerald-500 to-green-500",
+    },
+    {
+      title: "Cybersecurity Fundamentals",
+      institute: "IBM SkillsBuild",
+      status: "In Progress",
+      skills: ["Data Privacy", "Information Security", "Compliance Arrays"],
+      color: "from-red-500 to-pink-500",
+    },
+    {
+      title: "Azure Fundamentals (AZ-900)",
+      institute: "Microsoft Certified",
+      status: "In Progress",
+      skills: ["Cloud Computing", "Cloud Architecture", "Azure Services"],
+      color: "from-blue-600 to-indigo-500",
+    },
+    {
+      title: "LearnEnglish Workplace Proficiency",
+      institute: "British Council",
+      status: "In Progress",
+      skills: [
+        "Professional Communication",
+        "Technical Writing",
+        "Remote Collaboration",
+      ],
+      color: "from-purple-500 to-violet-500",
+    },
+  ];
+
+  return (
+    <section className="skills" id="skills" data-aos-offset="0">
+      <div className="skills-container" data-aos="fade-up">
+        <h2 className="section-title" data-aos="fade-right">
+          Technical Toolbox
+        </h2>
+        <h2 className="parts-heading">Languages & Frameworks</h2>
+        <div className="skills-grid">
+          {skillList.map((skill, index) => (
+            <div className="skill-card shimmer" key={index} data-aos="fade-up">
+              <span className="skill-icon">{skill.icon}</span>
+              <h3 data-aos="fade-down">{skill.name}</h3>
+              <span className="exp-tag">{calculateExperience(skill.date)}</span>
+              <p data-aos="fade-right">{skill.level} </p>
+
+              <div className="progress-bar">
+                <div
+                  data-aos="fade-right"
+                  className={`progress ${skill.level.toLowerCase()}`}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+        {/* other skills  */}
+        <h2 className="parts-heading">Software, Services & Platforms</h2>
+        <div className="marquee-wrapper">
+          <div className="marquee-track">
+            {doubleList.map((item, index) => (
+              <div key={index} className="marquee-item">
+                <span style={{ color: item.color, fontSize: "1.5rem" }}>
+                  {item.icon}
+                </span>
+                <span>{item.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Github COntributation  */}
+        {/* <h2 className="parts-heading">My GitHub Activity</h2>
+        <div className="github-stats-container" data-aos="fade-up">
+          <div className="stats-grid">
+            <img src="https://streak-stats.demolab.com?user=lakshan-beast&theme=radical&hide_border=true&border_radius=6.5&date_format=j%20M%5B%20Y%5D&exclude_days=Sun%2CMon%2CTue%2CWed%2CThu%2CFri%2CSat&theme=tokyonight&hide_border=true" />
+
+            <img
+              src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=lakshan-beast&theme=github_dark"
+              alt="lakshan-beast's GitHub Stats"
+            />
+          </div>
+        </div> */}
+        {/* 
+        <div className="code-playground" data-aos="fade-up">
+          <div className="code-header">
+            <div className="code-dots">
+              <span className="dot red"></span>
+              <span className="dot yellow"></span>
+              <span className="dot green"></span>
+            </div>
+            <span className="code-title">useFetchCustomHook.js</span>
+          </div>
+          <div className="code-body">
+            <pre>
+              <code>
+                {`
+                  // A custom hook I designed for clean API integration
+                  import { useState, useEffect } from 'react';
+
+                  export const useFetch = (url) => {
+                    const [data, setData] = useState(null);
+                    const [loading, setLoading] = useState(true);
+
+                    useEffect(() => {
+                      fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                          setData(data);
+                          setLoading(false);
+                        });
+                    }, [url]);
+
+                    return { data, loading };
+                  };`}
+              </code>
+            </pre>
+          </div>
+        </div> */}
+      </div>
+
+      <div className="courses-continer">
+        <h2 className="parts-heading">
+          Continuous Professional Specializations
+        </h2>
+        {/* <p className="parts">
+          To evolve as a robust T-Shaped Engineer, I am continuously scaling my
+          core knowledge across AI engines, cloud ecosystems, and infrastructure
+          security.
+        </p> */}
+
+        {/* Courses Grid */}
+        <div className="courses-grid">
+          {coursesData.map((course, index) => (
+            <div key={index} className="course-card shimmer">
+              <div className="course-card__main">
+                <div className="course-card__meta">
+                  <h3 className="course-card__institute">{course.institute}</h3>
+                  <span className="course-card__status">{course.status}</span>
+                </div>
+
+                {/* Course Title */}
+                <h3 className="course-card__title">{course.title}</h3>
+              </div>
+
+              {/* Skills Tags */}
+              <div className="course-card__footer">
+                <div className="course-card__tags">
+                  {course.skills.map((skill, sIndex) => (
+                    <span key={sIndex} className="course-card__tag">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p className="courses-section__footnote">
+          *Also expanding knowledge through non-certified architectural
+          deep-dives via Google Digital Garage.
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default Skills;
