@@ -41,22 +41,24 @@ import App from "./App.jsx";
 import ProjectsPage from "./pages/ProjectsPage.jsx";
 import "./index.css";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { index: true, element: <App /> },
+        { path: "projects", element: <ProjectsPage /> },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        element: <App />,
-      },
-      {
-        path: "projects",
-        element: <ProjectsPage />,
-      },
-    ],
+    future: {
+      v7_startTransition: true,
+      v7_relativeSplatPath: true,
+    },
   },
-]);
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
