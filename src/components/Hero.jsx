@@ -146,7 +146,7 @@ export default function Hero() {
 
   const spotlight = useMotionTemplate`
     radial-gradient(520px circle at ${springX}px ${springY}px,
-    rgba(124, 58, 237, 0.16),
+    rgba(124, 58, 237, 0.36),
     transparent 70%)
   `;
 
@@ -189,7 +189,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           custom={0}
-          className="font-display text-lg font-bold tracking-tight">
+          className="font-display text-3xl font-bold tracking-tight">
           Lakshan<span className="text-violet-brand">.</span>
         </motion.a>
 
@@ -198,7 +198,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           custom={1}
-          className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs tracking-wide backdrop-blur-md sm:flex">
+          className="items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs tracking-wide backdrop-blur-md sm:flex">
           <span className="size-2 rounded-full bg-violet-brand" />
           Available for 2026
         </motion.div>
@@ -224,13 +224,13 @@ export default function Hero() {
             <span className="text-violet-brand">web experiences.</span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-base text-muted sm:text-lg">
+          <p className="mt-6 max-w-xl text-base text-muted sm:text-lg leading-tight ">
             I design and build modern interfaces with React, Tailwind CSS and
             Framer Motion — focused on performance, detail and real user
             experience.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-2">
             <a
               href="#projects"
               className="rounded-full bg-violet-brand px-6 py-3 text-sm font-semibold text-white transition hover:bg-violet-soft">
