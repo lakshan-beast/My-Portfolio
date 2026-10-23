@@ -267,7 +267,7 @@ export default function Footer() {
             <span className="text-muted/40">Build your next idea.</span>
           </h2>
 
-          <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-1">
             <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
               <div>
                 <p className="mb-1.5 text-[0.65rem] tracking-[0.15em] text-muted/50 uppercase">
@@ -296,14 +296,14 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex items-start lg:justify-end">
+            {/* <div className="flex items-start lg:justify-end">
               <a
                 href="mailto:lakshansandeepa0305@gmail.com?subject=Project%20Inquiry"
                 className="group inline-flex items-center gap-2 rounded-full bg-paper px-7 py-3 text-xs font-extrabold tracking-widest text-ink uppercase shadow-[0_0_20px_rgba(245,245,245,0.08)] transition hover:-translate-y-0.5 hover:bg-violet-brand hover:text-paper hover:shadow-[0_0_25px_rgba(124,58,237,0.4)]">
                 Get in touch
                 <FiArrowUpRight className="text-sm transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
-            </div>
+            </div> */}
           </div>
         </motion.div>
 

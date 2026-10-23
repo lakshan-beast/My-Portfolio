@@ -841,6 +841,8 @@ export default function About() {
               <img
                 src="https://ghchart.rshah.org/7C3AED/lakshan-beast"
                 alt="GitHub contribution graph"
+                loading="lazy"
+                decoding="async"
                 className="w-full"
                 style={{
                   filter:

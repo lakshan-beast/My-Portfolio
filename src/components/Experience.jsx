@@ -347,8 +347,9 @@ export default function Experience() {
             <img
               src="https://ghchart.rshah.org/7C3AED/lakshan-beast"
               alt="GitHub contribution graph"
-              className="w-full"
               loading="lazy"
+              decoding="async"
+              className="w-full"
               style={{
                 filter:
                   "invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.85)",
