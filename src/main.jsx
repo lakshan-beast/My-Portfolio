@@ -35,7 +35,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Layout from "./components/Layout.jsx";
 import App from "./App.jsx";
 import ProjectsPage from "./pages/ProjectsPage.jsx";
