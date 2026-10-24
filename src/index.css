@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Titillium+Web:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Inter:wght@300..800&display=swap");
 
 @import "tailwindcss";
 
@@ -11,7 +11,7 @@
   --color-violet-soft: #a78bfa;
 
   --font-display: "Exo", sans-serif;
-  --font-sans: "Titillium Web", sans-serif;
+  --font-sans: "Inter", sans-serif;
 
   --animate-marquee: marquee 30s linear infinite;
 

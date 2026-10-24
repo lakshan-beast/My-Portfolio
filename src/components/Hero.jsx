@@ -145,7 +145,7 @@ export default function Hero() {
   const springY = useSpring(mouseY, { stiffness: 120, damping: 20 });
 
   const spotlight = useMotionTemplate`
-    radial-gradient(520px circle at ${springX}px ${springY}px,
+    radial-gradient(540px circle at ${springX}px ${springY}px,
     rgba(124, 58, 237, 0.36),
     transparent 70%)
   `;
@@ -170,12 +170,12 @@ export default function Hero() {
       {/* Center outline name */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <motion.h2
-          initial={{ opacity: 0, scale: 0.96 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-[18vw] leading-none font-black tracking-tighter text-transparent uppercase select-none sm:text-[15vw]"
           style={{
-            WebkitTextStroke: "1px rgba(245, 245, 245, 0.10)",
+            WebkitTextStroke: "1px rgba(245, 245, 245, 0.15)",
           }}>
           Lakshan
         </motion.h2>
@@ -198,14 +198,14 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           custom={1}
-          className="items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs tracking-wide backdrop-blur-md sm:flex">
-          <span className="size-2 rounded-full bg-violet-brand" />
+          className="items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs tracking-wide backdrop-blur-md sm:flex">
+          <span className="size-2 rounded-full bg-violet-brand animate-pulse" />
           Available for 2026
         </motion.div>
       </div>
 
       {/* Bottom row */}
-      <div className="relative z-10 flex flex-col justify-between gap-12 lg:flex-row lg:items-end">
+      <div className="relative z-10 flex flex-col justify-between gap-12 lg:flex-row lg:items-end sm:bottom-12 lg:bottom-0">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -216,7 +216,7 @@ export default function Hero() {
             Frontend Developer
           </p>
 
-          <h1 className="font-display text-5xl leading-[1.05] font-extrabold sm:text-7xl lg:text-8xl">
+          <h1 className="font-display leading-none font-extrabold text-6xl sm:text-7xl lg:text-8xl">
             Building clean,
             <br />
             interactive
@@ -224,7 +224,7 @@ export default function Hero() {
             <span className="text-violet-brand">web experiences.</span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-base text-muted sm:text-lg leading-tight ">
+          <p className="mt-6 max-w-xl text-base text-muted sm:text-lg leading-tight font-display">
             I design and build modern interfaces with React, Tailwind CSS and
             Framer Motion — focused on performance, detail and real user
             experience.
@@ -255,7 +255,7 @@ export default function Hero() {
             <a
               key={link.label}
               href={link.href}
-              className="group flex items-center gap-3 text-sm text-muted transition hover:text-paper">
+              className="group flex items-center gap-3 text-lg text-muted transition hover:text-paper">
               {link.label}
               <span className="h-px w-6 bg-white/20 transition-all group-hover:w-10 group-hover:bg-violet-brand" />
             </a>

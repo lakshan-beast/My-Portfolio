@@ -281,14 +281,15 @@ export default function Footer() {
                 </a>
               </div>
 
+              <div className="mt-1.5 py-3 px-1 flex items-center gap-2 text-xs text-violet-brand">
+                <span className="size-1.5 animate-pulse rounded-full bg-violet-brand shadow-[0_0_10px_#7c3aed]" />
+                Available for Roles & Freelance
+              </div>
+
               <div>
                 <p className="mb-1.5 text-[0.65rem] tracking-[0.15em] text-muted/50 uppercase">
                   Location & Status
                 </p>
-                <div className="mt-1.5 flex items-center gap-2 text-xs text-violet-brand">
-                  <span className="size-1.5 animate-pulse rounded-full bg-violet-brand shadow-[0_0_10px_#7c3aed]" />
-                  Available for Roles & Freelance
-                </div>
 
                 <p className="text-sm">Kandy, Sri Lanka 🇱🇰</p>
 
@@ -345,9 +346,10 @@ export default function Footer() {
             </a>
           </div>
 
-          <p className="flex items-center gap-1.5 text-xs text-muted/60">
+          <p className="flex items-center gap-1.5 text-xs text-muted/60 flex-wrap">
             Copyright <FaRegCopyright /> {currentYear}
-            <span>SyncXel Web Solutions. All rights reserved.</span>
+            SyncXel Web Solutions.{" "}
+            <span className="items-center"> All rights reserved.</span>
           </p>
         </motion.div>
       </div>
