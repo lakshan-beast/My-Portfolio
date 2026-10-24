@@ -245,7 +245,7 @@ export default function Experience() {
                 <span
                   className={`absolute top-2 left-0 size-4 rounded-full border-4 border-ink md:left-[9rem] ${
                     experience.highlight
-                      ? "bg-violet-brand shadow-[0_0_16px_#7c3aed]"
+                      ? "bg-violet-brand shadow-[0_0_16px_#7c3aed] animate-ping"
                       : "bg-white/25"
                   }`}
                 />
@@ -267,11 +267,11 @@ export default function Experience() {
                     </span>
                   </div>
 
-                  <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+                  <p className="mt-4 text-sm leading-tight text-muted font-primary">
                     {experience.description}
                   </p>
 
-                  <div className="mt-6 flex flex-wrap gap-2">
+                  <div className="mt-6 flex flex-wrap gap-1.5">
                     {experience.tags.map((tag) => (
                       <span
                         key={tag}
@@ -290,23 +290,23 @@ export default function Experience() {
               className="relative flex flex-col gap-4 pl-8 md:flex-row md:gap-10 md:pl-0">
               <div className="md:w-36 md:shrink-0">
                 <span className="relative z-10 inline-flex items-center gap-2 rounded-full border border-violet-brand/40 bg-violet-brand/10 px-3 py-1.5 text-xs font-semibold tracking-wide text-violet-soft">
-                  <span className="size-1.5 animate-pulse rounded-full bg-violet-brand" />
+                  <span className="size-1.5 animate-pulse rounded-full bg-violet-brand animate-pulse" />
                   Now
                 </span>
               </div>
 
-              <span className="absolute top-2 left-0 size-4 rounded-full border-4 border-ink bg-violet-brand shadow-[0_0_16px_#7c3aed] md:left-[9rem]" />
+              <span className="absolute top-2 left-0 size-4 rounded-full border-4 border-ink bg-violet-brand shadow-[0_0_16px_#7c3aed] md:left-[9rem] animate-ping" />
 
               <div className="flex-1 rounded-3xl border border-violet-brand/30 bg-violet-brand/[0.08] p-7 backdrop-blur-md lg:p-8">
                 <h3 className="font-display text-xl font-bold sm:text-2xl">
                   {currentLearning.title}
                 </h3>
 
-                <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+                <p className="mt-4 text-sm leading-tight font-primary text-muted ">
                   {currentLearning.description}
                 </p>
 
-                <div className="mt-6 flex flex-wrap gap-2">
+                <div className="mt-6 flex flex-wrap gap-1">
                   {currentLearning.tags.map((tag) => (
                     <span
                       key={tag}
