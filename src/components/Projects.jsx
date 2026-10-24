@@ -400,7 +400,7 @@ export default function Projects() {
 
           <motion.p
             variants={item}
-            className="max-w-sm text-sm leading-relaxed text-muted">
+            className="max-w-sm text-sm leading-tight font-primary text-muted">
             A selection of products, client work and experiments — built with
             React, Tailwind CSS and Motion.
           </motion.p>
@@ -412,31 +412,31 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          href="https://syncxel.com"
+          href="https://syncxel.vercel.app"
           target="_blank"
           rel="noreferrer"
-          className="group relative mt-12 block overflow-hidden rounded-3xl border border-violet-brand/25 bg-gradient-to-br from-violet-brand/[0.12] via-white/[0.03] to-transparent p-8 transition hover:border-violet-brand/50 lg:p-12">
-          <div className="pointer-events-none absolute -top-24 -right-24 size-72 rounded-full bg-violet-brand/20 blur-3xl" />
+          className="group relative mt-12 block overflow-hidden rounded-3xl border border-violet-brand/25 bg-gradient-to-br from-violet-brand/[0.12] via-white/[0.03] to-transparent p-6 transition hover:border-violet-brand/30 lg:p-12">
+          <div className="pointer-events-none absolute -top-24 -right-24 size-92 rounded-full bg-violet-brand/20 blur-3xl" />
 
-          <div className="relative flex flex-col justify-between gap-10 lg:flex-row lg:items-end">
+          <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
               <span className="inline-flex items-center gap-2 rounded-full border border-violet-brand/30 bg-violet-brand/10 px-3.5 py-1.5 text-xs tracking-wide text-violet-soft">
                 <FiZap />
                 Founder & Frontend Engineer
               </span>
 
-              <h3 className="mt-6 font-display text-4xl font-extrabold sm:text-5xl lg:text-6xl">
+              <h3 className="mt-3 font-display text-4xl font-bold sm:text-5xl lg:text-6xl">
                 SyncXel
               </h3>
 
-              <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
+              <p className="mt-3 text-base leading-tight font-primary text-muted sm:text-base">
                 A component library platform offering reusable React, Tailwind
                 CSS and Motion UI components. I designed and built the platform
                 from the ground up — including the component system, previews
                 and UI packs.
               </p>
 
-              <div className="mt-7 flex flex-wrap gap-2">
+              <div className="mt-3 flex flex-wrap gap-1.5">
                 {["React", "Tailwind CSS", "Motion", "Firebase", "Vercel"].map(
                   (tech) => (
                     <span
@@ -449,7 +449,7 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className="flex shrink-0 items-center gap-4">
+            <div className="flex shrink-0 items-center gap-2">
               <span className="inline-flex items-center gap-2 rounded-full bg-violet-brand px-6 py-3.5 text-sm font-semibold text-white transition group-hover:bg-violet-soft">
                 Visit SyncXel
                 <FiArrowUpRight className="transition group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -464,10 +464,10 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="mt-10 flex justify-center">
+          className="mt-10 flex justify-center font-primary">
           <Link
             to="/projects"
-            className="group inline-flex items-center gap-3 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold transition hover:border-violet-brand hover:text-violet-soft">
+            className="group inline-flex items-center gap-3 rounded-full border border-white/15 px-7 py-3.5 text-sm transition hover:border-violet-brand/60 hover:text-violet-soft/50">
             View all projects
             <FiArrowRight className="transition group-hover:translate-x-1" />
           </Link>
