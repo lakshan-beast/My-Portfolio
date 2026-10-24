@@ -293,11 +293,6 @@ export default function Footer() {
 
                 <p className="text-sm pl-2 flex items-center gap-2">
                   Kandy, Sri Lanka 🇱🇰{" "}
-                  <img
-                    src="https://flagcdn.com/24x18/lk.png"
-                    alt="Sri Lanka Flag"
-                    className="w-4 h-3 object-cover rounded-xs shadow-xs"
-                  />
                 </p>
 
                 <p className="mt-2 pl-2 text-xs text-muted ">
