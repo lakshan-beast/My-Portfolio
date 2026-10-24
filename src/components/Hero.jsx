@@ -160,7 +160,7 @@ export default function Hero() {
     <section
       ref={heroRef}
       onMouseMove={handleMouseMove}
-      className="relative flex min-h-screen flex-col justify-between overflow-hidden p-6 sm:p-10 lg:p-14">
+      className="relative flex min-h-screen flex-col justify-between overflow-hidden py-8 px-6 pb-18 sm:p-10 lg:p-16">
       {/* Cursor spotlight */}
       <motion.div
         style={{ background: spotlight }}

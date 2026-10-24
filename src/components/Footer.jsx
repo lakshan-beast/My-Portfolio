@@ -219,7 +219,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="w-full border-t border-white/10 bg-ink px-5 pt-20 pb-10 text-paper lg:px-[5%] lg:pt-24 lg:pb-12">
+      className="w-full border-t border-white/10 bg-ink px-5 pt-20 pb-20 text-paper lg:px-[5%] lg:pt-24 lg:pb-12">
       <div className="mx-auto flex min-h-[70vh] max-w-[1400px] flex-col justify-between">
         {/* Top bar */}
         <motion.div
@@ -228,9 +228,9 @@ export default function Footer() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           custom={0}
-          className="flex items-center justify-between border-b border-white/10 pb-8">
+          className="flex items-center justify-between border-b border-white/10 pb-3">
           <div className="flex items-center gap-3">
-            <span className="font-display text-xl font-black tracking-widest uppercase">
+            <span className="font-display text-2xl font-black tracking-widest uppercase">
               Lakshan<span className="text-violet-brand">.</span>
             </span>
 
@@ -258,8 +258,8 @@ export default function Footer() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
           custom={1}
-          className="my-14 lg:my-16">
-          <h2 className="font-display text-5xl leading-[0.92] font-black tracking-tighter uppercase sm:text-6xl lg:text-[5.5rem]">
+          className="my-14 lg:my-6">
+          <h2 className="font-display text-5xl leading-[0.92] font-black tracking-tighter uppercase sm:text-6xl lg:text-[5.8rem]">
             Let&rsquo;s
             <br />
             Collaborate.
@@ -267,8 +267,8 @@ export default function Footer() {
             <span className="text-muted/40">Build your next idea.</span>
           </h2>
 
-          <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-1">
-            <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+          <div className="mt-5 pb-5 grid grid-cols-1 gap-6 lg:grid-cols-1 border-t border-white/10">
+            <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between mt-6">
               <div>
                 <p className="mb-1.5 text-[0.65rem] tracking-[0.15em] text-muted/50 uppercase">
                   Email Inquiry
@@ -281,7 +281,7 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div className="mt-1.5 py-3 px-1 flex items-center gap-2 text-xs text-violet-brand">
+              <div className="mt-1.5 py-3 px-1 flex items-center gap-2 text-lg text-violet-brand font-sans">
                 <span className="size-1.5 animate-pulse rounded-full bg-violet-brand shadow-[0_0_10px_#7c3aed]" />
                 Available for Roles & Freelance
               </div>
@@ -291,20 +291,20 @@ export default function Footer() {
                   Location & Status
                 </p>
 
-                <p className="text-sm">Kandy, Sri Lanka 🇱🇰</p>
+                <p className="text-sm pl-2 flex items-center gap-2">
+                  Kandy, Sri Lanka 🇱🇰{" "}
+                  <img
+                    src="https://flagcdn.com/24x18/lk.png"
+                    alt="Sri Lanka Flag"
+                    className="w-4 h-3 object-cover rounded-xs shadow-xs"
+                  />
+                </p>
 
-                <p className="mt-2 text-xs text-muted">Local time — {time}</p>
+                <p className="mt-2 pl-2 text-xs text-muted ">
+                  Local time — {time}
+                </p>
               </div>
             </div>
-
-            {/* <div className="flex items-start lg:justify-end">
-              <a
-                href="mailto:lakshansandeepa0305@gmail.com?subject=Project%20Inquiry"
-                className="group inline-flex items-center gap-2 rounded-full bg-paper px-7 py-3 text-xs font-extrabold tracking-widest text-ink uppercase shadow-[0_0_20px_rgba(245,245,245,0.08)] transition hover:-translate-y-0.5 hover:bg-violet-brand hover:text-paper hover:shadow-[0_0_25px_rgba(124,58,237,0.4)]">
-                Get in touch
-                <FiArrowUpRight className="text-sm transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-            </div> */}
           </div>
         </motion.div>
 
@@ -348,7 +348,7 @@ export default function Footer() {
 
           <p className="flex items-center gap-1.5 text-xs text-muted/60 flex-wrap">
             Copyright <FaRegCopyright /> {currentYear}
-            SyncXel Web Solutions.{" "}
+            <span> SyncXel Web Solutions.</span>
             <span className="items-center"> All rights reserved.</span>
           </p>
         </motion.div>

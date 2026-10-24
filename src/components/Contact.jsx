@@ -245,13 +245,13 @@ export default function Contact() {
 
           <motion.h2
             variants={item}
-            className="font-display text-4xl font-extrabold sm:text-5xl lg:text-6xl">
+            className="font-display text-4xl font-extrabold sm:text-5xl lg:text-6xl leading-none">
             Let’s build something
             <br />
             <span className="text-violet-brand">worth shipping.</span>
           </motion.h2>
 
-          <motion.p variants={item} className="mt-5 max-w-xl text-muted">
+          <motion.p variants={item} className="mt-5 max-w-xl text-muted font-sans">
             Have a project in mind, a role to discuss, or just want to talk
             frontend? Send a message — I usually reply within 24 hours.
           </motion.p>
