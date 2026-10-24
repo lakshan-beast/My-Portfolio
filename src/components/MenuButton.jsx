@@ -274,12 +274,12 @@ export default function MenuButton() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="fixed right-5 bottom-5 z-50 flex items-center gap-4 rounded-full border border-white/10 bg-white/5 px-6 py-4 text-lg backdrop-blur-md transition hover:border-violet-brand lg:hidden"
+        className="fixed right-5 bottom-5 z-50 flex items-center gap-4 rounded-full border border-white/10 bg-white/5 w-15 h-15 p-3.5 text-lg backdrop-blur-md transition hover:border-violet-brand lg:hidden"
         aria-label="Open menu">
         {/* Menu */}
         <span className="flex flex-col gap-1">
-          <span className="block h-1 w-6 bg-paper rounded-2xl" />
-          <span className="block h-1 w-3 bg-violet-brand rounded-2xl" />
+          <span className="block h-1.5 w-7.5 bg-paper rounded-2xl" />
+          <span className="block h-1.5 w-5 bg-violet-brand rounded-2xl" />
         </span>
       </button>
 
@@ -294,7 +294,7 @@ export default function MenuButton() {
             className="fixed inset-0 z-40 flex flex-col justify-end bg-ink/95 p-6 backdrop-blur-xl sm:p-10">
             <button
               onClick={() => setOpen(false)}
-              className="absolute top-6 right-6 rounded-full border border-white/10 px-4 py-2 text-sm">
+              className="absolute top-6 right-6 rounded-full border border-white/20 px-4 py-2 text-sm font-primary">
               Close
             </button>
 
@@ -324,7 +324,7 @@ export default function MenuButton() {
               ))}
             </nav>
 
-            <div className="flex items-center justify-between border-t border-white/10 pt-6 pb-16 text-lg text-muted">
+            <div className="flex items-center justify-between border-t border-white/10 pt-6 pb-16 text-lg text-muted font-primary">
               <span>Kandy, Sri Lanka</span>
               <span className="text-violet-brand">Available for 2026</span>
             </div>
