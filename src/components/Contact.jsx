@@ -230,7 +230,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative bg-ink px-5 py-24 text-paper sm:px-10 lg:px-[5%] lg:py-32">
+      className="relative bg-white/5 rounded-4xl px-5 py-24 text-paper sm:px-10 lg:px-[5%] lg:py-32">
       <div className="mx-auto max-w-[1400px]">
         <motion.div
           variants={container}

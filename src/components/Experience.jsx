@@ -199,7 +199,7 @@ export default function Experience() {
     <section
       id="experience"
       className="relative bg-ink px-5 py-24 text-paper sm:px-10 lg:px-[5%] lg:py-32">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-[1400px]">
         <motion.div
           variants={container}
           initial="hidden"
@@ -219,7 +219,7 @@ export default function Experience() {
           </motion.h2>
         </motion.div>
 
-        <div className="relative mt-16">
+        <div className="relative mt-16 max-w-[900px] mx-auto">
           {/* Timeline line */}
           <div className="absolute top-0 bottom-0 left-[7px] w-px bg-white/10 md:left-[calc(9rem+7px)]" />
 
@@ -233,6 +233,14 @@ export default function Experience() {
               <motion.div
                 key={experience.title}
                 variants={item}
+                initial={{ opacity: 0.3, y: -30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.3,
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }}
                 className="relative flex flex-col gap-4 pl-8 md:flex-row md:gap-10 md:pl-0">
                 {/* Sticky period */}
                 <div className="md:w-36 md:shrink-0">
@@ -267,17 +275,33 @@ export default function Experience() {
                     </span>
                   </div>
 
-                  <p className="mt-4 text-sm leading-tight text-muted font-primary">
+                  <motion.p
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      type: "keyframes",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="mt-4 text-sm leading-tight text-muted font-primary">
                     {experience.description}
-                  </p>
+                  </motion.p>
 
-                  <div className="mt-6 flex flex-wrap gap-1.5">
+                  <div className="mt-3 flex flex-wrap gap-1.5 border-t border-slate-100/10 pt-3">
                     {experience.tags.map((tag) => (
-                      <span
+                      <motion.span
+                        initial={{ opacity: 0.3, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                          delay: 0.2,
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 17,
+                        }}
                         key={tag}
                         className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-muted transition hover:border-violet-brand hover:text-violet-soft">
                         {tag}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
                 </div>
@@ -287,7 +311,7 @@ export default function Experience() {
             {/* Currently learning */}
             <motion.div
               variants={item}
-              className="relative flex flex-col gap-4 pl-8 md:flex-row md:gap-10 md:pl-0">
+              className="relative flex flex-col gap-2 pl-8 md:flex-row md:gap-10 md:pl-0">
               <div className="md:w-36 md:shrink-0">
                 <span className="relative z-10 inline-flex items-center gap-2 rounded-full border border-violet-brand/40 bg-violet-brand/10 px-3 py-1.5 text-xs font-semibold tracking-wide text-violet-soft">
                   <span className="size-1.5 animate-pulse rounded-full bg-violet-brand animate-pulse" />
@@ -302,17 +326,32 @@ export default function Experience() {
                   {currentLearning.title}
                 </h3>
 
-                <p className="mt-4 text-sm leading-tight font-primary text-muted ">
+                <motion.p
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    type: "keyframes",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  className="mt-4 text-sm leading-tight font-primary text-muted ">
                   {currentLearning.description}
-                </p>
+                </motion.p>
 
-                <div className="mt-6 flex flex-wrap gap-1">
+                <div className="mt-3 flex flex-wrap gap-1 border-t border-slate-100/10 pt-3">
                   {currentLearning.tags.map((tag) => (
-                    <span
-                      key={tag}
+                    <motion.span
+                      initial={{ opacity: 0.3, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{
+                        delay: 0.2,
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 17,
+                      }}
                       className="rounded-full border border-violet-brand/25 bg-violet-brand/10 px-3 py-1.5 text-xs text-violet-soft">
                       {tag}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </div>
@@ -321,7 +360,7 @@ export default function Experience() {
         </div>
 
         {/* GitHub activity */}
-        <motion.div
+        {/* <motion.div
           variants={item}
           initial="hidden"
           whileInView="visible"
@@ -356,7 +395,7 @@ export default function Experience() {
               }}
             />
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

@@ -219,7 +219,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="w-full border-t border-white/10 bg-ink px-5 pt-20 pb-20 text-paper lg:px-[5%] lg:pt-24 lg:pb-12">
+      className="w-full border-none border-white/10 bg-ink px-5 pt-20 pb-20 text-paper lg:px-[5%] lg:pt-24 lg:pb-12">
       <div className="mx-auto flex min-h-[70vh] max-w-[1400px] flex-col justify-between">
         {/* Top bar */}
         <motion.div

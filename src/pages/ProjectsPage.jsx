@@ -127,7 +127,7 @@ export default function ProjectsPage() {
 
   return (
     <main className="min-h-screen bg-ink px-5 py-6 lg:py-24 text-paper sm:px-10 lg:px-[5%]">
-      <div className="mx-auto max-w-[1300px]">
+      <div className="mx-auto max-w-[1400px]">
         <Link
           to="/#projects"
           className="inline-flex items-center gap-2 text-sm text-muted transition hover:text-paper">

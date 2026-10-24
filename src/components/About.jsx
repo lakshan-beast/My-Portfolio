@@ -670,7 +670,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative bg-ink px-5 py-24 text-paper sm:px-10 lg:px-[5%] lg:py-32">
+      className="relative bg-white/5 px-5 py-24 text-paper sm:px-10 lg:px-[5%] lg:py-32 rounded-4xl">
       <div className="mx-auto max-w-[1400px]">
         {/* Heading */}
         <motion.div
