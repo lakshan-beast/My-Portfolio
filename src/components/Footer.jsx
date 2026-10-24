@@ -234,7 +234,7 @@ export default function Footer() {
               Lakshan<span className="text-violet-brand">.</span>
             </span>
 
-            <span className="hidden text-xs tracking-widest text-muted/60 lg:inline">
+            <span className="hidden text-xs tracking-widest text-muted/60 lg:inline font-primary">
               FRONTEND DEVELOPER
             </span>
           </div>
@@ -243,7 +243,7 @@ export default function Footer() {
             type="button"
             onClick={scrollToTop}
             className="group flex items-center gap-2.5 text-xs text-muted transition hover:text-paper">
-            <span className="hidden lg:inline">BACK TO TOP</span>
+            <span className="hidden lg:inline font-primary">BACK TO TOP</span>
 
             <span className="flex size-9 items-center justify-center rounded-full border border-white/15 bg-white/5 transition group-hover:-translate-y-0.5 group-hover:border-violet-brand group-hover:text-violet-soft">
               <FiArrowUp className="text-sm" />
@@ -276,12 +276,12 @@ export default function Footer() {
 
                 <a
                   href="mailto:lakshansandeepa0305@gmail.com"
-                  className="block text-sm break-all transition hover:text-violet-brand">
+                  className="block text-sm break-all transition hover:text-violet-brand font-primary pl-2">
                   lakshansandeepa0305@gmail.com
                 </a>
               </div>
 
-              <div className="mt-1.5 py-3 px-1 flex items-center gap-2 text-lg text-violet-brand font-sans">
+              <div className="mt-1.5 py-3 px-1 flex items-center gap-2 text-lg text-violet-brand font-primary">
                 <span className="size-1.5 animate-pulse rounded-full bg-violet-brand shadow-[0_0_10px_#7c3aed]" />
                 Available for Roles & Freelance
               </div>
@@ -291,11 +291,11 @@ export default function Footer() {
                   Location & Status
                 </p>
 
-                <p className="text-sm pl-2 flex items-center gap-2">
+                <p className="text-sm pl-2 flex items-center gap-2 font-primary">
                   Kandy, Sri Lanka 🇱🇰{" "}
                 </p>
 
-                <p className="mt-2 pl-2 text-xs text-muted ">
+                <p className="mt-2 pl-2 text-xs text-muted  font-primary">
                   Local time — {time}
                 </p>
               </div>
@@ -311,7 +311,7 @@ export default function Footer() {
           viewport={{ once: true, amount: 0.3 }}
           custom={2}
           className="flex flex-col items-center gap-8 border-t border-white/10 pt-8 lg:flex-row lg:justify-between">
-          <div className="flex flex-wrap items-center justify-center gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-8 font-primary">
             <a
               href="https://github.com/lakshan-beast"
               target="_blank"
@@ -341,7 +341,7 @@ export default function Footer() {
             </a>
           </div>
 
-          <p className="flex items-center gap-1.5 text-xs text-muted/60 flex-wrap">
+          <p className="flex items-center gap-1.5 text-xs text-muted/60 flex-wrap font-primary">
             Copyright <FaRegCopyright /> {currentYear}
             <span> SyncXel Web Solutions.</span>
             <span className="items-center"> All rights reserved.</span>

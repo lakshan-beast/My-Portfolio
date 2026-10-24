@@ -191,7 +191,7 @@
 //   ];
 
 //   return (
-//     <div className="bg-[#080808] text-[#f5f5f5] font-sans antialiased selection:bg-[#22c55e] selection:text-black min-h-screen">
+//     <div className="bg-[#080808] text-[#f5f5f5] font-primary antialiased selection:bg-[#22c55e] selection:text-black min-h-screen">
 
 //       {/* Navbar */}
 //       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 md:px-12 py-5 flex items-center justify-between ${

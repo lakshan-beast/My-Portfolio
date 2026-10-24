@@ -126,13 +126,13 @@ export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState("client");
 
   return (
-    <main className="min-h-screen bg-ink px-5 py-24 text-paper sm:px-10 lg:px-[5%]">
+    <main className="min-h-screen bg-ink px-5 py-6 lg:py-24 text-paper sm:px-10 lg:px-[5%]">
       <div className="mx-auto max-w-[1300px]">
         <Link
-          to="/"
+          to="/#projects"
           className="inline-flex items-center gap-2 text-sm text-muted transition hover:text-paper">
           <FiArrowLeft />
-          Back home
+          Back Home
         </Link>
 
         <motion.div
@@ -140,7 +140,7 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="mt-10">
-          <p className="mb-4 text-sm tracking-[0.25em] text-muted uppercase">
+          <p className="mb-2 text-sm tracking-[0.25em] text-muted uppercase">
             All Projects
           </p>
 
@@ -149,14 +149,14 @@ export default function ProjectsPage() {
             <span className="text-violet-brand">.</span>
           </h1>
 
-          <p className="mt-5 max-w-2xl text-muted">
+          <p className="mt-1 max-w-2xl text-muted leading-tight font-primary font-normal">
             Client work, learning projects and SyncXel UI packs — a complete
             view of what I build, ship and maintain.
           </p>
         </motion.div>
 
         {/* Tabs */}
-        <div className="mt-12 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap gap-1.5">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -172,7 +172,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* Tab content */}
-        <div className="mt-10">
+        <div className="mt-5">
           <AnimatePresence mode="wait">
             {activeTab === "client" && (
               <motion.div
@@ -181,18 +181,18 @@ export default function ProjectsPage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.35 }}
-                className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                className="grid grid-cols-1 gap-5 lg:grid-cols-3">
                 {clientProjects.map((project) => (
                   <div
                     key={project.title}
-                    className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-md lg:p-8">
+                    className="rounded-3xl border border-white/10 bg-white/4 p-7 backdrop-blur-md lg:p-7">
                     <div className="flex items-center justify-between">
                       <span className="text-xs tracking-[0.2em] text-muted uppercase">
                         Client project
                       </span>
 
                       {project.status === "approved" ? (
-                        <span className="rounded-full border border-violet-brand/30 bg-violet-brand/10 px-3 py-1 text-xs text-violet-soft">
+                        <span className="rounded-full border border-violet-brand/30 bg-violet-brand/10 px-5 py-1 text-xs text-violet-soft">
                           Live
                         </span>
                       ) : (
@@ -203,15 +203,15 @@ export default function ProjectsPage() {
                       )}
                     </div>
 
-                    <h3 className="mt-5 font-display text-2xl font-bold">
+                    <h3 className="mt-3 font-display text-2xl font-bold">
                       {project.title}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-relaxed text-muted">
+                    <p className="mt-1 text-sm leading-tight text-muted font-primary">
                       {project.description}
                     </p>
 
-                    <div className="mt-6 flex flex-wrap gap-2">
+                    <div className="mt-4 lg:mt-10 flex flex-wrap gap-2">
                       {project.stack.map((tech) => (
                         <span
                           key={tech}
@@ -226,7 +226,7 @@ export default function ProjectsPage() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="group mt-7 inline-flex items-center gap-2 text-sm font-semibold text-violet-soft transition hover:text-paper">
+                        className="group mt-5 inline-flex items-center gap-2 text-sm font-semibold text-violet-soft transition hover:text-paper">
                         View live project
                         <FiArrowUpRight className="transition group-hover:translate-x-1 group-hover:-translate-y-1" />
                       </a>
@@ -249,12 +249,12 @@ export default function ProjectsPage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.35 }}
-                className="grid grid-cols-1 gap-5 md:grid-cols-2">
+                className="grid grid-cols-1 gap-3 md:grid-cols-3">
                 {learningProjects.map((project) => (
                   <div
                     key={project.title}
-                    className="group flex flex-col rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-md transition hover:border-violet-brand/40 lg:p-8">
-                    <span className="text-xs tracking-[0.2em] text-muted uppercase">
+                    className="group flex flex-col rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-md transition hover:border-violet-brand/30 lg:p-8">
+                    <span className="block text-xs tracking-[0.2em] uppercase text-violet-brand/70 ">
                       {project.subtitle}
                     </span>
 
@@ -262,21 +262,21 @@ export default function ProjectsPage() {
                       {project.title}
                     </h3>
 
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+                    <p className="mt-1 flex-1 text-sm leading-tight text-muted font-primary">
                       {project.description}
                     </p>
 
-                    <div className="mt-6 flex flex-wrap gap-2">
+                    <div className="mt-4 flex flex-wrap gap-1">
                       {project.stack.map((tech) => (
                         <span
                           key={tech}
-                          className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-muted">
+                          className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-muted">
                           {tech}
                         </span>
                       ))}
                     </div>
 
-                    <div className="mt-7 flex items-center gap-6">
+                    <div className="mt-5 font-primary flex items-center gap-6 border-t border-slate-100/10 pt-3">
                       <a
                         href={project.liveUrl}
                         target="_blank"
@@ -291,8 +291,8 @@ export default function ProjectsPage() {
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 text-sm text-muted transition hover:text-paper">
-                        <FiGithub />
                         GitHub
+                        <FiGithub />
                       </a>
                     </div>
                   </div>
@@ -321,26 +321,27 @@ export default function ProjectsPage() {
                       SyncXel UI Packs
                     </h3>
 
-                    <p className="mt-4 max-w-2xl text-muted">
+                    <p className="mt-2 max-w-2xl text-muted leading-tight font-primary">
                       Premium, production-ready UI packs built with React,
                       Tailwind CSS and Motion. Each pack includes multiple
                       ready-to-use designs with live previews and instant
                       download.
                     </p>
 
-                    <a
+                    {/* <a
                       href="https://syncxel.com/ui-packs"
                       target="_blank"
                       rel="noreferrer"
                       className="group mt-8 inline-flex items-center gap-2 rounded-full bg-violet-brand px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-violet-soft">
                       View all UI packs
                       <FiArrowUpRight className="transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
 
                 {/* Pack deep links */}
-                <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-5 grid grid-cols-1 gap2
+                 lg:gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:px-12">
                   {uiPacks.map((pack) => (
                     <a
                       key={pack.name}
@@ -353,7 +354,7 @@ export default function ProjectsPage() {
                           {pack.name} Pack
                         </h4>
 
-                        <p className="mt-1 text-xs text-muted">
+                        <p className="mt-1 text-xs text-muted font-primary pl-3">
                           View designs & purchase
                         </p>
                       </div>

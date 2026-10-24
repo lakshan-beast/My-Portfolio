@@ -251,7 +251,7 @@ export default function Contact() {
             <span className="text-violet-brand">worth shipping.</span>
           </motion.h2>
 
-          <motion.p variants={item} className="mt-5 max-w-xl text-muted font-sans">
+          <motion.p variants={item} className="mt-5 max-w-xl text-muted font-primary leading-tight">
             Have a project in mind, a role to discuss, or just want to talk
             frontend? Send a message — I usually reply within 24 hours.
           </motion.p>
@@ -268,7 +268,7 @@ export default function Contact() {
             ref={form}
             onSubmit={sendEmail}
             variants={item}
-            className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-md lg:col-span-3 lg:p-9">
+            className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-md lg:col-span-3 lg:p-9 font-primary">
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div>
                 <label
@@ -283,7 +283,7 @@ export default function Contact() {
                   id="from_name"
                   required
                   placeholder="John Doe"
-                  className="w-full rounded-2xl border border-white/10 bg-ink-soft px-4 py-3.5 text-sm outline-none transition placeholder:text-muted/50 focus:border-violet-brand"
+                  className="w-full rounded-2xl border border-white/10 bg-ink-soft px-4 py-3.5 text-sm outline-none transition placeholder:text-muted/50 focus:border-violet-brand/60 focus:shadow-inner"
                 />
               </div>
 
@@ -372,7 +372,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={isSending}
-              className="group mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-violet-brand px-6 py-4 text-sm font-semibold text-white transition hover:bg-violet-soft disabled:opacity-50 sm:w-auto">
+              className="group mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-violet-brand px-6 py-4 text-sm text-white transition hover:bg-violet-soft disabled:opacity-50 sm:w-auto">
               {isSending ? "Sending..." : "Send message"}
               <FiArrowUpRight className="transition group-hover:translate-x-1 group-hover:-translate-y-1" />
             </button>

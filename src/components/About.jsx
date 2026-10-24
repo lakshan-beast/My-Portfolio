@@ -706,7 +706,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
-          className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-6 font-primary">
+          className="mt-6 grid grid-cols-1 gap-3 lg:gap-5 md:grid-cols-6 font-primary">
           {/* Bio */}
           <motion.div
             variants={item}
@@ -767,6 +767,44 @@ export default function About() {
             </div>
           </motion.div>
 
+          {/* GitHub activity */}
+          <motion.div
+            variants={item}
+            className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 md:col-span-4 lg:p-8">
+            <div className="flex items-center justify-between">
+              <span className="flex items-center gap-2 text-xs tracking-[0.2em] text-muted uppercase">
+                <FiGithub />
+                GitHub activity
+              </span>
+
+              <a
+                href="https://github.com/lakshan-beast"
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs text-violet-soft transition hover:text-paper">
+                View profile
+              </a>
+            </div>
+
+            <div className="mt-6 overflow-hidden rounded-2xl border border-white/5 bg-ink-soft p-4">
+              <img
+                src="https://ghchart.rshah.org/7C3AED/lakshan-beast"
+                alt="GitHub contribution graph"
+                loading="lazy"
+                decoding="async"
+                className="w-full"
+                style={{
+                  filter:
+                    "invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.85)",
+                }}
+              />
+            </div>
+
+            <p className="mt-4 text-xs text-muted font-primary leading-tight">
+              Building in public — components, experiments and client work.
+            </p>
+          </motion.div>
+
           {/* SyncXel */}
           <motion.a
             variants={item}
@@ -817,44 +855,6 @@ export default function About() {
                 </div>
               ))}
             </div>
-          </motion.div>
-
-          {/* GitHub activity */}
-          <motion.div
-            variants={item}
-            className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 md:col-span-4 lg:p-8">
-            <div className="flex items-center justify-between">
-              <span className="flex items-center gap-2 text-xs tracking-[0.2em] text-muted uppercase">
-                <FiGithub />
-                GitHub activity
-              </span>
-
-              <a
-                href="https://github.com/lakshan-beast"
-                target="_blank"
-                rel="noreferrer"
-                className="text-xs text-violet-soft transition hover:text-paper">
-                View profile
-              </a>
-            </div>
-
-            <div className="mt-6 overflow-hidden rounded-2xl border border-white/5 bg-ink-soft p-4">
-              <img
-                src="https://ghchart.rshah.org/7C3AED/lakshan-beast"
-                alt="GitHub contribution graph"
-                loading="lazy"
-                decoding="async"
-                className="w-full"
-                style={{
-                  filter:
-                    "invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.85)",
-                }}
-              />
-            </div>
-
-            <p className="mt-4 text-xs text-muted font-primary leading-tight">
-              Building in public — components, experiments and client work.
-            </p>
           </motion.div>
 
           {/* Availability + CTA */}
