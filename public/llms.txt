@@ -1,0 +1,14 @@
+# Lakshan Sandeepa — Frontend Developer & SyncXel Founder
+
+> Frontend developer building clean, interactive web interfaces with React, Tailwind CSS and Motion. Founder of SyncXel, a component library for modern UI.
+
+## Projects
+
+- [Portfolio](https://lakshan-sandeepa-dev.vercel.app/)
+- [SyncXel](https://syncxel.com)
+- [GitHub](https://github.com/lakshan-beast)
+- [LinkedIn](https://www.linkedin.com/in/lakshan-sandeepa)
+
+## Contact
+
+- [Email](mailto:lakshansandeepa0305@gmail.com)

@@ -1,0 +1,10 @@
+Diagnostics
+Minimize main-thread work 9.5 s
+Reduce JavaScript execution time 3.0 s
+Reduce unused JavaScript Est savings of 14,639 KiB
+Minify JavaScript Est savings of 1,711 KiB
+Reduce unused CSS Est savings of 31 KiB
+Image elements do not have explicit width and height
+Minify CSS Est savings of 7 KiB
+Avoid enormous network payloads Total size was 16,528 KiB
+Avoid long main-thread tasks 20 long tasks found

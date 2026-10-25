@@ -251,7 +251,9 @@ export default function Contact() {
             <span className="text-violet-brand">worth shipping.</span>
           </motion.h2>
 
-          <motion.p variants={item} className="mt-5 max-w-xl text-muted font-primary leading-tight">
+          <motion.p
+            variants={item}
+            className="mt-5 max-w-xl text-muted font-primary leading-tight">
             Have a project in mind, a role to discuss, or just want to talk
             frontend? Send a message — I usually reply within 24 hours.
           </motion.p>
@@ -374,7 +376,10 @@ export default function Contact() {
               disabled={isSending}
               className="group mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-violet-brand px-6 py-4 text-sm text-white transition hover:bg-violet-soft disabled:opacity-50 sm:w-auto">
               {isSending ? "Sending..." : "Send message"}
-              <FiArrowUpRight className="transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+              <FiArrowUpRight
+                aria-hidden="true"
+                className="transition group-hover:translate-x-1 group-hover:-translate-y-1"
+              />
             </button>
           </motion.form>
 
@@ -395,10 +400,14 @@ export default function Contact() {
                 </a>
 
                 <button
+                  aria-label="Copy email"
                   onClick={copyEmail}
-                  className="flex size-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-violet-brand hover:text-violet-soft"
-                  aria-label="Copy email">
-                  {copied ? <FiCheck /> : <FiCopy />}
+                  className="flex size-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-violet-brand hover:text-violet-soft">
+                  {copied ? (
+                    <FiCheck aria-hidden="true" />
+                  ) : (
+                    <FiCopy aria-hidden="true" />
+                  )}
                 </button>
               </div>
 
@@ -408,9 +417,12 @@ export default function Contact() {
                   target="_blank"
                   rel="noreferrer"
                   className="group flex items-center gap-3 text-sm text-muted transition hover:text-paper">
-                  <FiGithub className="text-violet-soft" />
+                  <FiGithub aria-hidden="true" className="text-violet-soft" />
                   GitHub
-                  <FiArrowUpRight className="ml-auto transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <FiArrowUpRight
+                    aria-hidden="true"
+                    className="ml-auto transition group-hover:translate-x-1 group-hover:-translate-y-1"
+                  />
                 </a>
 
                 <a
@@ -418,21 +430,24 @@ export default function Contact() {
                   target="_blank"
                   rel="noreferrer"
                   className="group flex items-center gap-3 text-sm text-muted transition hover:text-paper">
-                  <FiLinkedin className="text-violet-soft" />
+                  <FiLinkedin aria-hidden="true" className="text-violet-soft" />
                   LinkedIn
-                  <FiArrowUpRight className="ml-auto transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <FiArrowUpRight
+                    aria-hidden="true"
+                    className="ml-auto transition group-hover:translate-x-1 group-hover:-translate-y-1"
+                  />
                 </a>
               </div>
             </div>
 
             <div className="border-t border-white/10 pt-6 text-sm text-muted">
               <div className="flex items-center gap-2">
-                <FiMapPin className="text-violet-soft" />
+                <FiMapPin aria-hidden="true" className="text-violet-soft" />
                 Sri Lanka · GMT+5:30
               </div>
 
               <div className="mt-3 flex items-center gap-2">
-                <FiClock className="text-violet-soft" />
+                <FiClock aria-hidden="true" className="text-violet-soft" />
                 Usually replies within 24 hours
               </div>
 

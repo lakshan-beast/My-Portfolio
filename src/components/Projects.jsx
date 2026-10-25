@@ -421,7 +421,7 @@ export default function Projects() {
           <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
               <span className="inline-flex items-center gap-2 rounded-full border border-violet-brand/30 bg-violet-brand/10 px-3.5 py-1.5 text-xs tracking-wide text-violet-soft">
-                <FiZap />
+                <FiZap aria-hidden="true" />
                 Founder & Frontend Engineer
               </span>
 
@@ -452,7 +452,10 @@ export default function Projects() {
             <div className="flex shrink-0 items-center gap-2">
               <span className="inline-flex items-center gap-2 rounded-full bg-violet-brand px-6 py-3.5 text-sm font-semibold text-white transition group-hover:bg-violet-soft">
                 Visit SyncXel
-                <FiArrowUpRight className="transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+                <FiArrowUpRight
+                  aria-hidden="true"
+                  className="transition group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
               </span>
             </div>
           </div>
@@ -469,7 +472,10 @@ export default function Projects() {
             to="/projects"
             className="group inline-flex items-center gap-3 rounded-full border border-white/15 px-7 py-3.5 text-sm transition hover:border-violet-brand/60 hover:text-violet-soft/50">
             View all projects
-            <FiArrowRight className="transition group-hover:translate-x-1" />
+            <FiArrowRight
+              aria-hidden="true"
+              className="transition group-hover:translate-x-1"
+            />
           </Link>
         </motion.div>
       </div>

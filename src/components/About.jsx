@@ -628,7 +628,7 @@ import {
   FiZap,
   FiBookOpen,
 } from "react-icons/fi";
-import AboutImage from "../assets/hero.jpg";
+import AboutImage from "/hero.webp";
 
 const container = {
   hidden: {},
@@ -762,7 +762,7 @@ export default function About() {
             <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent" />
 
             <div className="absolute bottom-5 left-5 flex items-center gap-2 rounded-full border border-white/15 bg-ink/70 px-3.5 py-2 text-xs backdrop-blur-md">
-              <FiMapPin className="text-violet-brand" />
+              <FiMapPin aria-hidden="true" className="text-violet-brand" />
               Sri Lanka · GMT+5:30
             </div>
           </motion.div>
@@ -773,7 +773,7 @@ export default function About() {
             className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 md:col-span-4 lg:p-8">
             <div className="flex items-center justify-between">
               <span className="flex items-center gap-2 text-xs tracking-[0.2em] text-muted uppercase">
-                <FiGithub />
+                <FiGithub aria-hidden="true" />
                 GitHub activity
               </span>
 
@@ -818,7 +818,10 @@ export default function About() {
                   Currently building
                 </span>
 
-                <FiArrowUpRight className="text-violet-soft transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+                <FiArrowUpRight
+                  aria-hidden="true"
+                  className="text-violet-soft transition group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
               </div>
 
               <h3 className="mt-5 font-display text-2xl font-bold sm:text-3xl">
@@ -832,7 +835,7 @@ export default function About() {
             </div>
 
             <div className="mt-6 flex items-center gap-2 text-xs text-violet-soft">
-              <FiZap />
+              <FiZap aria-hidden="true" />
               Founder & Frontend Engineer
             </div>
           </motion.a>
@@ -842,7 +845,7 @@ export default function About() {
             variants={item}
             className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 md:col-span-3 lg:p-8">
             <span className="flex items-center gap-2 text-xs tracking-[0.2em] text-muted uppercase">
-              <FiBookOpen /> Now learning
+              <FiBookOpen aria-hidden="true" /> Now learning
             </span>
 
             <div className="mt-5 flex flex-col gap-1.5">

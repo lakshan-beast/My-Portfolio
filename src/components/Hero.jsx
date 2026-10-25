@@ -113,6 +113,7 @@ import {
   useMotionTemplate,
 } from "framer-motion";
 import MenuButton from "./MenuButton";
+import AmbientFall from "./AmbientFall";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -166,6 +167,8 @@ export default function Hero() {
         style={{ background: spotlight }}
         className="pointer-events-none absolute inset-0"
       />
+
+      <AmbientFall />
 
       {/* Center outline name */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">

@@ -650,37 +650,37 @@ const item = {
 const coreStack = [
   {
     name: "React",
-    icon: <FaReact />,
+    icon: <FaReact aria-hidden="true" />,
     context: "Component systems, state and interactive UIs",
     proof: "Used across SyncXel & client work",
   },
   {
     name: "TypeScript",
-    icon: <SiTypescript />,
+    icon: <SiTypescript aria-hidden="true" />,
     context: "Type-safe components and scalable frontend logic",
     proof: "Currently deepening",
   },
   {
     name: "JavaScript",
-    icon: <FaSquareJs />,
+    icon: <FaSquareJs aria-hidden="true" />,
     context: "Core language for modern web applications",
     proof: "Foundation of every project",
   },
   {
     name: "Tailwind CSS",
-    icon: <SiTailwindcss />,
+    icon: <SiTailwindcss aria-hidden="true" />,
     context: "Utility-first styling and responsive design systems",
     proof: "Used in SyncXel UI Packs",
   },
   {
     name: "SASS / SCSS",
-    icon: <SiSass />,
+    icon: <SiSass aria-hidden="true" />,
     context: "Structured, maintainable styling workflows",
     proof: "Used in earlier client work",
   },
   {
     name: "Motion",
-    icon: <TbSparkles />,
+    icon: <TbSparkles aria-hidden="true" />,
     context: "Scroll reveals, micro-interactions and transitions",
     proof: "Used across portfolio & packs",
   },
@@ -694,18 +694,18 @@ const aiStack = [
 ];
 
 const tools = [
-  { name: "Firebase", icon: <SiFirebase /> },
-  { name: "Supabase", icon: <SiSupabase /> },
-  { name: "EmailJS", icon: <TbMailFast /> },
-  { name: "React Router", icon: <SiReactrouter /> },
-  { name: "Git & GitHub", icon: <FaGitAlt /> },
-  { name: "npm", icon: <FaNpm /> },
-  { name: "Figma", icon: <FaFigma /> },
-  { name: "Vercel", icon: <SiVercel /> },
-  { name: "Netlify", icon: <SiNetlify /> },
-  { name: "VS Code", icon: <BiLogoVisualStudio /> },
-  { name: "Chrome DevTools", icon: <FaChrome /> },
-  { name: "Cursor", icon: <BsCursor /> },
+  { name: "Firebase", icon: <SiFirebase aria-hidden="true" /> },
+  { name: "Supabase", icon: <SiSupabase aria-hidden="true" /> },
+  { name: "EmailJS", icon: <TbMailFast aria-hidden="true" /> },
+  { name: "React Router", icon: <SiReactrouter aria-hidden="true" /> },
+  { name: "Git & GitHub", icon: <FaGitAlt aria-hidden="true" /> },
+  { name: "npm", icon: <FaNpm aria-hidden="true" /> },
+  { name: "Figma", icon: <FaFigma aria-hidden="true" /> },
+  { name: "Vercel", icon: <SiVercel aria-hidden="true" /> },
+  { name: "Netlify", icon: <SiNetlify aria-hidden="true" /> },
+  { name: "VS Code", icon: <BiLogoVisualStudio aria-hidden="true" /> },
+  { name: "Chrome DevTools", icon: <FaChrome aria-hidden="true" /> },
+  { name: "Cursor", icon: <BsCursor aria-hidden="true" /> },
 ];
 
 export default function SkillCard() {
@@ -792,7 +792,7 @@ export default function SkillCard() {
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
             <div className="max-w-2xl">
               <span className="inline-flex items-center gap-2 rounded-full border border-violet-brand/30 bg-violet-brand/10 px-3.5 py-1.5 text-xs text-violet-soft">
-                <BsCursor />
+                <BsCursor aria-hidden="true" />
                 AI-Assisted Development
               </span>
 

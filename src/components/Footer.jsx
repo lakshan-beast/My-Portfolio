@@ -219,7 +219,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="w-full border-none border-white/10 bg-ink px-5 pt-20 pb-20 text-paper lg:px-[5%] lg:pt-24 lg:pb-12">
+      className="w-full border-nonenpm r border-white/10 bg-ink px-5 pt-20 pb-20 text-paper lg:px-[5%] lg:pt-24 lg:pb-12">
       <div className="mx-auto flex min-h-[70vh] max-w-[1400px] flex-col justify-between">
         {/* Top bar */}
         <motion.div
@@ -241,12 +241,13 @@ export default function Footer() {
 
           <button
             type="button"
+            aria-label="Back to top"
             onClick={scrollToTop}
             className="group flex items-center gap-2.5 text-xs text-muted transition hover:text-paper">
             <span className="hidden lg:inline font-primary">BACK TO TOP</span>
 
             <span className="flex size-9 items-center justify-center rounded-full border border-white/15 bg-white/5 transition group-hover:-translate-y-0.5 group-hover:border-violet-brand group-hover:text-violet-soft">
-              <FiArrowUp className="text-sm" />
+              <FiArrowUp aria-hidden="true" className="text-sm" />
             </span>
           </button>
         </motion.div>
@@ -317,7 +318,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 text-sm text-muted transition hover:border-b hover:border-paper/50 hover:text-paper">
-              <FiGithub className="text-base" />
+              <FiGithub aria-hidden="true" className="text-base" />
               <span className="hidden sm:inline">|</span>
               <span>GitHub</span>
             </a>
@@ -327,7 +328,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 text-sm text-muted transition hover:border-b hover:border-paper/50 hover:text-paper">
-              <FiLinkedin className="text-base" />
+              <FiLinkedin aria-hidden="true" className="text-base" />
               <span className="hidden sm:inline">|</span>
               <span>LinkedIn</span>
             </a>
@@ -335,7 +336,7 @@ export default function Footer() {
             <a
               href="mailto:lakshansandeepa0305@gmail.com"
               className="flex items-center gap-2 text-sm text-muted transition hover:border-b hover:border-paper/50 hover:text-paper">
-              <FiMail className="text-base" />
+              <FiMail aria-hidden="true" className="text-base" />
               <span className="hidden sm:inline">|</span>
               <span>Email</span>
             </a>
