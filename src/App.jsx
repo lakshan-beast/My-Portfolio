@@ -65,7 +65,6 @@ export default function App() {
   return (
     <>
       <Hero />
-
       <About />
       <Experience />
       <Projects />

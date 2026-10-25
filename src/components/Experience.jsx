@@ -199,7 +199,7 @@ export default function Experience() {
     <section
       id="experience"
       className="relative bg-ink px-5 py-24 text-paper sm:px-10 lg:px-[5%] lg:py-32">
-      <div className="mx-auto max-w-[1400px]">
+      <div className="mx-auto max-w-350">
         <motion.div
           variants={container}
           initial="hidden"
@@ -219,7 +219,7 @@ export default function Experience() {
           </motion.h2>
         </motion.div>
 
-        <div className="relative mt-16 max-w-[900px] mx-auto">
+        <div className="relative mt-16 max-w-225 mx-auto">
           {/* Timeline line */}
           <div className="absolute top-0 bottom-0 left-[7px] w-px bg-white/10 md:left-[calc(9rem+7px)]" />
 
@@ -263,7 +263,7 @@ export default function Experience() {
                   className={`flex-1 rounded-3xl border p-7 backdrop-blur-md transition lg:p-8 ${
                     experience.highlight
                       ? "border-violet-brand/30 bg-violet-brand/[0.07]"
-                      : "border-white/10 bg-white/[0.04]"
+                      : "border-white/10 bg-white/4"
                   }`}>
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <h3 className="font-display text-xl font-bold sm:text-2xl">
