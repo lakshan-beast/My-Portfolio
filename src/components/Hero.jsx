@@ -148,7 +148,7 @@ export default function Hero() {
   const spotlight = useMotionTemplate`
     radial-gradient(540px circle at ${springX}px ${springY}px,
     rgba(124, 58, 237, 0.36),
-    transparent 70%)
+    transparent 75%)
   `;
 
   const handleMouseMove = (event) => {
@@ -178,7 +178,7 @@ export default function Hero() {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-[18vw] leading-none font-black tracking-tighter text-transparent uppercase select-none sm:text-[15vw]"
           style={{
-            WebkitTextStroke: "1px rgba(245, 245, 245, 0.15)",
+            WebkitTextStroke: "1px rgba(245, 245, 245, 0.45)",
           }}>
           Lakshan
         </motion.h2>
@@ -252,13 +252,14 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
+          transition={{ delay: 0.2 }}
           custom={3}
           className="hidden flex-col items-end gap-3 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="group flex items-center gap-3 text-lg text-muted transition hover:text-paper">
+              className="group flex items-center gap-3 text-xl text-muted transition hover:text-paper">
               {link.label}
               <span className="h-px w-6 bg-white/20 transition-all group-hover:w-10 group-hover:bg-violet-brand" />
             </a>
