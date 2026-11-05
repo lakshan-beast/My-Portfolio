@@ -80,8 +80,8 @@ const learningProjects = [
     description:
       "A premium academic management system with gamified focus timers and past paper analytics.",
     stack: ["React", "Firebase", "Recharts"],
-    liveUrl: "#",
-    githubUrl: "https://github.com/lakshan-beast",
+    liveUrl: "https://future-plan-six.vercel.app",
+    githubUrl: "https://github.com/lakshan-beast/Future-Plan",
   },
   {
     title: "Educa",
@@ -89,8 +89,8 @@ const learningProjects = [
     description:
       "An educational resource hub providing students with organized, downloadable study materials.",
     stack: ["React", "SASS", "Firebase"],
-    liveUrl: "#",
-    githubUrl: "https://github.com/lakshan-beast",
+    liveUrl: "https://educa-lms-platform.vercel.app/",
+    githubUrl: "https://github.com/lakshan-beast/Educa-Advance-Learning-Platform",
   },
   {
     title: "Unseen Tapro",
@@ -98,8 +98,8 @@ const learningProjects = [
     description:
       "A travel exploration platform dedicated to uncovering and showcasing hidden destinations across Sri Lanka.",
     stack: ["React", "Tailwind CSS", "TypeScript"],
-    liveUrl: "#",
-    githubUrl: "https://github.com/lakshan-beast",
+    liveUrl: "https://unseentapro.vercel.app/",
+    githubUrl: "https://github.com/lakshan-beast/Unseen-Tapro",
   },
   {
     title: "Info.lanka",
@@ -107,26 +107,26 @@ const learningProjects = [
     description:
       "A centralized web portal designed to streamline access to verified Sri Lankan government services.",
     stack: ["HTML5", "CSS3", "JavaScript"],
-    liveUrl: "#",
-    githubUrl: "https://github.com/lakshan-beast",
+    liveUrl: "https://info-lanka-project.vercel.app",
+    githubUrl: "https://github.com/lakshan-beast/info.lanka-Project",
   },
 ];
 
 const uiPacks = [
-  { name: "Footers", url: "https://syncxel-ui-preview.vercel.app/footers" },
   { name: "Navbars", url: "https://syncxel.com/ui-packs/navbars" },
   { name: "Hero", url: "https://syncxel.com/ui-packs/hero" },
   { name: "Authentication", url: "https://syncxel-ui-preview.vercel.app/auth" },
-  { name: "Pricing", url: "https://syncxel-ui-preview.vercel.app/pricing" },
-  { name: "FAQ", url: "https://syncxel-ui-preview.vercel.app/faq" },
   {
-    name: "FAFeaturesQ",
+    name: "Features",
     url: "https://syncxel-ui-preview.vercel.app/features",
   },
+  { name: "Pricing", url: "https://syncxel-ui-preview.vercel.app/pricing" },
   {
     name: "Testimonials",
     url: "https://syncxel-ui-preview.vercel.app/testimonials",
   },
+  { name: "FAQ", url: "https://syncxel-ui-preview.vercel.app/faq" },
+  { name: "Footers", url: "https://syncxel-ui-preview.vercel.app/footers" },
 ];
 
 const fadeUp = {
