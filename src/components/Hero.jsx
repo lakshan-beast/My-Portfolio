@@ -233,16 +233,16 @@ export default function Hero() {
             experience.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-2 font-primary">
+          <div className="mt-8 flex flex-wrap items-center gap-2.5 font-primary">
             <a
               href="#projects"
-              className="rounded-full bg-violet-brand px-6 py-3 text-sm text-white transition hover:bg-violet-soft">
+              className="rounded-full bg-violet-brand px-6 py-3 text-sm text-white transition hover:bg-violet-soft focus-visible: outline-2 focus-visible: outline-offset-2 focus-visible:outline-emerald-600 duration-150">
               View Projects
             </a>
 
             <a
               href="#contact"
-              className="rounded-full border border-white/15 px-6 py-3 text-sm transition hover:border-violet-brand hover:text-violet-soft">
+              className="rounded-full border border-white/15 px-6 py-2.5 text-sm transition hover:border-violet-brand hover:text-violet-soft focus-visible: outline-2 outline-violet-700 focus-visible: outline-offset-2 focus-visible:outline-emerald-600">
               Contact Me
             </a>
           </div>

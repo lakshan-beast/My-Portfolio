@@ -54,9 +54,16 @@ const clientProjects = [
     description:
       "A personal portfolio website designed and developed for a hospitality professional, including experience, skills and contact sections.",
     stack: ["React", "Tailwind CSS", "Motion", "Vercel"],
-    status: "approved",
-    liveUrl: "#",
+    status: "private",
   },
+  {
+    title: "Exam Quiz Website",
+    description:
+      "A computer-based test simulator designed and developed for JFT-Basic Japanese language candidates, including candidate verification, an interactive question palette, and Bento-styled performance analytics sections.",
+    stack: ["HTML5", "CSS3", "JavaScript"],
+    status: "private",
+  },
+  
   {
     title: "Vesper Perfume",
     description:
