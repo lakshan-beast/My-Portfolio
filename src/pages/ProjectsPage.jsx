@@ -63,7 +63,7 @@ const clientProjects = [
     stack: ["HTML5", "CSS3", "JavaScript"],
     status: "private",
   },
-  
+
   {
     title: "Vesper Perfume",
     description:
@@ -113,11 +113,20 @@ const learningProjects = [
 ];
 
 const uiPacks = [
-  { name: "Footers", url: "https://syncxel.com/ui-packs/footers" },
+  { name: "Footers", url: "https://syncxel-ui-preview.vercel.app/footers" },
   { name: "Navbars", url: "https://syncxel.com/ui-packs/navbars" },
-  { name: "Authentication", url: "https://syncxel.com/ui-packs/auth" },
-  { name: "Pricing", url: "https://syncxel.com/ui-packs/pricing" },
-  { name: "FAQ", url: "https://syncxel.com/ui-packs/faq" },
+  { name: "Hero", url: "https://syncxel.com/ui-packs/hero" },
+  { name: "Authentication", url: "https://syncxel-ui-preview.vercel.app/auth" },
+  { name: "Pricing", url: "https://syncxel-ui-preview.vercel.app/pricing" },
+  { name: "FAQ", url: "https://syncxel-ui-preview.vercel.app/faq" },
+  {
+    name: "FAFeaturesQ",
+    url: "https://syncxel-ui-preview.vercel.app/features",
+  },
+  {
+    name: "Testimonials",
+    url: "https://syncxel-ui-preview.vercel.app/testimonials",
+  },
 ];
 
 const fadeUp = {
@@ -347,7 +356,8 @@ export default function ProjectsPage() {
                 </div>
 
                 {/* Pack deep links */}
-                <div className="mt-5 grid grid-cols-1 gap2
+                <div
+                  className="mt-5 grid grid-cols-1 gap-2
                  lg:gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:px-12">
                   {uiPacks.map((pack) => (
                     <a
