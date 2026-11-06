@@ -69,7 +69,8 @@ const clientProjects = [
     description:
       "An e-commerce experience for a perfume business, including product browsing and a premium dark/gold storefront design.",
     stack: ["React", "Tailwind CSS", "Motion", "Supabase"],
-    status: "private",
+    status: "approved",
+    liveUrl: "https://vesper-perfume.vercel.app",
   },
 ];
 
